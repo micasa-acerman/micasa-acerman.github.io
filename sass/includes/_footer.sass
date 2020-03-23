@@ -1,0 +1,141 @@
+.subfooter
+    padding: 32px 0
+    &-wrapper
+        border-top: 1px solid #ccc
+        &-gray
+            background: #fafafa
+    &__title
+        font-size: 1.8em
+        font-weight: 600
+        line-height: 2em
+        text-align: center
+    &__subtitle
+        font-size: 1.2em
+        text-align: center
+    &__input
+        padding: 0.4em
+        font-size: 14px
+        width: 100%
+        margin-top: 8px
+        &::placeholder
+            font-weight: bold
+            color: #aaa
+    &__control-group
+        margin: 24px 0
+    &__button
+        margin-top: 8px
+        width: 100%
+        font-size: 14px
+        padding: 0.4em
+        background: transparent
+        border: 1px solid #333
+        transition-property: background color
+        transition-timing-function: linear
+        transition-duration: .2s
+        &:hover
+            background: #333
+            color: white
+    &__list
+        list-style: none
+        @media screen and ( max-width: 767px )
+            margin-top: 32px
+            strong
+                text-transform: uppercase
+        > *
+            line-height: 1.4em
+            margin: .6em 0
+    *
+        color: #333
+        &:hover
+            color: #666
+        &:focus
+            color: #666
+            
+
+.footer
+    border-top: 1px solid #ccc
+    background: #fafafa
+    min-height: 60px
+    display: flex
+    justify-content: center
+    align-items: center
+    &__copyright
+        font-size: 14px
+        color: #333
+        &:hover
+            color: #444
+        &:focus
+            color: #444
+
+.payments
+    overflow: hidden
+    img
+        height: 30px
+        width: 100%
+.social
+    display: flex
+    justify-content: flex-start
+    padding: 8px 0
+    *
+        transition-property: border color
+        transition-timing-function: ease
+        transition-duration: .2s
+    i
+        font-size: 16px
+        text-align: center
+        margin: 0 .2em
+        &::before
+            border: 2px solid
+            padding: .3em
+            
+    &__vk
+        i
+            color: #4a76a8
+            &::before
+                border-color: #4a76a8
+        &:hover
+            *
+                color: white
+            i::before
+                background-color: #4a76a8
+        &:focus
+            *
+                color: #4a76a8
+            i::before
+                border-color: #4a76a8
+    
+    &__fb
+        i
+            color: #3b5998
+            &::before
+                border-color: #3b5998
+                padding: .3em .5em
+        &:hover
+            
+            *
+                color: white
+            i::before
+                background-color: #3b5998
+        &:focus
+            *
+                color: #3b5998
+            i::before
+                border-color: #3b5998
+    
+    &__inst
+        i
+            color: #ec4a66
+            &::before
+                border-color: #ec4a66
+                padding: .3em .44em
+        &:hover
+            
+            *
+                color: white
+            i::before
+                background-color: #ec4a66
+        &:focus
+            *
+                color: #ec4a66
+            i::before
+                border-color: #ec4a66

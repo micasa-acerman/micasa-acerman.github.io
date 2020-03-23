@@ -1,0 +1,39 @@
+.searchbar
+    display: flex
+    position: absolute
+    top: 100%
+    left: 0
+    right: 0
+    width: 100%
+    background: #efefef
+    border-top: 1px solid #ccc
+    border-bottom: 1px solid #ccc
+    padding: 1em
+
+    &-container
+        position: relative
+
+    &__input
+        width: 100%
+        padding: .2em .4em
+        font: 14px/1.375 Arial,Amiri,sans-serif
+        letter-spacing: .6px
+        border: 1px solid #333
+        border-right: 0
+    &__button
+        padding: 4px 8px
+        background: #333
+        border: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        i
+            width: 16px
+            height: 16px
+        // border: 1px solid #333
+        &:focus
+            outline: none
+        &:hover
+            outline: none
+        i
+            color: white

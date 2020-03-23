@@ -1,0 +1,88 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+// Bootstrap
+@import "bootstrap/functions"
+@import "bootstrap/variables"
+@import "bootstrap/mixins"
+@import "bootstrap/modal"
+@import "bootstrap/buttons"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+	font-family: Arial, Amiri, sans-serif
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font: $default-font
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $blue
+	color: #fff
+a
+	color: $linkColor
+	&:hover
+		color: $linkColorHover
+		text-decoration: none
+
+
+// Modal
+@import "text-fields"
+@import "includes/link"
+
+
+.modal-title
+	font-size: 24px
+// Custom
+@import "owl/owl"
+@import "includes/header"
+@import "includes/footer"
+
+	
+@import "media" // Всегда в конце

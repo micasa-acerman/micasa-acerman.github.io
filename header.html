@@ -1,0 +1,188 @@
+
+<div class="header">
+  <div class="topbar">
+    <div class="topbar__inner">
+      <div class="topbar__left"><a class="locationSelector topbar__item" href="#locationModal" data-toggle="modal" data-target="#locationModal"><span class="fa fa-location-arrow"></span><span>Москва</span></a>
+        <div class="modal location fade" id="locationModal" tabindex="-1" role="dialog" aria-labelledby="locationModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content location__content">
+              <div class="location__header">
+                <h5 class="location__title" id="locationModalLabel">ВАШ РЕГИОН ДОСТАВКИ</h5>
+              </div>
+              <div class="location__body">
+                <input class="input-text input-text-bg" placeholder="Введите название населённого пункта"/>
+                <div class="location__auto"><a class="link link-primary" href="#">Определить автоматически</a></div>
+                <div class="location__subtitle">Популярные города</div>
+                <ul class="location__list">
+                  <li class="location__item"><a href="#">Москва</a></li>
+                  <li class="location__item"><a href="#">Санкт-Петербург</a></li>
+                  <li class="location__item"><a href="#">Екатеринбург</a></li>
+                  <li class="location__item"><a href="#">Новосибирск</a></li>
+                  <li class="location__item"><a href="#">Ростов-на-Дону</a></li>
+                </ul>
+              </div>
+              <div class="modal-footer location__footer">
+                <button class="btn btn-link btn-lg location__action" type="button" data-dismiss="modal">Отмена</button>
+                <button class="btn btn-primary btn-lg location__action" type="button">Запомнить выбор</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="topbar__right">
+        <div class="profile"><a class="profile__avatar" href="#"><img class="profile__img" src="img/user-default.png"/><span class="profile__discount">-15%</span></a><a class="profile__label" href="#">Личный кабинет</a></div>
+        <div class="favorite dropdown">
+          <div class="favorite__icon"></div>
+          <div class="dropdown__inner"> 
+            <div class="favorite__title">У вас нет избранных</div><a class="favorite__action">Каталог товаров</a>
+          </div>
+        </div>
+        <div class="cart dropdown">
+          <div class="cart__icon"></div>
+          <div class="dropdown__inner"> 
+            <div class="cart__title">Ваша тележка пуста</div><a class="cart__action">Каталог товаров</a>
+          </div>
+        </div>
+        <div class="help dropdown">
+          <div class="help__icon"></div>
+          <div class="dropdown__inner"> 
+            <ul class="help__list">
+              <li class="help__item"><a class="help__link" href="#1">Доставка</a></li>
+              <li class="help__item"><a class="help__link" href="#2">Размеры</a></li>
+              <li class="help__item"><a class="help__link" href="#3">Возврат</a></li>
+              <li class="help__item"><a class="help__link" href="#4">Гарантия</a></li>
+              <li class="help__item"><a class="help__link" href="#5">Оплата</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu mh-head Sticky">
+    <div class="menu-mobile searchbar-container">
+      <div class="menu-mobile__row"><a class="menu-mobile__action" href="#menu"><span class="menu-mobile__icon menu-mobile__menu"></span></a><span class="menu-mobile__action searchbar-toggle" data-target="#msearch"><span class="menu-mobile__icon menu-mobile__search"></span></span><a class="menu__logo" href="/"><img src="/img/logo.jpg" alt="logo"/></a><a class="menu-mobile__action"><span class="menu-mobile__favorite menu-mobile__icon"></span></a><a class="menu-mobile__action"><span class="menu-mobile__cart menu-mobile__icon"></span></a>
+        <div class="searchbar" id="msearch" style="display: none">
+          <input class="searchbar__input" placeholder="Поиск"/>
+          <button class="searchbar__button"><i class="menu-mobile__search-inverse menu-mobile__icon"></i></button>
+        </div>
+      </div>
+      <div class="__hidden" style="display:none">
+        <div class="mobile-menu__content" id="menu">
+          <ul>
+            <li><a href="#"><span>Образы</span></a>
+              <ul>
+                <li><a href="#">На каждый день</a></li>
+                <li><a href="#">В садик, школу</a></li>
+                <li><a href="#">На фотосессию</a></li>
+                <li><a href="#">На мероприятие</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><span>Одежда</span></a>
+              <ul>
+                <li><a href="#">Платья и сарафаны</a></li>
+                <li><a href="#">Футболки и поло</a></li>
+                <li><a href="#">Толстовки</a></li>
+                <li><a href="#">Комбинезоны</a></li>
+                <li><a href="#">Купальники</a></li>
+                <li><a href="#">Штаны</a></li>
+                <li><a href="#">Юбки</a></li>
+                <li><a href="#">Шорты</a></li>
+                <li><a href="#">Свитеры и свитшоты</a></li>
+                <li><a href="#">Дождевики</a></li>
+              </ul>
+              <li><a href="#"><span>Обувь</span></a>
+                <ul>
+                  <li><a href="#">Балетки</a></li>
+                  <li><a href="#">Босоножки</a></li>
+                  <li><a href="#">Туфли</a></li>
+                  <li><a href="#">Кеды</a></li>
+                  <li><a href="#">Кроссовки</a></li>
+                  <li><a href="#">Лоферы</a></li>
+                  <li><a href="#">Сапоги</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><span>Аксессуары</span></a>
+                <ul>
+                  <li><a href="#">Сумки</a></li>
+                  <li><a href="#">Бантики</a></li>
+                  <li><a href="#">Рюкзаки</a></li>
+                  <li><a href="#">Платки и шарфы</a></li>
+                  <li><a href="#">Зонты</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><span>Игрушки</span></a>
+                <ul>
+                  <li><a href="#">Куклы L.O.L. Surprise</a></li>
+                  <li><a href="#">Развивающие игры</a></li>
+                  <li><a href="#">Настольные игры</a></li>
+                  <li><a href="#">Наборы для творчества</a></li>
+                  <li><a href="#">Игрушки будущего</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><span>Новинки</span></a></li>
+              <li><a href="#"><span>Аутлет</span></a></li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container menu-desktop">
+      <div class="menu__inner"><a class="menu__logo" href="/"><img src="/img/logo.jpg" alt="logo"/>
+          <ul class="menu__list">
+            <li class="menu__item dropdown"><a class="menu__link" href="#"><span>Образы</span></a>
+              <ul class="menu__submenu dropdown__inner">
+                <li class="menu__subitem"><a class="menu__sublink" href="#">На каждый день</a></li>
+                <li class="menu__subitem"><a class="menu__sublink" href="#">В садик, школу</a></li>
+                <li class="menu__subitem"><a class="menu__sublink" href="#">На фотосессию</a></li>
+                <li class="menu__subitem"><a class="menu__sublink" href="#">На мероприятие</a></li>
+              </ul>
+            </li>
+            <li class="menu__item dropdown"><a class="menu__link" href="#"><span>Одежда</span></a>
+              <ul class="menu__submenu dropdown__inner">
+                <li class="menu__subitem"><a class="menu__sublink" href="#">Платья и сарафаны</a></li>
+                <li class="menu__subitem"><a class="menu__sublink" href="#">Футболки и поло</a></li>
+                <li class="menu__subitem"><a class="menu__sublink" href="#">Толстовки</a></li>
+                <li class="menu__subitem"><a class="menu__sublink" href="#">Комбинезоны</a></li>
+                <li class="menu__subitem"><a class="menu__sublink" href="#">Купальники</a></li>
+                <li class="menu__subitem"><a class="menu__sublink" href="#">Штаны</a></li>
+                <li class="menu__subitem"><a class="menu__sublink" href="#">Юбки</a></li>
+                <li class="menu__subitem"><a class="menu__sublink" href="#">Шорты</a></li>
+                <li class="menu__subitem"><a class="menu__sublink" href="#">Свитеры и свитшоты</a></li>
+                <li class="menu__subitem"><a class="menu__sublink" href="#">Дождевики</a></li>
+              </ul>
+              <li class="menu__item dropdown"><a class="menu__link" href="#"><span>Обувь</span></a>
+                <ul class="menu__submenu dropdown__inner">
+                  <li class="menu__subitem"><a class="menu__sublink" href="#">Балетки</a></li>
+                  <li class="menu__subitem"><a class="menu__sublink" href="#">Босоножки</a></li>
+                  <li class="menu__subitem"><a class="menu__sublink" href="#">Туфли</a></li>
+                  <li class="menu__subitem"><a class="menu__sublink" href="#">Кеды</a></li>
+                  <li class="menu__subitem"><a class="menu__sublink" href="#">Кроссовки</a></li>
+                  <li class="menu__subitem"><a class="menu__sublink" href="#">Лоферы</a></li>
+                  <li class="menu__subitem"><a class="menu__sublink" href="#">Сапоги</a></li>
+                </ul>
+              </li>
+              <li class="menu__item dropdown"><a class="menu__link" href="#"><span>Аксессуары</span></a>
+                <ul class="menu__submenu dropdown__inner">
+                  <li class="menu__subitem"><a class="menu__sublink" href="#">Сумки</a></li>
+                  <li class="menu__subitem"><a class="menu__sublink" href="#">Бантики</a></li>
+                  <li class="menu__subitem"><a class="menu__sublink" href="#">Рюкзаки</a></li>
+                  <li class="menu__subitem"><a class="menu__sublink" href="#">Платки и шарфы</a></li>
+                  <li class="menu__subitem"><a class="menu__sublink" href="#">Зонты</a></li>
+                </ul>
+              </li>
+              <li class="menu__item"><a class="menu__link" href="#"><span>Игрушки</span></a>
+                <ul class="menu__submenu dropdown__inner">
+                  <li class="menu__subitem"><a class="menu__sublink" href="#">Куклы L.O.L. Surprise</a></li>
+                  <li class="menu__subitem"><a class="menu__sublink" href="#">Развивающие игры</a></li>
+                  <li class="menu__subitem"><a class="menu__sublink" href="#">Настольные игры</a></li>
+                  <li class="menu__subitem"><a class="menu__sublink" href="#">Наборы для творчества</a></li>
+                  <li class="menu__subitem"><a class="menu__sublink" href="#">Игрушки будущего</a></li>
+                </ul>
+              </li>
+              <li class="menu__item"><a class="menu__link" href="#"><span>Новинки</span></a></li>
+              <li class="menu__item"><a class="menu__link" href="#"><span>Аутлет</span></a></li>
+            </li>
+          </ul></a></div>
+    </div>
+  </div><span class="scrollup" style="display: none" id="scrollup"><i class="fa fa-angle-double-up"></i></span>
+</div>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Минишопоголик</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="height=device-height, 	width=device-width, initial-scale=1.0, 	minimum-scale=1.0, maximum-scale=1.0, 	user-scalable=no, target-densitydpi=device-dpi">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <!-- Chrome, Firefox OS and Opera-->
+    <meta name="theme-color" content="#c37ca7">
+    <!-- Windows Phone-->
+    <meta name="msapplication-navbutton-color" content="#c37ca7">
+    <!-- iOS Safari-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#c37ca7">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/mmenu.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
+  </head>
+  <body>
+    <div class="wrapper" id="wrapper">
+      <div class="header">
+        <div class="topbar">
+          <div class="topbar__inner">
+            <div class="topbar__left"><a class="locationSelector topbar__item" href="#locationModal" data-toggle="modal" data-target="#locationModal"><span class="fa fa-location-arrow"></span><span>Москва</span></a>
+              <div class="modal location fade" id="locationModal" tabindex="-1" role="dialog" aria-labelledby="locationModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content location__content">
+                    <div class="location__header">
+                      <h5 class="location__title" id="locationModalLabel">ВАШ РЕГИОН ДОСТАВКИ</h5>
+                    </div>
+                    <div class="location__body">
+                      <input class="input-text input-text-bg" placeholder="Введите название населённого пункта">
+                      <div class="location__auto"><a class="link link-primary" href="#">Определить автоматически</a></div>
+                      <div class="location__subtitle">Популярные города</div>
+                      <ul class="location__list">
+                        <li class="location__item"><a href="#">Москва</a></li>
+                        <li class="location__item"><a href="#">Санкт-Петербург</a></li>
+                        <li class="location__item"><a href="#">Екатеринбург</a></li>
+                        <li class="location__item"><a href="#">Новосибирск</a></li>
+                        <li class="location__item"><a href="#">Ростов-на-Дону</a></li>
+                      </ul>
+                    </div>
+                    <div class="modal-footer location__footer">
+                      <button class="btn btn-link btn-lg location__action" type="button" data-dismiss="modal">Отмена</button>
+                      <button class="btn btn-primary btn-lg location__action" type="button">Запомнить выбор</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="topbar__right">
+              <div class="profile"><a class="profile__avatar" href="#"><img class="profile__img" src="img/user-default.png"><span class="profile__discount">-15%</span></a><a class="profile__label" href="#">Личный кабинет</a></div>
+              <div class="favorite dropdown">
+                <div class="favorite__icon"></div>
+                <div class="dropdown__inner"> 
+                  <div class="favorite__title">У вас нет избранных</div><a class="favorite__action">Каталог товаров</a>
+                </div>
+              </div>
+              <div class="cart dropdown">
+                <div class="cart__icon"></div>
+                <div class="dropdown__inner"> 
+                  <div class="cart__title">Ваша тележка пуста</div><a class="cart__action">Каталог товаров</a>
+                </div>
+              </div>
+              <div class="help dropdown">
+                <div class="help__icon"></div>
+                <div class="dropdown__inner"> 
+                  <ul class="help__list">
+                    <li class="help__item"><a class="help__link" href="#1">Доставка</a></li>
+                    <li class="help__item"><a class="help__link" href="#2">Размеры</a></li>
+                    <li class="help__item"><a class="help__link" href="#3">Возврат</a></li>
+                    <li class="help__item"><a class="help__link" href="#4">Гарантия</a></li>
+                    <li class="help__item"><a class="help__link" href="#5">Оплата</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menu mh-head Sticky">
+          <div class="menu-mobile searchbar-container">
+            <div class="menu-mobile__row"><a class="menu-mobile__action" href="#menu"><span class="menu-mobile__icon menu-mobile__menu"></span></a><span class="menu-mobile__action searchbar-toggle" data-target="#msearch"><span class="menu-mobile__icon menu-mobile__search"></span></span><a class="menu__logo" href="/"><img src="/img/logo.jpg" alt="logo"></a><a class="menu-mobile__action"><span class="menu-mobile__favorite menu-mobile__icon"></span></a><a class="menu-mobile__action"><span class="menu-mobile__cart menu-mobile__icon"></span></a>
+              <div class="searchbar" id="msearch" style="display: none">
+                <input class="searchbar__input" placeholder="Поиск">
+                <button class="searchbar__button"><i class="menu-mobile__search-inverse menu-mobile__icon"></i></button>
+              </div>
+            </div>
+            <div class="__hidden" style="display:none">
+              <div class="mobile-menu__content" id="menu">
+                <ul>
+                  <li><a href="#"><span>Образы</span></a>
+                    <ul>
+                      <li><a href="#">На каждый день</a></li>
+                      <li><a href="#">В садик, школу</a></li>
+                      <li><a href="#">На фотосессию</a></li>
+                      <li><a href="#">На мероприятие</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#"><span>Одежда</span></a>
+                    <ul>
+                      <li><a href="#">Платья и сарафаны</a></li>
+                      <li><a href="#">Футболки и поло</a></li>
+                      <li><a href="#">Толстовки</a></li>
+                      <li><a href="#">Комбинезоны</a></li>
+                      <li><a href="#">Купальники</a></li>
+                      <li><a href="#">Штаны</a></li>
+                      <li><a href="#">Юбки</a></li>
+                      <li><a href="#">Шорты</a></li>
+                      <li><a href="#">Свитеры и свитшоты</a></li>
+                      <li><a href="#">Дождевики</a></li>
+                    </ul>
+                    <li><a href="#"><span>Обувь</span></a>
+                      <ul>
+                        <li><a href="#">Балетки</a></li>
+                        <li><a href="#">Босоножки</a></li>
+                        <li><a href="#">Туфли</a></li>
+                        <li><a href="#">Кеды</a></li>
+                        <li><a href="#">Кроссовки</a></li>
+                        <li><a href="#">Лоферы</a></li>
+                        <li><a href="#">Сапоги</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#"><span>Аксессуары</span></a>
+                      <ul>
+                        <li><a href="#">Сумки</a></li>
+                        <li><a href="#">Бантики</a></li>
+                        <li><a href="#">Рюкзаки</a></li>
+                        <li><a href="#">Платки и шарфы</a></li>
+                        <li><a href="#">Зонты</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#"><span>Игрушки</span></a>
+                      <ul>
+                        <li><a href="#">Куклы L.O.L. Surprise</a></li>
+                        <li><a href="#">Развивающие игры</a></li>
+                        <li><a href="#">Настольные игры</a></li>
+                        <li><a href="#">Наборы для творчества</a></li>
+                        <li><a href="#">Игрушки будущего</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#"><span>Новинки</span></a></li>
+                    <li><a href="#"><span>Аутлет</span></a></li>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="container menu-desktop">
+            <div class="menu__inner"><a class="menu__logo" href="/"><img src="/img/logo.jpg" alt="logo">
+                <ul class="menu__list">
+                  <li class="menu__item dropdown"><a class="menu__link" href="#"><span>Образы</span></a>
+                    <ul class="menu__submenu dropdown__inner">
+                      <li class="menu__subitem"><a class="menu__sublink" href="#">На каждый день</a></li>
+                      <li class="menu__subitem"><a class="menu__sublink" href="#">В садик, школу</a></li>
+                      <li class="menu__subitem"><a class="menu__sublink" href="#">На фотосессию</a></li>
+                      <li class="menu__subitem"><a class="menu__sublink" href="#">На мероприятие</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu__item dropdown"><a class="menu__link" href="#"><span>Одежда</span></a>
+                    <ul class="menu__submenu dropdown__inner">
+                      <li class="menu__subitem"><a class="menu__sublink" href="#">Платья и сарафаны</a></li>
+                      <li class="menu__subitem"><a class="menu__sublink" href="#">Футболки и поло</a></li>
+                      <li class="menu__subitem"><a class="menu__sublink" href="#">Толстовки</a></li>
+                      <li class="menu__subitem"><a class="menu__sublink" href="#">Комбинезоны</a></li>
+                      <li class="menu__subitem"><a class="menu__sublink" href="#">Купальники</a></li>
+                      <li class="menu__subitem"><a class="menu__sublink" href="#">Штаны</a></li>
+                      <li class="menu__subitem"><a class="menu__sublink" href="#">Юбки</a></li>
+                      <li class="menu__subitem"><a class="menu__sublink" href="#">Шорты</a></li>
+                      <li class="menu__subitem"><a class="menu__sublink" href="#">Свитеры и свитшоты</a></li>
+                      <li class="menu__subitem"><a class="menu__sublink" href="#">Дождевики</a></li>
+                    </ul>
+                    <li class="menu__item dropdown"><a class="menu__link" href="#"><span>Обувь</span></a>
+                      <ul class="menu__submenu dropdown__inner">
+                        <li class="menu__subitem"><a class="menu__sublink" href="#">Балетки</a></li>
+                        <li class="menu__subitem"><a class="menu__sublink" href="#">Босоножки</a></li>
+                        <li class="menu__subitem"><a class="menu__sublink" href="#">Туфли</a></li>
+                        <li class="menu__subitem"><a class="menu__sublink" href="#">Кеды</a></li>
+                        <li class="menu__subitem"><a class="menu__sublink" href="#">Кроссовки</a></li>
+                        <li class="menu__subitem"><a class="menu__sublink" href="#">Лоферы</a></li>
+                        <li class="menu__subitem"><a class="menu__sublink" href="#">Сапоги</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu__item dropdown"><a class="menu__link" href="#"><span>Аксессуары</span></a>
+                      <ul class="menu__submenu dropdown__inner">
+                        <li class="menu__subitem"><a class="menu__sublink" href="#">Сумки</a></li>
+                        <li class="menu__subitem"><a class="menu__sublink" href="#">Бантики</a></li>
+                        <li class="menu__subitem"><a class="menu__sublink" href="#">Рюкзаки</a></li>
+                        <li class="menu__subitem"><a class="menu__sublink" href="#">Платки и шарфы</a></li>
+                        <li class="menu__subitem"><a class="menu__sublink" href="#">Зонты</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu__item"><a class="menu__link" href="#"><span>Игрушки</span></a>
+                      <ul class="menu__submenu dropdown__inner">
+                        <li class="menu__subitem"><a class="menu__sublink" href="#">Куклы L.O.L. Surprise</a></li>
+                        <li class="menu__subitem"><a class="menu__sublink" href="#">Развивающие игры</a></li>
+                        <li class="menu__subitem"><a class="menu__sublink" href="#">Настольные игры</a></li>
+                        <li class="menu__subitem"><a class="menu__sublink" href="#">Наборы для творчества</a></li>
+                        <li class="menu__subitem"><a class="menu__sublink" href="#">Игрушки будущего</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu__item"><a class="menu__link" href="#"><span>Новинки</span></a></li>
+                    <li class="menu__item"><a class="menu__link" href="#"><span>Аутлет</span></a></li>
+                  </li>
+                </ul></a></div>
+          </div>
+        </div><span class="scrollup" style="display: none" id="scrollup"><i class="fa fa-angle-double-up"></i></span>
+      </div>
+      <section class="content-fluid submenu hidden-md hidden-lg hidden-sm">
+        <div class="submenu__wrap">
+          <ul class="submenu__list">
+            <li class="submenu__item"><a class="submenu__link" href="#">Новинки</a></li>
+            <li class="submenu__item"><a class="submenu__link" href="#">Доставка</a></li>
+            <li class="submenu__item"><a class="submenu__link" href="#">Бренды</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="row">
+        <div class="col-md-12"><a class="block-fullscreen" href="#"><img class="block-fullscreen__image" src="img/section1.jpg">
+            <div class="block-fullscreen__inner">
+              <h3 class="block-fullscreen__subtitle">You may like this brand</h3>
+              <h2 class="block-fullscreen__title">Balmain</h2>
+              <div class="block-fullscreen__action">Shop the collection</div>
+            </div></a></div>
+      </section>
+      <section class="container-fluid">
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-6 nopadding"><a class="block-col" href="#"><img class="block-col__image" src="img/section2-1.jpg">
+              <div class="block-col__inner">
+                <h3 class="block-col__subtitle">Каталог</h3>
+                <h2 class="block-col__title">Детям</h2>
+              </div></a></div>
+          <div class="col-md-3 col-sm-3 col-xs-6 nopadding"><a class="block-col" href="#"><img class="block-col__image" src="img/section2-2.jpg">
+              <div class="block-col__inner">
+                <h3 class="block-col__subtitle">Каталог</h3>
+                <h2 class="block-col__title">Мужчинам</h2>
+              </div></a></div>
+          <div class="col-md-3 col-sm-3 col-xs-6 nopadding"><a class="block-col" href="#"><img class="block-col__image" src="img/section2-3.jpg">
+              <div class="block-col__inner">
+                <h3 class="block-col__subtitle">Каталог</h3>
+                <h2 class="block-col__title">Женщинам</h2>
+              </div></a></div>
+          <div class="col-md-3 col-sm-3 col-xs-6 nopadding"><a class="block-col" href="#"><img class="block-col__image" src="img/section2-4.jpg">
+              <div class="block-col__inner">
+                <h3 class="block-col__subtitle">Каталог</h3>
+                <h2 class="block-col__title">О нас</h2>
+              </div></a></div>
+        </div>
+      </section>
+      <section class="container-fluid">
+        <div class="block-tape">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="block-tape__title">Дизайнеры</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2 col-sm-3 col-xs-6"><a class="block-tape__item" href="#"><img src="https://cdn.childrensalon.com/images/cms/landing/homepagev7/dest/designers/21.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 hidden-xs"><a class="block-tape__item" href="#"><img src="https://cdn.childrensalon.com/images/cms/landing/homepagev7/dest/designers/22.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-6"><a class="block-tape__item" href="#"><img src="https://cdn.childrensalon.com/images/cms/landing/homepagev7/dest/designers/23.png" alt=""></a></div>
+            <div class="col-md-2 col-sm-3 hidden-xs"><a class="block-tape__item" href="#"><img src="https://cdn.childrensalon.com/images/cms/landing/homepagev7/dest/designers/34.png" alt=""></a></div>
+            <div class="col-md-2 hidden-sm hidden-xs"><a class="block-tape__item" href="#"><img src="https://cdn.childrensalon.com/images/cms/landing/homepagev7/dest/designers/25.png" alt=""></a></div>
+            <div class="col-md-2 hidden-sm hidden-xs"><a class="block-tape__item" href="#"><img src="https://cdn.childrensalon.com/images/cms/landing/homepagev7/dest/designers/26.png" alt=""></a></div>
+          </div>
+          <div class="row">
+            <div class="col-md-12"><a class="block-tape__action">Все дизайнеры</a></div>
+          </div>
+        </div>
+      </section>
+      <section class="container-fluid">
+        <div class="block-tape">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="block-tape__title">Подборка</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2 col-sm-3 col-xs-6"><a class="block-tape__item" href="#"><img src="https://cdn.childrensalon.com/media/catalog/product/cache/0/small_image/512x512/9df78eab33525d08d6e5fb8d27136e95/g/r/graci-pink-yellow-floral-headband-309528-8a4b4207debe831f4d4a4ea7b6a913503afe182c.jpg" alt=""><span class="block-tape__name">Мальчика до 3 лет</span></a></div>
+            <div class="col-md-2 col-sm-3 hidden-xs"><a class="block-tape__item" href="#"><img src="https://cdn.childrensalon.com/media/catalog/product/cache/0/small_image/512x512/9df78eab33525d08d6e5fb8d27136e95/g/r/graci-pink-yellow-floral-headband-309528-8a4b4207debe831f4d4a4ea7b6a913503afe182c.jpg" alt=""><span class="block-tape__name">Мальчика до 3 лет</span></a></div>
+            <div class="col-md-2 col-sm-3 col-xs-6"><a class="block-tape__item" href="#"><img src="https://cdn.childrensalon.com/media/catalog/product/cache/0/small_image/512x512/9df78eab33525d08d6e5fb8d27136e95/g/r/graci-pink-yellow-floral-headband-309528-8a4b4207debe831f4d4a4ea7b6a913503afe182c.jpg" alt=""><span class="block-tape__name">Мальчика до 3 лет</span></a></div>
+            <div class="col-md-2 col-sm-3 hidden-xs"><a class="block-tape__item" href="#"><img src="https://cdn.childrensalon.com/media/catalog/product/cache/0/small_image/512x512/9df78eab33525d08d6e5fb8d27136e95/g/r/graci-pink-yellow-floral-headband-309528-8a4b4207debe831f4d4a4ea7b6a913503afe182c.jpg" alt=""><span class="block-tape__name">Мальчика до 3 лет</span></a></div>
+            <div class="col-md-2 hidden-sm hidden-xs"><a class="block-tape__item" href="#"><img src="https://cdn.childrensalon.com/media/catalog/product/cache/0/small_image/512x512/9df78eab33525d08d6e5fb8d27136e95/g/r/graci-pink-yellow-floral-headband-309528-8a4b4207debe831f4d4a4ea7b6a913503afe182c.jpg" alt=""><span class="block-tape__name">Мальчика до 3 лет</span></a></div>
+            <div class="col-md-2 hidden-sm hidden-xs"><a class="block-tape__item" href="#"><img src="https://cdn.childrensalon.com/media/catalog/product/cache/0/small_image/512x512/9df78eab33525d08d6e5fb8d27136e95/g/r/graci-pink-yellow-floral-headband-309528-8a4b4207debe831f4d4a4ea7b6a913503afe182c.jpg" alt=""><span class="block-tape__name">Мальчика до 3 лет</span></a></div>
+          </div>
+        </div>
+      </section>
+      <section class="row">
+        <div class="col-md-12">
+          <div class="block-fullscreen block-fullscreen-testimonial"><img class="block-fullscreen__image" src="https://cdn.childrensalon.com/images/cms/landing/homepagev7/dest/testimonial/02-d.jpg">
+            <div class="block-fullscreen__inner">
+              <div class="testimonial"> 
+                <h3 class="testimonial__body">"Люди — единственные существа, которые заводят детей с определенной целью, если не считать рыбок гуппи, которые своих деток едят"</h3>
+                <div class="testimonial__author">Патрик О’Рурк</div>
+                <div class="testimonial__location">США</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Преимущества-->
+      <section class="container">
+        <div class="block-tape">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="block-tape__title">Почему мы?</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-6"><a class="block-tape__item" href="#"><img class="block-tape__img-small" src="/img/icons/benefit-1.svg" alt=""><span class="block-tape__name block-tape__name-small">MULTILINGUAL CUSTOMER SERVICE</span></a></div>
+            <div class="col-md-3 col-sm-3 col-xs-6"><a class="block-tape__item" href="#"><img class="block-tape__img-small" src="/img/icons/benefit-1.svg" alt=""><span class="block-tape__name block-tape__name-small">MULTILINGUAL CUSTOMER SERVICE</span></a></div>
+            <div class="col-md-3 col-sm-3 col-xs-6"><a class="block-tape__item" href="#"><img class="block-tape__img-small" src="/img/icons/benefit-1.svg" alt=""><span class="block-tape__name block-tape__name-small">MULTILINGUAL CUSTOMER SERVICE</span></a></div>
+            <div class="col-md-3 col-sm-3 col-xs-6"><a class="block-tape__item" href="#"><img class="block-tape__img-small" src="/img/icons/benefit-1.svg" alt=""><span class="block-tape__name block-tape__name-small">MULTILINGUAL CUSTOMER SERVICE</span></a></div>
+          </div>
+        </div>
+      </section>
+      <!-- Milie edit-->
+      <section class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 nopadding col-md-push-6"><img class="block-fullscreen__image" src="https://cdn.childrensalon.com/media/adminforms/hp_v7_editorial_content_block/cache/1/cache/750x584/5e06319eda06f020e43594a9c230972d/v/e/version_2_mobile_2.jpg" style="height: fit-content;max-height: 500px"></div>
+          <div class="col-md-6 nopadding col-md-pull-6">
+            <div class="block-tape vcenter">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="block-tape__title">The Millie Mackintosh Edit</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="block-tape__description" style="max-width: 80%; margin: 0 auto">Expecting a baby girl this spring? Piece together her very first wardrobe with the Millie Mackintosh Edit, hand-picked from our collection by the beautiful mum-to-be.</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12"><a class="block-tape__action">SHOP NOW</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Награды-->
+      <div class="section container-fluid block-tape-custom">
+        <div class="block-tape">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="block-tape__title">Программа лояльности</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="block-tape__description">Присоединяйся к нашей программе лояльности, которая ....</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12"><a class="block-tape__action">Присоединиться</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- Kenzo-->
+      <section class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 nopadding"><img class="block-fullscreen__image" src="https://cdn.childrensalon.com/media/adminforms/hp_v7_editorial_content_block/cache/1/cache/683x600/8a02aedcaf38ad3a98187ab0a1dede95/v/e/version_2_desktop_1.jpg" style="height: fit-content;max-height: 500px"></div>
+          <div class="col-md-6 nopadding">
+            <div class="block-tape vcenter">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="block-tape__title">Kenzo Kids</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="block-tape__description" style="max-width: 80%; margin: 0 auto">This season, join Kenzo Kids on a fun-filled trip from East to West, transporting boys and girls through three unique collections for spring and summer. </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12"><a class="block-tape__action">Shop Now</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Feedback-->
+      <div class="section container-fluid block-tape-custom2">
+        <div class="block-tape">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="block-tape__title">Будь первым</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="block-tape__description">Создайте аккаунт, чтобы быть в курсе выгодных предложений </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="block-tape__form-group">
+                <input class="block-tape__form-control" type="email" placeholder="Электронная почта">
+                <input class="block-tape__form-control" type="text" placeholder="Ваше имя">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12"><a class="block-tape__action">Создать аккаунт</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="subfooter-wrapper">
+        <div class="container">
+          <div class="subfooter">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="subfooter__title">СКИДКА 10% за подписку</div>
+              </div>
+              <div class="col-md-12">
+                <div class="subfooter__subtitle">на наши новости. <a href="#условия">Условия акции</a></div>
+              </div>
+            </div>
+            <div class="row subfooter__control-group">
+              <div class="col-md-8 col-xs-12">
+                <input class="subfooter__input" type="email" placeholder="Ваша почта">
+              </div>
+              <div class="col-md-2 col-xs-12">
+                <button class="subfooter__button">Женщинам</button>
+              </div>
+              <div class="col-md-2 col-xs-12">
+                <button class="subfooter__button">Мужчинам</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="subfooter-wrapper subfooter-wrapper-gray">
+        <div class="container">
+          <div class="subfooter row">
+            <div class="col-md-3">
+              <ul class="subfooter__list">
+                <li><strong>Помочь</strong></li>
+                <li><a href="#">Статус заказа по номеру</a></li>
+                <li><a href="#">Центр поддержки Lamoda</a></li>
+                <li><a href="#">Как оформить заказ</a></li>
+                <li><a href="#">Как выбрать размер</a></li>
+                <li><strong>Способ оплаты</strong></li>
+                <li>
+                  <div class="row payments">
+                    <div class="col-xs-4"><img src="/img/payment/mc.svg"></div>
+                    <div class="col-xs-4"><img src="/img/payment/visa.svg"></div>
+                    <div class="col-xs-4"><img src="/img/payment/mir.svg"></div>
+                  </div>
+                </li>
+                <li><span>Вы можете оплатить покупку наличными при получении, либо выбрать другой способ оплаты.</span></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <ul class="subfooter__list">
+                <li><strong>О нас</strong></li>
+                <li class="social"><a class="social__fb" href="#fb"><i class="fa fa-facebook-f"></i></a><a class="social__vk" href="#vk"><i class="fa fa-vk"></i></a><a class="social__inst" href="#inst"><i class="fa fa-instagram"></i></a></li>
+                <li> <a href="#">Fashion-блок минишипоголик</a></li>
+                <li><a href="#">Подарочные сертификаты минишипоголик</a></li>
+                <li> <a href="#">О компании</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <ul class="subfooter__list">
+                <li><strong>Партнерам</strong></li>
+                <li><a href="#">Подключиться к партнерской программе</a></li>
+                <li><a href="#">Стать подрядчиком Lamoda</a></li>
+                <li><a href="#">Предложить помещение в аренду</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <div><strong>Акции дня</strong></div>
+              <div class="owl-carousel owl-theme" id="fbanner">
+                <div class="owl-carousel__item">
+                  <h4> </h4>
+                </div>
+                <div class="owl-carousel__item">
+                  <h4> </h4>
+                </div>
+                <div class="owl-carousel__item">
+                  <h4> </h4>
+                </div>
+                <div class="owl-carousel__item"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer"><a class="footer__copyright" href="">&copy; 2020. Политика конфиденциальности</a></div>
+    </div>
+    <script src="js/scripts.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/mmenu/mmenu.polyfills.js"></script>
+    <script src="js/mmenu/mmenu.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function(){
+      	$("#fbanner").owlCarousel();
+      });
+    </script>
+  </body>
+</html>
