@@ -43,6 +43,10 @@ html(lang='ru')
 		script(src="js/owl/owl.carousel.min.js")
 		script.
 			$(document).ready(function(){
-				$("#fbanner").owlCarousel();
+				$("#fbanner").owlCarousel(
+					{
+						items: 1,
+						margin: 2
+					});
 			});
 		
