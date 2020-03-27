@@ -1,0 +1,48 @@
+doctype html
+html(lang='ru')
+	head
+		meta(charset='utf-8')
+		title Минишопоголик
+		meta(name='description', content='')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		//- meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		meta(name='viewport', content='height=device-height, \
+	width=device-width, initial-scale=1.0, \
+	minimum-scale=1.0, maximum-scale=1.0, \
+	user-scalable=no, target-densitydpi=device-dpi')
+	
+
+		meta(property='og:image', content='path/to/image.jpg')
+		link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+		link(rel='apple-touch-icon', href='img/favicon/apple-touch-icon.png')
+		link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+		link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+		// Chrome, Firefox OS and Opera
+		meta(name='theme-color', content='#c37ca7')
+		// Windows Phone
+		meta(name='msapplication-navbutton-color', content='#c37ca7')
+		// iOS Safari
+		meta(name='apple-mobile-web-app-status-bar-style', content='#c37ca7')
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic")
+		link(rel='stylesheet', href='css/font-awesome.min.css')
+		link(rel='stylesheet', href='css/mmenu.css')
+		link(rel='stylesheet', href='css/main.min.css')
+		link(rel="stylesheet", href="css/owl/owl.carousel.min.css")
+		link(rel="stylesheet", href="css/owl/owl.theme.default.min.css")
+	body
+		.wrapper#wrapper
+			include ./header.pug
+			block content
+			include ./footer.pug
+		
+		script(src='js/scripts.min.js')
+		//- script(src='js/util.js')
+		script(src='js/bootstrap.bundle.min.js')
+		script(src='js/mmenu/mmenu.polyfills.js')
+		script(src='js/mmenu/mmenu.js')
+		script(src="js/owl/owl.carousel.min.js")
+		script.
+			$(document).ready(function(){
+				$("#fbanner").owlCarousel();
+			});
+		

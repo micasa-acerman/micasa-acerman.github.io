@@ -1,0 +1,38 @@
+@import "topbar"
+@import "dropdown"
+@import "menu"
+@import "blocks"
+@import "mobile-menu"
+@import "searchbar"
+
+.vcenter
+    display: inline-block
+    vertical-align: middle
+    float: none
+.scrollup
+    padding: 10px
+    border-radius: 50%
+    position: fixed
+    bottom: 35px
+    left: 70px
+    z-index: 1000
+    background: rgba(228, 227, 227, 0.7)//#333
+    // box-shadow: 0 0 10px rgba(0,0,0,.2)
+    transition: box-shadow .4s linear
+    min-height: 50px
+    min-width: 50px
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+        max-width: 26px
+    &:hover
+        cursor: pointer
+        box-shadow: 0 0 10px rgba(0,0,0,.4)
+    i
+        font-size: 2em
+        line-height: 100%
+        color: white
+    @media screen and ( max-width: 767px )
+        left: 35px
+        
