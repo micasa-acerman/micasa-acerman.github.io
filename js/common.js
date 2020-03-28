@@ -36,10 +36,22 @@ $(function() {
     });
 
     // Searcbar
-    $('.searchbar-toggle').click(function(e) {
+    $('.searchbar-mobile-toggle').click(function(e) {
         let target = $(this).attr("data-target");
         if (target)
             $(target).fadeToggle();
+    })
+
+    // Полная версия
+    $('#searchbar__back').click(function() {
+        $('#topbar__search').fadeOut('fast', function() {
+            $('#topbar__default').fadeIn('fast');
+        })
+    })
+    $('#search-toggle').click(function() {
+        $('#topbar__default').fadeOut('fast', function() {
+            $('#topbar__search').fadeIn('fast');
+        })
     })
 
     // Autocomplete
@@ -116,6 +128,14 @@ $(function() {
     }
 
     autocomplete(document.getElementById("msearch-input"), countries);
+    autocomplete(document.getElementById("search-input"), countries);
+
+    // Слайдер
+    $("#fbanner").owlCarousel({
+        items: 1,
+        margin: 2
+    });
+
     // Mobile menu
     $("#menu").mmenu({
         "extensions": [

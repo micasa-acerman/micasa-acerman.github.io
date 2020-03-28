@@ -3,8 +3,122 @@
 @import "menu"
 @import "blocks"
 @import "mobile-menu"
-@import "searchbar"
 
+
+// *****
+// Поиск
+// *****
+
+.searchbar
+    // Полная версия
+    display: flex
+    flex: 1 1 auto
+    align-items: center
+    flex-direction: row
+    max-width: 700px
+    margin: 0 auto
+    &__input
+        width: 100%
+        padding: 0 20px
+        letter-spacing: .6px
+        background: transparent
+        border: 0
+        color: white
+    &__button
+        border: 0
+        background: transparent
+        width: 20px
+        height: 20px
+        cursor: pointer
+        &-clear
+            background: url('/img/icons/close.png')
+            background-size: cover
+        &-search
+            background: url('/img/icons/search-inverse.png')
+            background-size: cover
+        &:focus
+            outline: none
+        &:hover
+            outline: none
+    // Fix
+    .autocomplete-items
+        left: 0
+        right: 0
+        margin-top: 14px
+    // Переключатель
+    &-toggle
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        span
+            background: url('/img/icons/search-inverse.png')
+            background-size: cover
+            height: 28px
+            width: 28px
+            
+
+
+    // Мобильная версия
+    &-mobile
+        display: flex
+        background: #efefef
+        border-top: 1px solid #ccc
+        border-bottom: 1px solid #ccc
+        padding: 1em
+        
+        &-container
+            position: relative
+
+        &__input
+            width: 100%
+            padding: .2em .4em
+            font-size: 14px
+            letter-spacing: .6px
+            border: 1px solid #333
+            border-right: 0
+        &__button
+            padding: 4px 8px
+            background: transparent
+            border: 1px solid #333
+            display: flex
+            justify-content: center
+            align-items: center
+            span
+                width: 16px
+                height: 16px
+            &-clear
+                background: url('/img/icons/close.png')
+                object-fit: contain
+            &:focus
+                outline: none
+            &:hover
+                outline: none
+.autocomplete-items 
+	position: absolute 
+	border: 1px solid #d4d4d4 
+	border-bottom: none 
+	border-top: none 
+	z-index: 99 
+	top: calc(100% - 14px)
+	left: 13px
+	right: 13px
+	div 
+		padding: 10px 
+		cursor: pointer 
+		background-color: #fff 
+		border-bottom: 1px solid #d4d4d4 
+		&:hover 
+			background-color: #e9e9e9
+.autocomplete-active 
+	background-color: #666 !important 
+	color: #ffffff 
+
+
+// *****
+// Разное
+// *****
+    
 .vcenter
     display: inline-block
     vertical-align: middle
@@ -35,4 +149,3 @@
         color: white
     @media screen and ( max-width: 767px )
         left: 35px
-        

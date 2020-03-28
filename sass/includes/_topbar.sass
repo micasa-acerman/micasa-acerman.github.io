@@ -1,10 +1,12 @@
 @import "../_vars.sass" 
+
 .topbar
     background-color: $topbar-backColor
     height: 48px
     &__inner
         display: flex
         padding: 0 1.2em
+        height: 100%
     &__item
         padding: 14px 0
         text-decoration: none
@@ -23,6 +25,11 @@
             text-decoration: none
     &__left
         float: left
+        display: flex
+        flex-direction: row
+        align-items: center
+        > *:not(:first-child)
+            margin-left: 20px
     &__right
         float: right
         display: flex
@@ -30,6 +37,7 @@
         flex: 1 1 auto
         &>*
             padding: 0 1.3em
+
 .location
     &__auto
         margin-top: 14px
@@ -125,7 +133,6 @@
     cursor: pointer
     &__icon
         background: url('/img/icons/cart.png')
-        color: white
         width: 28px
         height: 28px
         background-size: contain
@@ -160,10 +167,10 @@
     display: flex
     cursor: pointer
     &__icon
-        background: url('/img/icons/favorite.svg')
-        color: white
+        background: url('/img/icons/favorite.png')
         width: 28px
         height: 28px
+        background-size: contain
     &__title
         font-size: 16px
         color: white
@@ -194,6 +201,7 @@
     align-items: center
     display: flex
     cursor: pointer
+    height: 100%
     &__icon
         background: url('/img/icons/help.png')
         color: white

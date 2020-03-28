@@ -5,8 +5,28 @@
 
 .header
     .topbar
-        .topbar__inner
+        .topbar__inner#topbar__search(style='display: none')
+            .searchbar
+                button.searchbar__button.searchbar__button-search
+                input(type='text',placeholder='Поиск').searchbar__input#search-input
+                button.searchbar__button-clear.searchbar__button#searchbar__back
+                
+        .topbar__inner#topbar__default
             .topbar__left
+                .help.dropdown
+                    .help__icon
+                    .dropdown__inner.dropdown__inner-right 
+                        ul.help__list
+                            li.help__item
+                                a.help__link(href="#1") Доставка
+                            li.help__item
+                                a.help__link(href="#2") Размеры
+                            li.help__item
+                                a.help__link(href="#3") Возврат
+                            li.help__item
+                                a.help__link(href="#4") Гарантия
+                            li.help__item
+                                a.help__link(href="#5") Оплата
                 a.locationSelector.topbar__item(href="#locationModal" data-toggle="modal" data-target="#locationModal")
                     span.fa.fa-location-arrow
                     span Москва
@@ -48,28 +68,17 @@
                     .dropdown__inner 
                         .cart__title Ваша тележка пуста
                         a.cart__action Каталог товаров
-                .help.dropdown
-                    .help__icon
-                    .dropdown__inner 
-                        ul.help__list
-                            li.help__item
-                                a.help__link(href="#1") Доставка
-                            li.help__item
-                                a.help__link(href="#2") Размеры
-                            li.help__item
-                                a.help__link(href="#3") Возврат
-                            li.help__item
-                                a.help__link(href="#4") Гарантия
-                            li.help__item
-                                a.help__link(href="#5") Оплата
+                .searchbar-toggle#search-toggle
+                    span
+
 
 
     .menu.mh-head.Sticky
-        .menu-mobile.searchbar-container
+        .menu-mobile.searchbar-mobile-container
             .menu-mobile__row
                 a.menu-mobile__action(href="#menu")
                     span.menu-mobile__icon.menu-mobile__menu
-                span.menu-mobile__action.searchbar-toggle(data-target='#msearch')
+                span.menu-mobile__action.searchbar-mobile-toggle(data-target='#msearch')
                     span.menu-mobile__icon.menu-mobile__search
                 a.menu__logo(href="/")
                     img(src='/img/logo.jpg',alt='logo')
@@ -77,213 +86,16 @@
                     span.menu-mobile__favorite.menu-mobile__icon
                 a.menu-mobile__action
                     span.menu-mobile__cart.menu-mobile__icon
-                .searchbar#msearch(style="display: none")
-                    input.searchbar__input(placeholder="Поиск")#msearch-input
-                    button.searchbar__button
-                        i.menu-mobile__search.menu-mobile__icon
+                .searchbar-mobile.menu-mobile__searchbar#msearch(style="display: none")
+                    input.searchbar-mobile__input(placeholder="Поиск")#msearch-input
+                    button.searchbar-mobile__button
+                        span.menu-mobile__search.menu-mobile__icon
             .__hidden(style='display:none')
                 include ./includes/_mobile-menu.pug
 
-        .container.menu-desktop
-            .menu__inner
-                a.menu__logo(href="/")
-                    img(src='/img/logo.jpg',alt='logo')
-                    ul.menu__list
-                        li.menu__item.dropdown
-                            a.menu__link(href="#")
-                                span Образы
-                            ul.menu__submenu.dropdown__inner
-                                li.menu__subitem
-                                    a(href="#").menu__sublink На каждый день
-                                li.menu__subitem
-                                    a(href="#").menu__sublink В садик, школу
-                                li.menu__subitem
-                                    a(href="#").menu__sublink На фотосессию
-                                li.menu__subitem
-                                    a(href="#").menu__sublink На мероприятие
-                        
-                        li.menu__item.dropdown
-                            a.menu__link(href="#")
-                                span Одежда
-                            ul.menu__submenu.dropdown__inner
-                                li.menu__subitem
-                                    a(href="#").menu__sublink Платья и сарафаны
-                                li.menu__subitem
-                                    a(href="#").menu__sublink Футболки и поло
-                                li.menu__subitem
-                                    a(href="#").menu__sublink Толстовки
-                                li.menu__subitem
-                                    a(href="#").menu__sublink Комбинезоны
-                                li.menu__subitem
-                                    a(href="#").menu__sublink Купальники
-                                li.menu__subitem
-                                    a(href="#").menu__sublink Штаны
-                                li.menu__subitem
-                                    a(href="#").menu__sublink Юбки
-                                li.menu__subitem
-                                    a(href="#").menu__sublink Шорты
-                                li.menu__subitem
-                                    a(href="#").menu__sublink Свитеры и свитшоты
-                                li.menu__subitem
-                                    a(href="#").menu__sublink Дождевики
-                            li.menu__item.dropdown
-                                a.menu__link(href="#")
-                                    span Обувь
-                                ul.menu__submenu.dropdown__inner
-                                    li.menu__subitem
-                                        a(href="#").menu__sublink Балетки
-                                    li.menu__subitem
-                                        a(href="#").menu__sublink Босоножки
-                                    li.menu__subitem
-                                        a(href="#").menu__sublink Туфли
-                                    li.menu__subitem
-                                        a(href="#").menu__sublink Кеды
-                                    li.menu__subitem
-                                        a(href="#").menu__sublink Кроссовки
-                                    li.menu__subitem
-                                        a(href="#").menu__sublink Лоферы
-                                    li.menu__subitem
-                                        a(href="#").menu__sublink Сапоги
-                            li.menu__item.dropdown
-                                a.menu__link(href="#")
-                                    span Аксессуары
-                                ul.menu__submenu.dropdown__inner
-                                    li.menu__subitem
-                                        a(href="#").menu__sublink Сумки
-                                    li.menu__subitem
-                                        a(href="#").menu__sublink Бантики
-                                    li.menu__subitem
-                                        a(href="#").menu__sublink Рюкзаки
-                                    li.menu__subitem
-                                        a(href="#").menu__sublink Платки и шарфы
-                                    li.menu__subitem
-                                        a(href="#").menu__sublink Зонты
-                            li.menu__item
-                                a.menu__link(href="#")
-                                    span Игрушки
-                                ul.menu__submenu.dropdown__inner
-                                    li.menu__subitem
-                                        a(href="#").menu__sublink Куклы L.O.L. Surprise
-                                    li.menu__subitem
-                                        a(href="#").menu__sublink Развивающие игры
-                                    li.menu__subitem
-                                        a(href="#").menu__sublink Настольные игры
-                                    li.menu__subitem
-                                        a(href="#").menu__sublink Наборы для творчества
-                                    li.menu__subitem
-                                        a(href="#").menu__sublink Игрушки будущего
-                            li.menu__item
-                                a.menu__link(href="#")
-                                    span Новинки
-                            li.menu__item
-                                a.menu__link(href="#")
-                                    span Аутлет
+        include ./includes/_menu.pug
 
 
     div.scrollup(style='display: none')#scrollup
         img(src='/img/icons/arrow-up.png')
                                 
-                            //- div.menu__submenu.dropdown__inner 
-                            //-     .row
-                            //-         .col-md-3
-                            //-             .menu__title By Product
-                            //-             .row
-                            //-                 .col-md-6
-                            //-                     ul.menu__sublist
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink Элемент
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink Элемент
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink Элемент
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink Элемент
-                            //-                 .col-md-6
-                            //-                     ul.menu__sublist
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink Элемент
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink Элемент
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink Элемент
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink Элемент
-                            //-         .col-md-3
-                            //-             .menu__title PREMATURE
-                            //-             .row
-                            //-                 .col-md-6
-                            //-                     ul.menu__sublist
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 0 MTH
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 1 MTH
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 3 MTH
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 6 MTH
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 6 MTH
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 6 MTH
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 9 MTH
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 12 MTH
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 18 MTH
-                            //-                 .col-md-6
-                            //-                     ul.menu__sublist
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 6 YR
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 7 - 8 YR
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 9 - 10 YR
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 13 - 14 YR
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 15 - 16 YR
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 16+ YR
-                            //-         .col-md-3
-                            //-             .menu__title PREMATURE
-                            //-             .row
-                            //-                 .col-md-6
-                            //-                     ul.menu__sublist
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 0 MTH
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 1 MTH
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 3 MTH
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 6 MTH
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 6 MTH
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 6 MTH
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 9 MTH
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 12 MTH
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 18 MTH
-                            //-                 .col-md-6
-                            //-                     ul.menu__sublist
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 6 YR
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 7 - 8 YR
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 9 - 10 YR
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 13 - 14 YR
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 15 - 16 YR
-                            //-                         li.menu__subitem
-                            //-                             a(href="#").menu__sublink 16+ YR
-                            //-         .col-md-3
-                            //-             .menu__banner.menu__banner-last(href="#")
-                            //-                 img(src="img/menu_boy.png")
-                            //-                 .menu__bannerTitle.menu__bannerTitle-light Robberto Clancy
-                            //-                 a.menu__bannerAction(href="#") Купить

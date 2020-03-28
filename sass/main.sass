@@ -8,68 +8,120 @@
 @import "bootstrap/modal"
 @import "bootstrap/buttons"
 
-*
-	-webkit-box-sizing: border-box
-	-moz-box-sizing: border-box
-	box-sizing: border-box
-	margin: 0
-	padding: 0
-	font-family: 'Roboto', sans-serif //Arial, Amiri, sans-serif
+/*Обнуление*/
+* 
+	padding: 0 
+	margin: 0 
+	border: 0 
+	-moz-box-sizing: border-box 
+	-webkit-box-sizing: border-box 
+	box-sizing: border-box 
 	&:before, &:after
-		-webkit-box-sizing: border-box
-		-moz-box-sizing: border-box
-		box-sizing: border-box
+		-moz-box-sizing: border-box 
+		-webkit-box-sizing: border-box 
+		box-sizing: border-box 
+*:focus, *:active
+	outline: none
+a 
+	&:focus, &:active
+    outline: none 
+nav, footer, header, aside 
+	display: block 
+html, body 
+	height: 100% 
+	width: 100% 
+	font-size: 100% 
+	line-height: 1 
+	font-size: 14px 
+	-ms-text-size-adjust: 100% 
+	-moz-text-size-adjust: 100% 
+	-webkit-text-size-adjust: 100% 
+input, button, textarea 
+	font-family: inherit 
+input 
+	&::-ms-clear 
+		display: none 
+button 
+	cursor: pointer 
+	&::-moz-focus-inner 
+    padding: 0 
+	border: 0 
+	a 
+		text-decoration: none 
+		&:visited, &:hover
+    		text-decoration: none 
+	ul 
+		li 
+			list-style: none 
+img 
+	vertical-align: top 
+h1, h2, h3, h4, h5, h6 
+	font-size: inherit 
+	font-weight: inherit 
 
-*::-webkit-input-placeholder
-	color: #666
-	opacity: 1
 
-*:-moz-placeholder
-	color: #666
-	opacity: 1
+// *
+// 	-webkit-box-sizing: border-box
+// 	-moz-box-sizing: border-box
+// 	box-sizing: border-box
+// 	margin: 0
+// 	padding: 0
+// 	font-family: 'Roboto', sans-serif //Arial, Amiri, sans-serif
+// 	&:before, &:after
+// 		-webkit-box-sizing: border-box
+// 		-moz-box-sizing: border-box
+// 		box-sizing: border-box
 
-*::-moz-placeholder
-	color: #666
-	opacity: 1
+// *::-webkit-input-placeholder
+// 	color: #666
+// 	opacity: 1
 
-*:-ms-input-placeholder
-	color: #666
-	opacity: 1
+// *:-moz-placeholder
+// 	color: #666
+// 	opacity: 1
 
-body input:focus:required:invalid,
-body textarea:focus:required:invalid
-	color: #666
-body input:required:valid,
-body textarea:required:valid
-	color: #666
+// *::-moz-placeholder
+// 	color: #666
+// 	opacity: 1
 
-html, body
-	height: 100%
+// *:-ms-input-placeholder
+// 	color: #666
+// 	opacity: 1
 
-body
-	font-size: 16px
-	min-width: 320px
-	position: relative
-	line-height: 1.65
-	font: $default-font
-	overflow-x: hidden
+// body input:focus:required:invalid,
+// body textarea:focus:required:invalid
+// 	color: #666
+// body input:required:valid,
+// body textarea:required:valid
+// 	color: #666
 
-.img-responsive
-	display: block
-	max-width: 100%
-	height: auto
+// html, body
+// 	height: 100%
 
-.text-center
-	text-align: center
+// body
+// 	font-size: 16px
+// 	min-width: 320px
+// 	position: relative
+// 	line-height: 1.65
+// 	font: $default-font
+// 	overflow-x: hidden
 
-::selection
-	background-color: $blue
-	color: #fff
-a
-	color: $linkColor
-	&:hover
-		color: $linkColorHover
-		text-decoration: none
+// .img-responsive
+// 	display: block
+// 	max-width: 100%
+// 	height: auto
+
+// .text-center
+// 	text-align: center
+
+// ::selection
+// 	background-color: $blue
+// 	color: #fff
+// a
+// 	color: $linkColor
+// 	&:hover
+// 		color: $linkColorHover
+// 		text-decoration: none
 
 
 // Modal
