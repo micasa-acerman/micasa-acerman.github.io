@@ -10,14 +10,22 @@ block content
                 li.submenu__item
                     a.submenu__link(href="#") Бренды
 
-    section.container-fluid#section-banner
-        .row
-            a.block-fullscreen(href="#")
-                img.block-fullscreen__image(src="img/section1.jpg")
-                .block-fullscreen__inner
-                    h3.block-fullscreen__subtitle You may like this brand
-                    h2.block-fullscreen__title Balmain
-                    .block-fullscreen__action Shop the collection
+    section.container-fluid#section-banner.nopadding
+        #mbanner.owl-carousel.owl-theme
+            .row
+                a.block-fullscreen(href="#")
+                    img.block-fullscreen__image(src="img/section1.jpg")
+                    .block-fullscreen__inner
+                        h3.block-fullscreen__subtitle You may like this brand
+                        h2.block-fullscreen__title Balmain
+                        .block-fullscreen__action Shop the collection
+            .row
+                a.block-fullscreen(href="#")
+                    img.block-fullscreen__image(src="img/section1.jpg")
+                    .block-fullscreen__inner
+                        h3.block-fullscreen__subtitle You may like this brand
+                        h2.block-fullscreen__title Balmain
+                        .block-fullscreen__action Shop the collection
     section.container-fluid
         .row
             .col-md-3.col-sm-3.col-xs-6.nopadding
@@ -180,7 +188,7 @@ block content
                     a.block-fullscreen(href="#")
                         img.block-fullscreen__image(src="/img/content/kenzo.jpg",style="height: fit-content;max-height: 347px; filter: brightness(50%)")
                         .block-fullscreen__inner
-                            div(style="margin: 0 20%;background: white;padding: 10px 20px;display: flex; flex-direction: column;align-items: center;box-shadow: 0 0 20px rgba(0,0,0,.25)")
+                            div(style="margin: 0 20%;background: white;padding: 20px;display: flex; flex-direction: column;align-items: center;box-shadow: 0 0 20px rgba(0,0,0,.25)")
                                 h2.block-fullscreen__title(style='font-size: 26pt')  Kenzo Kids
                                 h3.block-fullscreen__subtitle(style='font-size: 12pt;line-height: 1.8;padding: 8px 0;text-transform: initial') This season, join Kenzo Kids on a fun-filled trip from East to West, transporting boys and girls through three unique collections for spring and summer. 
                                 .block-fullscreen__action Shop Now

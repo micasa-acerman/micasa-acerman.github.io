@@ -135,6 +135,11 @@ $(function() {
         items: 1,
         margin: 2
     });
+    $("#mbanner").owlCarousel({
+        items: 1,
+        margin: 20,
+        dots: false
+    })
 
     // Mobile menu
     $("#menu").mmenu({

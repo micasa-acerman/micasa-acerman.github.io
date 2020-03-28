@@ -131,19 +131,33 @@
     align-items: center
     display: flex
     cursor: pointer
+    
     &__icon
         background: url('/img/icons/cart.png')
         width: 28px
         height: 28px
         background-size: contain
-    &__title
-        font-size: 16px
-        color: white
-        padding: 14px 20px 0
+    &__content
+        padding: 10px
+        > *
+            color: white
+        > *
+            margin-left: 8px
+            margin-right: 8px
+            margin-bottom: 12px
+        > :first-child
+            margin-top: 8px
+        > :last-child
+            margin-bottom: 8px
+        a
+            color: white
+        td 
+            padding: 8px
+        table
+            width: 100%
     &__action
         font-size: 12px
         display: block
-        margin: 10px 20px
         text-align: center
         padding: 10px 0
         font-size: 11px

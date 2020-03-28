@@ -76,17 +76,20 @@
               </div>
             </div>
             <div class="topbar__right">
+              <!-- Личный кабинет-->
               <div class="profile"><a class="profile__avatar" href="#"><img class="profile__img" src="img/user-default.png"><span class="profile__discount">-15%</span></a><a class="profile__label" href="#">Личный кабинет</a></div>
+              <!-- Избранные-->
               <div class="favorite dropdown">
                 <div class="favorite__icon"></div>
                 <div class="dropdown__inner"> 
                   <div class="favorite__title">У вас нет избранных</div><a class="favorite__action">Каталог товаров</a>
                 </div>
               </div>
+              <!-- Корзина-->
               <div class="cart dropdown">
                 <div class="cart__icon"></div>
-                <div class="dropdown__inner"> 
-                  <div class="cart__title">Ваша тележка пуста</div><a class="cart__action">Каталог товаров</a>
+                <div class="cart__content dropdown__inner"> 
+                  <div class="cart__title">В вашей корзине пока нет товаров</div><a class="cart__action">Перейти в каталог</a>
                 </div>
               </div>
               <div class="searchbar-toggle" id="search-toggle"><span></span></div>
@@ -231,13 +234,21 @@
           </ul>
         </div>
       </section>
-      <section class="container-fluid" id="section-banner">
-        <div class="row"><a class="block-fullscreen" href="#"><img class="block-fullscreen__image" src="img/section1.jpg">
-            <div class="block-fullscreen__inner">
-              <h3 class="block-fullscreen__subtitle">You may like this brand</h3>
-              <h2 class="block-fullscreen__title">Balmain</h2>
-              <div class="block-fullscreen__action">Shop the collection</div>
-            </div></a></div>
+      <section class="container-fluid nopadding" id="section-banner">
+        <div class="owl-carousel owl-theme" id="mbanner">
+          <div class="row"><a class="block-fullscreen" href="#"><img class="block-fullscreen__image" src="img/section1.jpg">
+              <div class="block-fullscreen__inner">
+                <h3 class="block-fullscreen__subtitle">You may like this brand</h3>
+                <h2 class="block-fullscreen__title">Balmain</h2>
+                <div class="block-fullscreen__action">Shop the collection</div>
+              </div></a></div>
+          <div class="row"><a class="block-fullscreen" href="#"><img class="block-fullscreen__image" src="img/section1.jpg">
+              <div class="block-fullscreen__inner">
+                <h3 class="block-fullscreen__subtitle">You may like this brand</h3>
+                <h2 class="block-fullscreen__title">Balmain</h2>
+                <div class="block-fullscreen__action">Shop the collection</div>
+              </div></a></div>
+        </div>
       </section>
       <section class="container-fluid">
         <div class="row">
@@ -384,7 +395,7 @@
             <!-- Kenzo-->
             <div class="row"><a class="block-fullscreen" href="#"><img class="block-fullscreen__image" src="/img/content/kenzo.jpg" style="height: fit-content;max-height: 347px; filter: brightness(50%)">
                 <div class="block-fullscreen__inner">
-                  <div style="margin: 0 20%;background: white;padding: 10px 20px;display: flex; flex-direction: column;align-items: center;box-shadow: 0 0 20px rgba(0,0,0,.25)">
+                  <div style="margin: 0 20%;background: white;padding: 20px;display: flex; flex-direction: column;align-items: center;box-shadow: 0 0 20px rgba(0,0,0,.25)">
                     <h2 class="block-fullscreen__title" style="font-size: 26pt"> Kenzo Kids</h2>
                     <h3 class="block-fullscreen__subtitle" style="font-size: 12pt;line-height: 1.8;padding: 8px 0;text-transform: initial">This season, join Kenzo Kids on a fun-filled trip from East to West, transporting boys and girls through three unique collections for spring and summer. </h3>
                     <div class="block-fullscreen__action">Shop Now</div>
