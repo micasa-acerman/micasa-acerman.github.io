@@ -1,154 +1,156 @@
-
-// Меню
-@media screen and (min-width: 767px)
-    .menu
-        border: 1px solid #ccc
-        &__inner
-            display: flex
-            align-items: center
-            position: relative
-        &__logo
-            max-height: 50px
-        &__list
-            list-style: none
-            margin-left: 30px
-            display: flex
-            flex-direction: row
-            .menu__item:not(:nth-child(2))
-                .menu__link span
-                    position: relative
-                    &::before
-                        content: ""
-                        left: 0
-                        border-left: 1px solid #ccc
-                        position: absolute
-                        top: 0
-                        bottom: 0
-                        width: 1px
-        &__link
+.menu-desktop
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+    > *
+        width: 33%
+    padding: 0 10%
+.logo
+    text-align: center
+// Первый уровень
+.top-menu
+    list-style: none
+    display: flex
+    flex-direction: row
+    & > li 
+        float: left
+        & > a
+            font-size: 16px
+            line-height: 2
+            padding: 20px
             display: block
-            line-height: 70px
             position: relative
+        // Выпадающее меню
+        &:hover > .sub-menu
+            visibility: visible !important
+            opacity: 1 !important
+    .top-item-opened
+        &::after
+            content: ""
+            background: url('/img/icons/pointer.png') 
+            position: absolute
+            background-size: contain
+            width: 16px
+            height: 9px
+            top: calc(100% - 8px)
+            left: calc(50% - 8px)
+            z-index: 1000
+    // Для всех подменю
+    a
+        &:hover
+            // font-weight: bold
+            // color: lighten(rgba(0,0,0), .25)
+// Второй уровень
+.sub-menu
+    list-style: none
+    visibility: hidden
+    opacity: 0
+    position: absolute
+    left: 0
+    z-index: 10
+    top: calc(100%)
+    background: white
+    width: 100%
+    padding: 0 10%
+    border-top: 1px solid #D0D0D0
+    border-bottom: 1px solid #D0D0D0
+    >li
+        float: left
+        >a
+            position: relative
+            padding: 20px
+            font-size: 16px
+            display: block
+            // Подчеркивание
             &:hover::after
-                content: ""
-                bottom: 0
+                content: ''
+                position: absolute
                 width: 100%
+                height: 2px
                 left: 0
-                bottom: 0
-                height: 1px
-                position: absolute
+                top: 100%
                 background: black
-            span
-                text-transform: uppercase
-                line-height: 1
-                font-size: 12px
-                padding: 0 16px
+                z-index: 100
+        // Выпадающее меню
+        &:hover > .third-menu
+            visibility: visible !important
+            opacity: 1 !important
+    // Разделитель
+    > li:not(:first-child) > a::before
+        content: ""
+        background: #D0D0D0
+        width: 1px
+        position: absolute
+        display: inline
+        height: 30%
+        top: 35%
+        bottom: 0
+        left: 0
 
-            &:hover
-                text-decoration: none
-                color: black
-            &:visited
-                color: black
-                text-decoration: none
-            &:focus
-                outline: none
-                color: black
-                text-decoration: none
-            
-        &__multycols
-            position: static
-            .menu__submenu
-                padding: 0 10px
 
-        &__submenu
-            display: none
-            right: auto
-            left: 0
-            background: white
-            border: 1px solid #ccc
-            padding: 8px 12px
-            // min-width: 100%
-            // max-width: 200%
-            width: 500px
-            list-style: none
-            box-shadow: 0 2px 8px 0 rgba(0,0,0,.16)
-            &-reverse
-                left: auto
-                right: 0
-        
-        &__sublist
-            list-style: none
-        &__title
-            font-size: 12px 
-            font-weight: bold
-            margin: 12px 0 4px
-        &__subitem
-            width: calc(250px - 24px)
-            float: left
-            display: inline
-        &__sublink
+// Третий уровень
+.third-menu
+    position: absolute
+    top: 100%
+    visibility: hidden
+    opacity: 0
+    width: calc(100% - 20px)
+    margin: 0 10px
+    padding: 40px
+    left: 0
+    background: white
+    border: 1px solid #D0D0D0
+    *
+        font-size: 16px
+        line-height: 1.6
+    // Заголовок
+    strong
+        margin: 0 0 1em
+        font-size: 20px
+        display: block
+    // Картинки
+    figure
+        img
             display: block
-            // text-transform: uppercase
-            line-height: 1
-            font-size: 12px
-            line-height: 1.8
-            overflow: hidden
-            white-space: nowrap
-            text-overflow: ellipsis
-            color: #565656
+            margin: 0 auto
+            object-fit: contain
+        figcaption
+            text-align: center
 
-            &:hover
-                text-decoration: none
-                color: black
-            &:visited
-                color: black
-                text-decoration: none
-            &:focus
-                outline: none
-                color: black
-                text-decoration: none
-        
-        // Банер
-        &__banner
-            position: relative
-            float: right
-            img
-                max-height: 300px
-            &-last
-                margin-right: -10px
-            &Title
-                text-transform: uppercase
-                position: absolute
-                bottom: 54px
-                left: 0
-                right: 0
-                text-align: center
-                color: black
-                font-weight: bold
-                &-light
-                    color: white
-            &Action
-                position: absolute
-                left: 30px
-                right: 30px
-                border: 1px solid #333
-                bottom: 17px
-                background: white
-                padding: 4px
-                text-align: center
+    ul
+        list-style: none
+        > li
+            > a
+                // Выезжающая точка
+                &:after
+                    transition: all .25s
+                    opacity: 0
+                    margin-left: -.5em
+                    content: '\f111'
+                    font-size: .8em
+                    font-family: 'FontAwesome'
+                    display: inline-block
                 &:hover
-                    text-decoration: none
-                    color: #333
-                &:visited
-                    color: black
-                    text-decoration: none
-                &:focus
-                    outline: none
-                    color: black
-                    text-decoration: none
-            .menu__link
-                height: 60px
-                line-height: 60px
+                    text-decoration: underline
+                    color: #D362A2
+                    &:after
+                        opacity: 1
+                        margin-left: 1em
+    // Баннер
+    &-banner
+        &__name
+            font-size: 20px
+            font-weight: bold
+            line-height: 1.2
+            margin-top: .4em
+        img
+            width: 100%
+            display: block
+            max-width: 400px
+            margin: 0 auto
+    &-other
+        color: #613964
 
 // Sticky
 .menu-sticky

@@ -4,6 +4,10 @@
 -var isCartEmpty = true
 
 .header
+    .banner-topbar
+        a(href="#")
+            img.banner-topbar__inner(src='/img/banner/banner.png')
+        .banner-topbar__close
     .topbar
         .topbar__inner#topbar__search(style='display: none')
             .searchbar
@@ -123,9 +127,7 @@
                             a.cart__action Перейти в корзину
                 .searchbar-toggle#search-toggle
                     span
-
-
-
+    
     .menu.mh-head.Sticky
         .menu-mobile.searchbar-mobile-container
             .menu-mobile__row
@@ -145,10 +147,8 @@
                         span.menu-mobile__search.menu-mobile__icon
             .__hidden(style='display:none')
                 include ./includes/_mobile-menu.pug
-
         include ./includes/_menu.pug
-
-
+    
     div.scrollup(style='display: none')#scrollup
         img(src='/img/icons/arrow-up.png')
                                 

@@ -1,4 +1,16 @@
 $(function() {
+    // Меню
+    //.
+    $('.top-menu > li').mouseover(function() {
+        const element = $(this);
+        if (element.find('> ul').length > 0)
+            element.find('> a').addClass('top-item-opened')
+    });
+    $('.top-menu > li').mouseleave(function() {
+        $(this).find('> a').removeClass('top-item-opened')
+    })
+
+
     // Sticky menu
     window.onscroll = function() { onScrollListener() };
 
@@ -139,6 +151,10 @@ $(function() {
         items: 1,
         margin: 20,
         dots: false
+    })
+
+    $('.banner-topbar__close').click(function() {
+        $(this).parent().hide();
     })
 
     // Mobile menu

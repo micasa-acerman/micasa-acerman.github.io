@@ -246,6 +246,25 @@
             color: #ccc
             text-decoration: none
 
+// Банер
+.banner-topbar
+    position: relative
+
+    &__inner
+        width: 100%
+        max-height: 40px
+        object-fit: cover
+    &__close
+        background: url('/img/icons/banner-close.png')
+        border-radius: 50%
+        width: 24px
+        height: 24px
+        position: absolute
+        right: 16px
+        top: 8px
+        cursor: pointer
+        background-size: cover
+
 
 @media screen and ( max-width: 767px  )
     .topbar

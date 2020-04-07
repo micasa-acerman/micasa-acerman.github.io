@@ -1,5 +1,8 @@
 
 <div class="header">
+  <div class="banner-topbar"><a href="#"><img class="banner-topbar__inner" src="/img/banner/banner.png"/></a>
+    <div class="banner-topbar__close"></div>
+  </div>
   <div class="topbar">
     <div class="topbar__inner" id="topbar__search" style="display: none">
       <div class="searchbar">
@@ -137,63 +140,83 @@
         </div>
       </div>
     </div>
-    <div class="container menu-desktop">
-      <div class="menu__inner"><a class="menu__logo" href="/"><img src="/img/logo.jpg" alt="logo"/>
-          <ul class="menu__list">
-            <li class="menu__item dropdown"><a class="menu__link" href="#"><span>Образы</span></a>
-              <ul class="menu__submenu menu__submenu dropdown__inner">
-                <li class="menu__subitem"><a class="menu__sublink" href="#">На каждый день</a></li>
-                <li class="menu__subitem"><a class="menu__sublink" href="#">В садик, школу</a></li>
-                <li class="menu__subitem"><a class="menu__sublink" href="#">На фотосессию</a></li>
-                <li class="menu__subitem"><a class="menu__sublink" href="#">На мероприятие</a></li>
-              </ul>
+    <div class="menu-desktop">
+      <ul class="top-menu">
+        <li><a href="#">Детям</a>
+          <ul class="sub-menu">
+            <li><a href="#">Образы</a>
+              <div class="third-menu">
+                <div class="row">
+                  <!-- Первый блок-->
+                  <div class="col-md-4"><strong>Категории</strong>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <ul>
+                          <li><a href="#">Балетки</a></li>
+                          <li><a href="#">Босоножки</a></li>
+                          <li><a href="#">Ботинки</a></li>
+                          <li><a href="#">Лоферы</a></li>
+                          <li><a href="#">Сандалии</a></li>
+                          <li><a href="#">Сапоги</a></li>
+                          <li><a href="#">Сланцы</a></li>
+                          <li><a href="#">Слипоны</a></li>
+                          <li><a href="#">Туфли</a></li>
+                          <li><a href="#">Уход за обувью</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-md-6">
+                        <ul>
+                          <li><a href="#">Балетки</a></li>
+                          <li><a href="#">Босоножки</a></li>
+                          <li><a href="#">Ботинки</a></li>
+                          <li><a href="#">Лоферы</a></li>
+                          <li><a href="#">Сандалии</a></li>
+                          <li><a href="#">Сапоги</a></li>
+                          <li><a href="#">Сланцы</a></li>
+                          <li><a href="#">Слипоны</a></li>
+                          <li><a href="#">Туфли</a></li>
+                          <li><a class="third-menu-other" href="#">Все категории</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Второй блок-->
+                  <div class="col-md-2"><strong>Бренды</strong>
+                    <ul>
+                      <li><a href="#">Mini Melissa</a></li>
+                      <li><a href="#">Mel by Melisa</a></li>
+                      <li><a href="#">Ipanema</a></li>
+                      <li><a href="#">Zaxy</a></li>
+                      <li><a class="third-menu-other" href="#">Все бренды</a></li>
+                    </ul>
+                  </div>
+                  <!-- Третий блок-->
+                  <div class="col-md-2"><strong class="text-center">Тренды сезона</strong><a href="#">
+                      <figure><img src="/img/gods/item1.png"/>
+                        <figcaption>Сумка-рюкзак Unircorn</figcaption>
+                      </figure></a><a href="#">
+                      <figure><img src="/img/gods/item2.png"/>
+                        <figcaption>Сапожки Zaxy Bow</figcaption>
+                      </figure></a></div>
+                  <!-- Четвертый блок-->
+                  <div class="col-md-4">
+                    <div class="third-menu-banner"><a href="#"><img src="/img/banner/mbanner.png"/></a>
+                      <div class="third-menu-banner__name text-center">Mini Melissa SS 20</div>
+                      <div class="text-center">Встречайте новую коллекцию</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
-            <li class="menu__item dropdown"><a class="menu__link" href="#"><span>Одежда</span></a>
-              <ul class="menu__submenu dropdown__inner">
-                <li class="menu__subitem"><a class="menu__sublink" href="#">Платья и сарафаны</a></li>
-                <li class="menu__subitem"><a class="menu__sublink" href="#">Футболки и поло</a></li>
-                <li class="menu__subitem"><a class="menu__sublink" href="#">Толстовки</a></li>
-                <li class="menu__subitem"><a class="menu__sublink" href="#">Комбинезоны</a></li>
-                <li class="menu__subitem"><a class="menu__sublink" href="#">Купальники</a></li>
-                <li class="menu__subitem"><a class="menu__sublink" href="#">Штаны</a></li>
-                <li class="menu__subitem"><a class="menu__sublink" href="#">Юбки</a></li>
-                <li class="menu__subitem"><a class="menu__sublink" href="#">Шорты</a></li>
-                <li class="menu__subitem"><a class="menu__sublink" href="#">Свитеры и свитшоты</a></li>
-                <li class="menu__subitem"><a class="menu__sublink" href="#">Дождевики</a></li>
-              </ul>
-              <li class="menu__item dropdown"><a class="menu__link" href="#"><span>Обувь</span></a>
-                <ul class="menu__submenu dropdown__inner">
-                  <li class="menu__subitem"><a class="menu__sublink" href="#">Балетки</a></li>
-                  <li class="menu__subitem"><a class="menu__sublink" href="#">Босоножки</a></li>
-                  <li class="menu__subitem"><a class="menu__sublink" href="#">Туфли</a></li>
-                  <li class="menu__subitem"><a class="menu__sublink" href="#">Кеды</a></li>
-                  <li class="menu__subitem"><a class="menu__sublink" href="#">Кроссовки</a></li>
-                  <li class="menu__subitem"><a class="menu__sublink" href="#">Лоферы</a></li>
-                  <li class="menu__subitem"><a class="menu__sublink" href="#">Сапоги</a></li>
-                </ul>
-              </li>
-              <li class="menu__item dropdown"><a class="menu__link" href="#"><span>Аксессуары</span></a>
-                <ul class="menu__submenu dropdown__inner">
-                  <li class="menu__subitem"><a class="menu__sublink" href="#">Сумки</a></li>
-                  <li class="menu__subitem"><a class="menu__sublink" href="#">Бантики</a></li>
-                  <li class="menu__subitem"><a class="menu__sublink" href="#">Рюкзаки</a></li>
-                  <li class="menu__subitem"><a class="menu__sublink" href="#">Платки и шарфы</a></li>
-                  <li class="menu__subitem"><a class="menu__sublink" href="#">Зонты</a></li>
-                </ul>
-              </li>
-              <li class="menu__item"><a class="menu__link" href="#"><span>Игрушки</span></a>
-                <ul class="menu__submenu dropdown__inner">
-                  <li class="menu__subitem"><a class="menu__sublink" href="#">Куклы L.O.L. Surprise</a></li>
-                  <li class="menu__subitem"><a class="menu__sublink" href="#">Развивающие игры</a></li>
-                  <li class="menu__subitem"><a class="menu__sublink" href="#">Настольные игры</a></li>
-                  <li class="menu__subitem"><a class="menu__sublink" href="#">Наборы для творчества</a></li>
-                  <li class="menu__subitem"><a class="menu__sublink" href="#">Игрушки будущего</a></li>
-                </ul>
-              </li>
-              <li class="menu__item"><a class="menu__link" href="#"><span>Новинки</span></a></li>
-              <li class="menu__item"><a class="menu__link" href="#"><span>Аутлет</span></a></li>
-            </li>
-          </ul></a></div>
+            <li><a href="#">Одежда</a></li>
+            <li><a href="#">Обувь</a></li>
+            <li><a href="#">Аксессуары</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Женщинам</a></li>
+        <li><a href="#">Мужчинам</a></li>
+      </ul><a class="logo" href="/"><img src="/img/logo.jpg" alt="logo"/></a>
+      <div></div>
     </div>
   </div>
   <div class="scrollup" style="display: none" id="scrollup"><img src="/img/icons/arrow-up.png"/></div>
