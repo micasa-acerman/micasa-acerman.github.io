@@ -1,14 +1,10 @@
 $(function() {
     // Меню
-    //.
-    $('.top-menu > li').mouseover(function() {
-        const element = $(this);
-        if (element.find('> ul').length > 0)
-            element.find('> a').addClass('top-item-opened')
+    $('.top-menu > li').click(function() {
+        $('.top-menu > li').removeClass('top-item-opened');
+        $(this).addClass('top-item-opened');
+        return false;
     });
-    $('.top-menu > li').mouseleave(function() {
-        $(this).find('> a').removeClass('top-item-opened')
-    })
 
 
     // Sticky menu
