@@ -17,20 +17,7 @@
                 
         .topbar__inner#topbar__default
             .topbar__left
-                .help.dropdown
-                    .help__icon
-                    .dropdown__inner.dropdown__inner-right 
-                        ul.help__list
-                            li.help__item
-                                a.help__link(href="#1") Доставка
-                            li.help__item
-                                a.help__link(href="#2") Размеры
-                            li.help__item
-                                a.help__link(href="#3") Возврат
-                            li.help__item
-                                a.help__link(href="#4") Гарантия
-                            li.help__item
-                                a.help__link(href="#5") Оплата
+                
                 a.locationSelector.topbar__item(href="#locationModal" data-toggle="modal" data-target="#locationModal")
                     span.fa.fa-location-arrow
                     span Москва
@@ -53,80 +40,114 @@
                                 button.btn.btn-primary.btn-lg.location__action(type='button') Запомнить выбор
             .topbar__right
                 // Личный кабинет
-                if(isAuthorizated)
-                    .profile
-                        a.profile__avatar(href="#")
-                            img.profile__img(src='img/user-default.png')
-                            span.profile__discount -15%
-                        a.profile__label(href="#") Личный кабинет
-                else
-                    .authorization
-                        a(href="#").authorization__link Войти
-                        a(href="#").authorization__link Создать аккаунт
+                //- if(isAuthorizated)
+                //-     .profile
+                //-         a.profile__avatar(href="#")
+                //-             img.profile__img(src='img/user-default.png')
+                //-             span.profile__discount -15%
+                //-         a.profile__label(href="#") Личный кабинет
+                //- else
+                //-     .authorization
+                //-         a(href="#").authorization__link Войти
+                //-         a(href="#").authorization__link Создать аккаунт
+                // Помощь
+                .help.dropdown
+                    .help__icon
+                    .dropdown__inner
+                        ul.help__list
+                            li.help__item
+                                a.help__link(href="#1") Доставка
+                            li.help__item
+                                a.help__link(href="#2") Размеры
+                            li.help__item
+                                a.help__link(href="#3") Возврат
+                            li.help__item
+                                a.help__link(href="#4") Гарантия
+                            li.help__item
+                                a.help__link(href="#5") Оплата
+                // Социальные сети
+                .social-bar
+                    ul.social-bar-links
+                        li
+                            a(href="#")
+                                img(src='/img/social/ic_ig.png')
+                        li
+                            a(href="#")
+                                img(src='/img/social/ic_wa.png')
+                        li
+                            a(href="#")
+                                img(src='/img/social/ic_tg.png')
+                        li
+                            a(href="#")
+                                img(src='/img/social/ic_vk.png')
+                        li
+                            a(href="#")
+                                img(src='/img/social/ic_fb.png')
+                    .social-bar-toggle#social-toggle
                 // Избранные
-                .favorite.dropdown
-                    .favorite__icon
-                    .dropdown__inner 
-                        .favorite__title У вас нет избранных
-                        a.favorite__action Каталог товаров
+                //- .favorite.dropdown
+                //-     .favorite__icon
+                //-     .dropdown__inner 
+                //-         .favorite__title У вас нет избранных
+                //-         a.favorite__action Каталог товаров
                 // Корзина
-                .cart.dropdown
-                    .cart__icon
-                    .cart__content.dropdown__inner 
-                        if(isCartEmpty)
-                            .cart__title В вашей корзине пока нет товаров
-                            a.cart__action Перейти в каталог
-                        else
-                            table
-                                tbody
-                                    tr
-                                        td.text-center
-                                            a(href='http://194.67.91.97/index.php?route=product/product&product_id=42')
-                                                img.img-thumbnail(src='http://194.67.91.97/image/cache/catalog/melissa-logo-1-47x47.png', alt='Apple Cinema 30"', title='Apple Cinema 30"')
-                                        td.text-left
-                                            a(href='http://194.67.91.97/index.php?route=product/product&product_id=42') Apple Cinema 30"
-                                            br
-                                            |             - 
-                                            small Radio Medium
-                                            br
-                                            |             - 
-                                            small Text test
-                                            br
-                                            |             - 
-                                            small Select Red
-                                            br
-                                            |             - 
-                                            small Textarea 4242
-                                            br
-                                            |             - 
-                                            small File 9307610-image23671-6..
-                                            br
-                                            |             - 
-                                            small Date 2011-02-20
-                                            br
-                                            |             - 
-                                            small Time 22:25
-                                            br
-                                            |             - 
-                                            small Date & Time 2011-02-20 22:25
-                                        td.count x 2
-                                        td.price 228р.
-                                        td.text-center
-                                            span.fa.fa-times
-                            table
-                                tbody
-                                    tr
-                                        td.text-right
-                                            strong Сумма
-                                        td.text-right.price 228р.
-                                    tr
-                                        td.text-right
-                                            strong Итого
-                                        td.text-right.price 228р.
-                            a.cart__action Оформить заказ
-                            a.cart__action Перейти в корзину
-                .searchbar-toggle#search-toggle
-                    span
+                //- .cart.dropdown
+                //-     .cart__icon
+                //-     .cart__content.dropdown__inner 
+                //-         if(isCartEmpty)
+                //-             .cart__title В вашей корзине пока нет товаров
+                //-             a.cart__action Перейти в каталог
+                //-         else
+                //-             table
+                //-                 tbody
+                //-                     tr
+                //-                         td.text-center
+                //-                             a(href='http://194.67.91.97/index.php?route=product/product&product_id=42')
+                //-                                 img.img-thumbnail(src='http://194.67.91.97/image/cache/catalog/melissa-logo-1-47x47.png', alt='Apple Cinema 30"', title='Apple Cinema 30"')
+                //-                         td.text-left
+                //-                             a(href='http://194.67.91.97/index.php?route=product/product&product_id=42') Apple Cinema 30"
+                //-                             br
+                //-                             |             - 
+                //-                             small Radio Medium
+                //-                             br
+                //-                             |             - 
+                //-                             small Text test
+                //-                             br
+                //-                             |             - 
+                //-                             small Select Red
+                //-                             br
+                //-                             |             - 
+                //-                             small Textarea 4242
+                //-                             br
+                //-                             |             - 
+                //-                             small File 9307610-image23671-6..
+                //-                             br
+                //-                             |             - 
+                //-                             small Date 2011-02-20
+                //-                             br
+                //-                             |             - 
+                //-                             small Time 22:25
+                //-                             br
+                //-                             |             - 
+                //-                             small Date & Time 2011-02-20 22:25
+                //-                         td.count x 2
+                //-                         td.price 228р.
+                //-                         td.text-center
+                //-                             span.fa.fa-times
+                //-             table
+                //-                 tbody
+                //-                     tr
+                //-                         td.text-right
+                //-                             strong Сумма
+                //-                         td.text-right.price 228р.
+                //-                     tr
+                //-                         td.text-right
+                //-                             strong Итого
+                //-                         td.text-right.price 228р.
+                //-             a.cart__action Оформить заказ
+                //-             a.cart__action Перейти в корзину
+                //- .searchbar-toggle#search-toggle
+                //-     span
     
     .menu.mh-head.Sticky
         .menu-mobile.searchbar-mobile-container

@@ -5,7 +5,17 @@ $(function() {
         $(this).addClass('top-item-opened');
         return false;
     });
+    // Социальные сети
+    $('#social-toggle').click(function() {
+        const parent = $(this).parent();
+        const el = parent.find('.social-bar-links');
 
+        if (el.is(':visible'))
+            parent.removeClass('social-bar--opened');
+        else
+            parent.addClass('social-bar--opened');
+        el.toggle('slide');
+    })
 
     // Sticky menu
     window.onscroll = function() { onScrollListener() };
