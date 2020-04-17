@@ -370,9 +370,16 @@
                                         span.prev.fa.fa-caret-left
                                         input(type='number',start='1',class='count',step='1',value='1')
                                         span.next.fa.fa-caret-right
-                                td.price 228 Р
+                                td(style='width:200px')
+                                    span.stock
+                                        span.stock-price-new 1000 Р
+                                        span.stock-price-old 800 Р
                                 td.text-center
                                     span.remove.fa.fa-trash
+                    .cart-other Еще 
+                        a(href="#") 21 товар
+                        .
+                            &nbsp;в корзине
                     hr
                     table
                         tbody
@@ -381,6 +388,6 @@
                                     a.toolbar-dropdown__action(href='#') Оформить заказ
                                 td.text-right.total
                                     span Итого:
-                                    span.price 228р.
+                                    span.price 228 Р
         .searchbar-toggle#search-toggle
             span

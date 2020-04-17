@@ -7,23 +7,23 @@ $(function() {
     });
     // Социальные сети
     $('#social-toggle').click(function() {
-            const parent = $(this).parent();
-            const el = parent.find('.social-bar-links');
-            const contacts = parent.find('.social-bar-contact');
+        const parent = $(this).parent();
+        const el = parent.find('.social-bar-links');
+        const contacts = parent.find('.social-bar-contact');
 
-            if (el.is(':visible')) {
-                parent.removeClass('social-bar--opened');
-                $('.help, .order-status').fadeIn();
-            } else {
-                parent.addClass('social-bar--opened');
-                $('.help, .order-status').fadeOut();
-            }
-            el.toggle('slide');
-            contacts.toggle('slide', function() {
+        if (el.is(':visible')) {
+            parent.removeClass('social-bar--opened');
+            $('.help, .order-status').fadeIn();
+        } else {
+            parent.addClass('social-bar--opened');
+            $('.help, .order-status').fadeOut();
+        }
+        el.toggle('slide');
+        contacts.toggle('slide', function() {
 
-            });
-        })
-        // Выпадающие меню
+        });
+    });
+    // Выпадающие меню
     $('.toolbar-dropdown')
         .on('mouseout', function() {
             $(this).removeClass('toolbar-dropdown--opened');

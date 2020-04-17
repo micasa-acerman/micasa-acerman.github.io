@@ -39,6 +39,7 @@
         background-size: contain
         opacity: .6
         transition: opacity .25s
+        position: pointer
         &:hover
             opacity: 1
     &__content
@@ -116,6 +117,7 @@
 
 .price
     width: 10%
+    text-align: center
 .count
     width: 26px
     font-size: 12px
@@ -140,6 +142,19 @@
     cursor: pointer
     &:hover
         opacity: 1
+.stock
+    position: relative
+    &-price-new
+        color: #d362a2
+        width: 100%
+        display: block
+        text-align: center
+    &-price-old
+        color: #B0B0B0
+        text-decoration: line-through
+        width: 100%
+        display: block
+        text-align: center
 .counter-container
     display: flex
     justify-content: space-between
@@ -147,6 +162,16 @@
 .total
     > *
         margin: 0 5px
+.cart-other
+    text-align: center
+    color: #B0B0B0
+    font-size: 12px
+    a
+        color: #B0B0B0
+        text-decoration: underline
+hr
+    margin: 0 8px
+
 // *****
 // Поиск
 // *****
