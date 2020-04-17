@@ -294,4 +294,59 @@
     a.logo(href="/")
         img(src='/img/logo.jpg',alt='logo')
     // Panel tools    
-    div
+    .toolbar
+        .searchbar
+            input(type='text',placeholder='Что будем искать?')
+            span.searchbar__action
+        // Личный кабинет
+        if(isAuthorizated)
+            a.profile(href="#")
+                img(src='img/user-default.png')
+        else
+            .authorization
+                a(href="#").authorization__link Войти
+                a(href="#").authorization__link Создать аккаунт
+        // Избранные
+        .toolbar-dropdown.dropdown
+            .toolbar-dropdown__icon.toolbar-dropdown__favorite
+            .toolbar-dropdown__content.dropdown__inner
+                .toolbar-dropdown__title У вас нет избранных
+                a.toolbar-dropdown__action Каталог товаров
+        // Корзина
+        .toolbar-dropdown.dropdown
+            span.toolbar-dropdown__icon.toolbar-dropdown__cart
+            .toolbar-dropdown__content.dropdown__inner 
+                if(false)
+                    .toolbar-dropdown__title В вашей корзине пока нет товаров
+                    a.toolbar-dropdown__action Перейти в каталог
+                else
+                    table
+                        tbody
+                            tr
+                                td.text-center
+                                    a(href='#')
+                                        img.img-thumbnail(src='/img/gods/item1.png', alt='Apple Cinema 30"', title='Apple Cinema 30"')
+                                td.text-left
+                                    a(href='http://194.67.91.97/index.php?route=product/product&product_id=42') Mini Melisa MAR SANDAL SWEET DREAMS
+                                    .properties
+                                        small Размер: 28/29
+                                        small Цвет: Розовый
+                                td
+                                    .counter-container
+                                        span.prev.fa.fa-caret-left
+                                        input(type='number',start='1',class='count')
+                                        span.next.fa.fa-caret-right
+                                td.price 228 Р
+                                td.text-center
+                                    span.remove.fa.fa-trash
+                    hr
+                    table
+                        tbody
+                            tr
+                                td
+                                    a.toolbar-dropdown__action Оформить заказ
+                                td.text-right.total
+                                    span Итого:
+                                    span.price 228р.
+        .searchbar-toggle#search-toggle
+            span

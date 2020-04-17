@@ -35,6 +35,7 @@
         display: flex
         justify-content: flex-end
         flex: 1 1 auto
+        align-items: center
         &>*
             padding: 0 1.3em
 
@@ -91,125 +92,6 @@
             color: $topbar-textColor
             text-decoration: none
 
-.profile
-    display: flex
-    flex-direction: center
-    align-items: center
-    &__discount
-        color: white
-        background: #e64a4a
-        padding: 2px
-        border-radius: 4px
-        font-size: 10px
-        position: absolute
-        top: -8px
-        right: -20px
-    &__avatar
-        position: relative
-    &__img
-        height: 32px
-        width: 32px
-        border: 1px solid gray
-        border-radius: 50%
-    &__label
-        color: white
-        &:hover
-            text-decoration: none
-            color: $topbar-textHover
-            border-color: $topbar-textHover
-        &:visited
-            color: $topbar-textColor
-            text-decoration: none
-        &:focus
-            outline: none
-            color: $topbar-textColor
-            text-decoration: none
-    &>*
-        margin: 0 .2em
-.cart
-    display: flex
-    align-items: center
-    display: flex
-    cursor: pointer
-    
-    &__icon
-        background: url('/img/icons/cart.png')
-        width: 20px
-        height: 20px
-        background-size: contain
-    &__content
-        padding: 10px
-        > *
-            color: white
-        > *
-            margin-left: 8px
-            margin-right: 8px
-            margin-bottom: 12px
-        > :first-child
-            margin-top: 8px
-        > :last-child
-            margin-bottom: 8px
-        a
-            color: white
-        td 
-            padding: 8px
-        table
-            width: 100%
-    &__action
-        font-size: 12px
-        display: block
-        text-align: center
-        padding: 10px 0
-        font-size: 11px
-        text-transform: uppercase
-        color: #efefef
-        border: 1px solid #efefef
-        &:hover
-            text-decoration: none
-            color: white
-            border-color: white
-        &:visited
-            color: white
-            text-decoration: none
-        &:focus
-            outline: none
-            color: white
-            text-decoration: none
-.favorite
-    display: flex
-    align-items: center
-    display: flex
-    cursor: pointer
-    &__icon
-        background: url('/img/icons/favorite.png')
-        width: 20px
-        height: 20px
-        background-size: contain
-    &__title
-        font-size: 16px
-        color: white
-        padding: 14px 20px 0
-    &__action
-        font-size: 12px
-        display: block
-        margin: 10px 20px
-        text-align: center
-        padding: 10px 0
-        font-size: 11px
-        text-transform: uppercase
-        color: #efefef
-        border: 1px solid #efefef
-        &:hover
-            text-decoration: none
-            color: white
-            border-color: white
-        &:visited
-            color: white
-            text-decoration: none
-        &:focus
-            outline: none
-            color: white
-            text-decoration: none
 .help
     display: flex
     align-items: center
@@ -266,35 +148,33 @@
         background-size: cover
 
 .social-bar
-    // height: 100%
     margin: 4px 0
     border-radius: 20px
     display: flex
     align-items: center
     padding: 0 8px
     transition: border 1s
-    span
-        width: 32px
-        height: 32px
-        // todo: remove
-        border-radius: 50%
-        background: white
+    height: calc(100% - 8px)
+    > *:not(:last-child)
+        margin-right: 20px
     &-links
         display: none
         list-style: none
-        margin-right: 16px
         li
             user-select: none
             float: left
             margin: 0 8px
+            transition: transform .5s
             &:first-child
                 margin-left: 0
+            &:hover
+                transform: scale(1.3)
         img
             width: 26px
             height: 26px
     &-toggle
         display: table 
-        // background: #F95785
+        // background: #cc74ab
         width: 26px 
         height: 26px 
         // border-radius: 50% 
@@ -314,9 +194,45 @@
         &:hover 
             &::after
                 animation: 1200ms ease 0s normal none 1 running shake
+    // Контакты
+    &-contact
+        min-width: 140px
+        text-align: center
+        user-select: none
+        display: none
+        &__text
+            color: white
+        &__hover
+            display: none
+            color: white
+            background: #c47ba8
+            padding: .5em
+            border-radius: 1em
+            cursor: pointer
+            transition: display 1s
+        &:hover
+            .social-bar-contact
+                &__text
+                    display: none
+                &__hover
+                    display: block
+            
     // Активировано
     &--opened
         border: 1px solid white
+
+.order-status
+    border: 1px solid #c47ba8
+    color: white
+    line-height: 2
+    font-size: 13px
+    height: 2em
+    border-radius: 1em
+    cursor: pointer
+    transition: background .5s
+    user-select: none
+    &:hover
+        background: #c47ba8
 
 
 

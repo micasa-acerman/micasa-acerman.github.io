@@ -7,16 +7,29 @@ $(function() {
     });
     // Социальные сети
     $('#social-toggle').click(function() {
-        const parent = $(this).parent();
-        const el = parent.find('.social-bar-links');
+            const parent = $(this).parent();
+            const el = parent.find('.social-bar-links');
+            const contacts = parent.find('.social-bar-contact');
 
-        if (el.is(':visible'))
-            parent.removeClass('social-bar--opened');
-        else
-            parent.addClass('social-bar--opened');
-        el.toggle('slide');
-    })
+            if (el.is(':visible')) {
+                parent.removeClass('social-bar--opened');
+                $('.help, .order-status').fadeIn();
+            } else {
+                parent.addClass('social-bar--opened');
+                $('.help, .order-status').fadeOut();
+            }
+            el.toggle('slide');
+            contacts.toggle('slide', function() {
 
+            });
+        })
+        // Выпадающие меню
+    $('.toolbar-dropdown')
+        .on('mouseout', function() {
+            $(this).removeClass('toolbar-dropdown--opened');
+        }).on('mouseover', function() {
+            $(this).addClass('toolbar-dropdown--opened');
+        });
     // Sticky menu
     window.onscroll = function() { onScrollListener() };
 
@@ -160,7 +173,7 @@ $(function() {
     })
 
     $('.banner-topbar__close').click(function() {
-        $(this).parent().hide();
+        $(this).parent().slideUp();
     })
 
     // Mobile menu

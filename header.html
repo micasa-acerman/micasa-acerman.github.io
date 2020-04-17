@@ -40,7 +40,7 @@
         </div>
       </div>
       <div class="topbar__right">
-        <!-- Личный кабинет-->
+        <!-- Статус заказа--><span class="order-status">Стутус заказа</span>
         <!-- Помощь-->
         <div class="help dropdown">
           <div class="help__icon"></div>
@@ -63,13 +63,13 @@
             <li><a href="#"><img src="/img/social/ic_vk.png"/></a></li>
             <li><a href="#"><img src="/img/social/ic_fb.png"/></a></li>
           </ul>
-          <div class="social-bar-toggle" id="social-toggle"></div>
+          <div class="social-bar-contact"><span class="social-bar-contact__text">+7 495 125 12 10</span><span class="social-bar-contact__hover">Обратный звонок</span></div>
+          <div class="social-bar-toggle" id="social-toggle">   </div>
         </div>
-        <!-- Избранные-->
-        <!-- Корзина-->
       </div>
     </div>
   </div>
+  <!-- Мобильное меню-->
   <div class="menu mh-head Sticky">
     <div class="menu-mobile searchbar-mobile-container">
       <div class="menu-mobile__row"><a class="menu-mobile__action" href="#menu"><span class="menu-mobile__icon menu-mobile__menu"></span></a><span class="menu-mobile__action searchbar-mobile-toggle" data-target="#msearch"><span class="menu-mobile__icon menu-mobile__search"></span></span><a class="menu__logo" href="/"><img src="/img/logo.jpg" alt="logo"/></a><a class="menu-mobile__action"><span class="menu-mobile__favorite menu-mobile__icon"></span></a><a class="menu-mobile__action"><span class="menu-mobile__cart menu-mobile__icon"></span></a>
@@ -360,7 +360,51 @@
       </ul>
       <!-- Logo--><a class="logo" href="/"><img src="/img/logo.jpg" alt="logo"/></a>
       <!-- Panel tools    -->
-      <div></div>
+      <div class="toolbar">
+        <div class="searchbar">
+          <input type="text" placeholder="Что будем искать?"/><span class="searchbar__action"></span>
+        </div>
+        <!-- Личный кабинет--><a class="profile" href="#"><img src="img/user-default.png"/></a>
+        <!-- Избранные-->
+        <div class="toolbar-dropdown dropdown">
+          <div class="toolbar-dropdown__icon toolbar-dropdown__favorite"></div>
+          <div class="toolbar-dropdown__content dropdown__inner">
+            <div class="toolbar-dropdown__title">У вас нет избранных</div><a class="toolbar-dropdown__action">Каталог товаров</a>
+          </div>
+        </div>
+        <!-- Корзина-->
+        <div class="toolbar-dropdown dropdown"><span class="toolbar-dropdown__icon toolbar-dropdown__cart"></span>
+          <div class="toolbar-dropdown__content dropdown__inner"> 
+            <table>
+              <tbody>
+                <tr>
+                  <td class="text-center"><a href="#"><img class="img-thumbnail" src="/img/gods/item1.png" alt="Apple Cinema 30&quot;" title="Apple Cinema 30&quot;"/></a></td>
+                  <td class="text-left"><a href="http://194.67.91.97/index.php?route=product/product&amp;product_id=42">Mini Melisa MAR SANDAL SWEET DREAMS</a>
+                    <div class="properties"><small>Размер: 28/29</small><small>Цвет: Розовый</small></div>
+                  </td>
+                  <td>
+                    <div class="counter-container"><span class="prev fa fa-caret-left"></span>
+                      <input class="count" type="number" start="1"/><span class="next fa fa-caret-right"></span>
+                    </div>
+                  </td>
+                  <td class="price">228 Р</td>
+                  <td class="text-center"><span class="remove fa fa-trash"></span></td>
+                </tr>
+              </tbody>
+            </table>
+            <hr/>
+            <table>
+              <tbody>
+                <tr>
+                  <td><a class="toolbar-dropdown__action">Оформить заказ</a></td>
+                  <td class="text-right total"><span>Итого:</span><span class="price">228р.</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="searchbar-toggle" id="search-toggle"><span></span></div>
+      </div>
     </div>
   </div>
   <div class="scrollup" style="display: none" id="scrollup"><img src="/img/icons/arrow-up.png"/></div>
