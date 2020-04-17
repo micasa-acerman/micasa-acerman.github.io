@@ -30,6 +30,21 @@ $(function() {
         }).on('mouseover', function() {
             $(this).addClass('toolbar-dropdown--opened');
         });
+
+    // Кнопки корзины
+    $('.prev').click(function() {
+        const input_count = $(this).parent().find('.count');
+        const c = parseInt(input_count.val());
+        if (c != 1) {
+            input_count.val(c - 1);
+        }
+    });
+    $('.next').click(function() {
+        const input_count = $(this).parent().find('.count');
+        const c = parseInt(input_count.val());
+        input_count.val(c + 1);
+    });
+
     // Sticky menu
     window.onscroll = function() { onScrollListener() };
 

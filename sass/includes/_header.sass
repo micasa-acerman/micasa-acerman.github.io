@@ -28,7 +28,7 @@
     display: flex
     align-items: center
     display: flex
-    cursor: pointer
+    // cursor: pointer
 
     a
         color: #333
@@ -75,6 +75,7 @@
         font-size: 11px
         text-transform: uppercase
         color: white !important
+        cursor: pointer
         // border: 1px solid #efefef
         background: #D362A2
         border-radius: 1em
@@ -116,14 +117,19 @@
 .price
     width: 10%
 .count
-    width: 24px
+    width: 26px
     font-size: 12px
     border-radius: .3em
     border: 1px solid #B0B0B0
-    padding: .2em .5em 
+    padding: .2em .4em 
 .remove
     color: #B0B0B0
     font-size: 12px
+    opacity: .6
+    transition: opacity .25s
+    cursor: pointer
+    &:hover
+        opacity: 1
 
 .prev, .next
     font-size: 12px
@@ -131,6 +137,7 @@
     color: #B0B0B0
     opacity: .5
     transition: opacity .5s
+    cursor: pointer
     &:hover
         opacity: 1
 .counter-container
