@@ -58,16 +58,13 @@
     background: #fafafa
     min-height: 60px
     display: flex
-    justify-content: center
+    justify-content: space-between
     align-items: center
-    &__copyright
-        font-size: 14px
-        color: #333
-        &:hover
-            color: #444
-        &:focus
-            color: #444
+    padding: 0 40px
+    &-payment
+        width: 200px
 
+    
 .payments
     overflow: hidden
     img
@@ -76,29 +73,28 @@
 .social
     display: flex
     justify-content: flex-start
-    padding: 8px 0
-    *
-        transition-property: border color
-        transition-timing-function: ease
-        transition-duration: .2s
+    padding: 8px 0        
     i
         font-size: 16px
         text-align: center
         margin: 0 .2em
         &::before
-            border: 2px solid
+            border: 2px solid #c5c5c5
+            background: #c5c5c5
+            color: white
             padding: .3em
+            border-radius: 10px
+            transition-property: border color
+            transition-timing-function: ease
+            transition-duration: .2s
             
     &__vk
-        i
-            color: #4a76a8
-            &::before
-                border-color: #4a76a8
         &:hover
             *
                 color: white
             i::before
                 background-color: #4a76a8
+                border-color: #4a76a8
         &:focus
             *
                 color: #4a76a8
@@ -106,17 +102,14 @@
                 border-color: #4a76a8
     
     &__fb
-        i
-            color: #3b5998
-            &::before
-                border-color: #3b5998
+        i::before
                 padding: .3em .5em
         &:hover
-            
             *
                 color: white
             i::before
                 background-color: #3b5998
+                border-color: #3b5998
         &:focus
             *
                 color: #3b5998
@@ -124,17 +117,14 @@
                 border-color: #3b5998
     
     &__inst
-        i
-            color: #ec4a66
-            &::before
-                border-color: #ec4a66
+        i::before
                 padding: .3em .44em
         &:hover
-            
             *
                 color: white
             i::before
                 background-color: #ec4a66
+                border-color: #ec4a66
         &:focus
             *
                 color: #ec4a66

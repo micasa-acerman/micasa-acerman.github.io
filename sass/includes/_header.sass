@@ -3,6 +3,7 @@
 @import "menu"
 @import "blocks"
 @import "mobile-menu"
+@import "controls"
 
 
 // Панель
@@ -18,10 +19,11 @@
     display: flex
     align-items: center
     img
-        box-sizing: content-box
-        height: 32px
+        box-sizing: border-box
+        height: 30px
+        width: 30px
         border-radius: 50%
-        border: 2px solid rgba(0,0,0,.25)
+        border: 1px solid rgb(127,127,127)
 
 // Контейнер для кнопок
 .toolbar-dropdown
@@ -34,8 +36,8 @@
         color: #333
 
     &__icon 
-        width: 30px
-        height: 30px
+        width: 26px
+        height: 26px
         background-size: contain
         opacity: .6
         transition: opacity .25s
@@ -64,7 +66,7 @@
         td 
             padding: 4px
             .toolbar-dropdown__action
-                max-width: 60%
+                max-width: 50%
         table
             width: calc(100% - 20px)
             padding: 0 10px
@@ -72,14 +74,12 @@
         font-size: 12px
         display: block
         text-align: center
-        padding: 10px 0
-        font-size: 11px
-        text-transform: uppercase
+        padding: 1em 0
+        font-size: 13px
         color: white !important
         cursor: pointer
-        // border: 1px solid #efefef
         background: #D362A2
-        border-radius: 1em
+        border-radius: 2em
         &:hover
             text-decoration: none
             color: white
@@ -124,6 +124,7 @@
     border-radius: .3em
     border: 1px solid #B0B0B0
     padding: .2em .4em 
+    text-align: center
 .remove
     color: #B0B0B0
     font-size: 12px
@@ -135,13 +136,15 @@
 
 .prev, .next
     font-size: 12px
-    margin: 0 .2em
+    margin: 0 .4em
     color: #B0B0B0
-    opacity: .5
+    opacity: .8
     transition: opacity .5s
     cursor: pointer
     &:hover
         opacity: 1
+.prev-disabled
+    opacity: .5
 .stock
     position: relative
     &-price-new
@@ -157,7 +160,7 @@
         text-align: center
 .counter-container
     display: flex
-    justify-content: space-between
+    justify-content: center
     align-items: center
 .total
     > *
@@ -184,8 +187,8 @@ hr
         border: 1px solid #dadada
         border-radius: 2em
         font-size: 14px
-        padding: .75em 1em
-        min-width: 240px
+        padding: .5em 1em
+        min-width: 220px
         &::placeholder
             color: #dadada
     &__action
@@ -194,8 +197,8 @@ hr
         right: 8px
         background: url(/img/icons/search.png)
         background-size: contain
-        width: 20px
-        height: 20px
+        width: 18px
+        height: 18px
         cursor: pointer
         opacity: .5
         transition: opacity .5s

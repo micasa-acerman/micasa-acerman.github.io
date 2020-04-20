@@ -184,7 +184,7 @@ $(function() {
     $("#mbanner").owlCarousel({
         items: 1,
         margin: 20,
-        dots: false
+        dots: true,
     })
 
     $('.banner-topbar__close').click(function() {

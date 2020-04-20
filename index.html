@@ -67,7 +67,7 @@
               </div>
             </div>
             <div class="topbar__right">
-              <!-- Статус заказа--><span class="order-status">Стутус заказа</span>
+              <!-- Статус заказа--><span class="order-status">Статус заказа</span>
               <!-- Помощь-->
               <div class="help dropdown">
                 <div class="help__icon"></div>
@@ -238,6 +238,12 @@
                   <li><a href="#">Одежда</a></li>
                   <li><a href="#">Обувь</a></li>
                   <li><a href="#">Аксессуары</a></li>
+                  <li><a href="#">Игрушки</a></li>
+                  <li><a href="#">Новинки</a></li>
+                  <li><a href="#">Аутлет</a></li>
+                  <li><a href="#">Доставка и оплата</a></li>
+                  <li><a href="#">Обмен и возврат</a></li>
+                  <li><a href="#">Контакты</a></li>
                 </ul>
               </li>
               <li><a href="#">Женщинам</a>
@@ -310,6 +316,12 @@
                   <li><a href="#">Одежда</a></li>
                   <li><a href="#">Обувь</a></li>
                   <li><a href="#">Аксессуары</a></li>
+                  <li><a href="#">Игрушки</a></li>
+                  <li><a href="#">Новинки</a></li>
+                  <li><a href="#">Аутлет</a></li>
+                  <li><a href="#">Доставка и оплата</a></li>
+                  <li><a href="#">Обмен и возврат</a></li>
+                  <li><a href="#">Контакты</a></li>
                 </ul>
               </li>
               <li><a href="#">Мужчинам</a>
@@ -382,6 +394,12 @@
                   <li><a href="#">Одежда</a></li>
                   <li><a href="#">Обувь</a></li>
                   <li><a href="#">Аксессуары</a></li>
+                  <li><a href="#">Игрушки</a></li>
+                  <li><a href="#">Новинки</a></li>
+                  <li><a href="#">Аутлет</a></li>
+                  <li><a href="#">Доставка и оплата</a></li>
+                  <li><a href="#">Обмен и возврат</a></li>
+                  <li><a href="#">Контакты</a></li>
                 </ul>
               </li>
             </ul>
@@ -402,6 +420,7 @@
               <!-- Корзина-->
               <div class="toolbar-dropdown dropdown"><span class="toolbar-dropdown__icon toolbar-dropdown__cart"></span>
                 <div class="toolbar-dropdown__content dropdown__inner"> 
+                  <!-- Toggle-->
                   <table>
                     <tbody>
                       <tr>
@@ -478,13 +497,13 @@
               <div class="block-fullscreen__inner">
                 <h3 class="block-fullscreen__subtitle">You may like this brand</h3>
                 <h2 class="block-fullscreen__title">Balmain</h2>
-                <div class="block-fullscreen__action">Shop the collection</div>
+                <button class="btn btn-dark">Shop the collection</button>
               </div></a></div>
           <div class="row"><a class="block-fullscreen" href="#"><img class="block-fullscreen__image" src="img/section1.jpg">
               <div class="block-fullscreen__inner">
                 <h3 class="block-fullscreen__subtitle">You may like this brand</h3>
                 <h2 class="block-fullscreen__title">Balmain</h2>
-                <div class="block-fullscreen__action">Shop the collection</div>
+                <button class="btn btn-dark">Shop the collection</button>
               </div></a></div>
         </div>
       </section>
@@ -570,21 +589,30 @@
         </div>
       </section>
       <!-- Преимущества-->
-      <section class="container">
-        <div class="block-tape">
-          <div class="row">
-            <div class="col-md-12">
-              <h2 class="block-tape__title">Почему мы?</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3 col-sm-3 col-xs-6"><a class="block-tape__item" href="#"><img class="block-tape__img-small" src="/img/icons/benefit-1.svg" alt=""><span class="block-tape__name block-tape__name-small">MULTILINGUAL CUSTOMER SERVICE</span></a></div>
-            <div class="col-md-3 col-sm-3 col-xs-6"><a class="block-tape__item" href="#"><img class="block-tape__img-small" src="/img/icons/benefit-1.svg" alt=""><span class="block-tape__name block-tape__name-small">MULTILINGUAL CUSTOMER SERVICE</span></a></div>
-            <div class="col-md-3 col-sm-3 col-xs-6"><a class="block-tape__item" href="#"><img class="block-tape__img-small" src="/img/icons/benefit-1.svg" alt=""><span class="block-tape__name block-tape__name-small">MULTILINGUAL CUSTOMER SERVICE</span></a></div>
-            <div class="col-md-3 col-sm-3 col-xs-6"><a class="block-tape__item" href="#"><img class="block-tape__img-small" src="/img/icons/benefit-1.svg" alt=""><span class="block-tape__name block-tape__name-small">MULTILINGUAL CUSTOMER SERVICE</span></a></div>
-          </div>
-        </div>
-      </section>
+      <!--section.container
+      .block-tape
+          .row
+              .col-md-12
+                  h2.block-tape__title Почему мы?
+          .row
+              .col-md-3.col-sm-3.col-xs-6
+                  a.block-tape__item(href="#")
+                      img.block-tape__img-small(src="/img/icons/benefit-1.svg", alt="")
+                      span.block-tape__name.block-tape__name-small MULTILINGUAL CUSTOMER SERVICE
+              .col-md-3.col-sm-3.col-xs-6
+                  a.block-tape__item(href="#")
+                      img.block-tape__img-small(src="/img/icons/benefit-1.svg", alt="")
+                      span.block-tape__name.block-tape__name-small MULTILINGUAL CUSTOMER SERVICE
+              .col-md-3.col-sm-3.col-xs-6
+                  a.block-tape__item(href="#")
+                      img.block-tape__img-small(src="/img/icons/benefit-1.svg", alt="")
+                      span.block-tape__name.block-tape__name-small MULTILINGUAL CUSTOMER SERVICE
+              .col-md-3.col-sm-3.col-xs-6
+                  a.block-tape__item(href="#")
+                      img.block-tape__img-small(src="/img/icons/benefit-1.svg", alt="")
+                      span.block-tape__name.block-tape__name-small MULTILINGUAL CUSTOMER SERVICE
+      
+      -->
       <!-- Milie edit-->
       <section style="background: #faebd7">
         <div class="container-fluid">
@@ -598,7 +626,9 @@
                 <div class="col-md-12">
                   <div class="block-tape__description" style="max-width: 80%; margin: 0 auto">Expecting a baby girl this spring? Piece together her very first wardrobe with the Millie Mackintosh Edit, hand-picked from our collection by the beautiful mum-to-be.</div>
                 </div>
-                <div class="col-md-12"><a class="block-tape__action">SHOP NOW</a></div>
+                <div class="col-md-12 mt-4">
+                  <div class="center"><a class="btn btn-dark">SHOP NOW</a></div>
+                </div>
               </div>
             </div>
           </div>
@@ -617,8 +647,10 @@
               <div class="block-tape__description">Присоединяйся к нашей программе лояльности, которая ....</div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-12"><a class="block-tape__action">Присоединиться</a></div>
+          <div class="row mt-2">
+            <div class="col-md-12">
+              <div class="center"><a class="btn btn-light" href="#">Присоединиться</a></div>
+            </div>
           </div>
         </div>
       </section>
@@ -629,8 +661,7 @@
               <div class="block-fullscreen__inner">
                 <div style="margin: 0 20%;background: white;padding: 20px;display: flex; flex-direction: column;align-items: center;box-shadow: 0 0 20px rgba(0,0,0,.25)">
                   <h2 class="block-fullscreen__title" style="font-size: 26pt"> Kenzo Kids</h2>
-                  <h3 class="block-fullscreen__subtitle" style="font-size: 12pt;line-height: 1.8;padding: 8px 0;text-transform: initial">This season, join Kenzo Kids on a fun-filled trip from East to West, transporting boys and girls through three unique collections for spring and summer. </h3>
-                  <div class="block-fullscreen__action">Shop Now</div>
+                  <h3 class="block-fullscreen__subtitle" style="font-size: 12pt;line-height: 1.8;padding: 8px 0;text-transform: initial">This season, join Kenzo Kids on a fun-filled trip from East to West, transporting boys and girls through three unique collections for spring and summer. </h3><a class="btn btn-light" href="#">Shop Now</a>
                 </div>
               </div></a></div>
           <div class="col-md-6 nopadding">
@@ -644,10 +675,12 @@
               </div>
               <div class="col-md-12">
                 <div class="block-tape__form-group">
-                  <input class="block-tape__form-control" type="email" placeholder="Электронная почта" style="min-width: 60%">
+                  <input class="form-control" type="email" placeholder="Электронная почта" style="min-width: 60%">
                 </div>
               </div>
-              <div class="col-md-12"><a class="block-tape__action" style="min-width: 30%">Подписаться</a></div>
+              <div class="col-md-12">
+                <div class="center"><a class="btn btn-light" href="#">Подписаться</a></div>
+              </div>
             </div>
           </div>
         </div>
@@ -661,22 +694,13 @@
                 <li><a href="#">Статус заказа по номеру</a></li>
                 <li><a href="#">Центр поддержки Lamoda</a></li>
                 <li><a href="#">Как оформить заказ</a></li>
-                <li><a href="#">Как выбрать размер</a></li>
-                <li><strong>Способ оплаты</strong></li>
-                <li>
-                  <div class="row payments">
-                    <div class="col-xs-4"><img src="/img/payment/mc.svg"></div>
-                    <div class="col-xs-4"><img src="/img/payment/visa.svg"></div>
-                    <div class="col-xs-4"><img src="/img/payment/mir.svg"></div>
-                  </div>
-                </li>
+                <li><a href="#">Как выбрать размер                        </a></li>
                 <li><span>Вы можете оплатить покупку наличными при получении, либо выбрать другой способ оплаты.</span></li>
               </ul>
             </div>
             <div class="col-md-3">
               <ul class="subfooter__list">
                 <li><strong>О нас</strong></li>
-                <li class="social"><a class="social__fb" href="#fb"><i class="fa fa-facebook-f"></i></a><a class="social__vk" href="#vk"><i class="fa fa-vk"></i></a><a class="social__inst" href="#inst"><i class="fa fa-instagram"></i></a></li>
                 <li> <a href="#">Fashion-блок минишипоголик</a></li>
                 <li><a href="#">Подарочные сертификаты минишипоголик</a></li>
                 <li> <a href="#">О компании</a></li>
@@ -697,7 +721,18 @@
           </div>
         </div>
       </div>
-      <div class="footer"><a class="footer__copyright" href="">&copy; 2020. Политика конфиденциальности</a></div>
+      <div class="footer">
+        <div class="footer-payment">
+          <div class="payments">
+            <div class="col-xs-4"><img src="/img/payment/mc.svg"></div>
+            <div class="col-xs-4"><img src="/img/payment/visa.svg"></div>
+            <div class="col-xs-4"><img src="/img/payment/mir.svg"></div>
+          </div>
+        </div><a class="footer__copyright" href="">&copy; 2020. Политика конфиденциальности</a>
+        <div class="footer-social">
+          <div class="social"><a class="social__fb" href="#fb"><i class="fa fa-facebook-f"></i></a><a class="social__vk" href="#vk"><i class="fa fa-vk"></i></a><a class="social__inst" href="#inst"><i class="fa fa-instagram"></i></a></div>
+        </div>
+      </div>
     </div>
     <script src="/js/scripts.min.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>

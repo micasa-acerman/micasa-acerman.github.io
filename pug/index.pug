@@ -18,14 +18,14 @@ block content
                     .block-fullscreen__inner
                         h3.block-fullscreen__subtitle You may like this brand
                         h2.block-fullscreen__title Balmain
-                        .block-fullscreen__action Shop the collection
+                        button.btn.btn-dark Shop the collection
             .row
                 a.block-fullscreen(href="#")
                     img.block-fullscreen__image(src="img/section1.jpg")
                     .block-fullscreen__inner
                         h3.block-fullscreen__subtitle You may like this brand
                         h2.block-fullscreen__title Balmain
-                        .block-fullscreen__action Shop the collection
+                        button.btn.btn-dark Shop the collection
     section.container-fluid
         .row
             .col-md-3.col-sm-3.col-xs-6.nopadding
@@ -118,7 +118,7 @@ block content
                         .testimonial__author Патрик О’Рурк
                         .testimonial__location США
     // Преимущества
-    section.container
+    //section.container
         .block-tape
             .row
                 .col-md-12
@@ -153,8 +153,9 @@ block content
                             h2.block-tape__title The Millie Mackintosh Edit
                         .col-md-12
                             div.block-tape__description(style='max-width: 80%; margin: 0 auto') Expecting a baby girl this spring? Piece together her very first wardrobe with the Millie Mackintosh Edit, hand-picked from our collection by the beautiful mum-to-be.
-                        .col-md-12
-                            a.block-tape__action SHOP NOW
+                        .col-md-12.mt-4
+                            .center
+                                a.btn.btn-dark SHOP NOW
     // Награды
     section.section.container-fluid.block-tape-custom
         .block-tape
@@ -164,9 +165,10 @@ block content
             .row
                 .col-md-12
                     div.block-tape__description Присоединяйся к нашей программе лояльности, которая ....
-            .row
+            .row.mt-2
                 .col-md-12
-                    a.block-tape__action Присоединиться
+                    .center
+                        a(href='#').btn.btn-light Присоединиться
 
         
     // Kenzo and subscribe
@@ -179,7 +181,7 @@ block content
                         div(style="margin: 0 20%;background: white;padding: 20px;display: flex; flex-direction: column;align-items: center;box-shadow: 0 0 20px rgba(0,0,0,.25)")
                             h2.block-fullscreen__title(style='font-size: 26pt')  Kenzo Kids
                             h3.block-fullscreen__subtitle(style='font-size: 12pt;line-height: 1.8;padding: 8px 0;text-transform: initial') This season, join Kenzo Kids on a fun-filled trip from East to West, transporting boys and girls through three unique collections for spring and summer. 
-                            .block-fullscreen__action Shop Now
+                            a(href='#').btn.btn-light Shop Now
 
             .col-md-6.nopadding
                 .block-tape(style="margin: 0")
@@ -190,6 +192,7 @@ block content
                         //Создайте аккаунт, чтобы быть в курсе выгодных предложений 
                     .col-md-12
                         .block-tape__form-group
-                            input.block-tape__form-control(type='email', placeholder='Электронная почта',style='min-width: 60%')
+                            input.form-control(type='email', placeholder='Электронная почта',style='min-width: 60%')
                     .col-md-12
-                        a.block-tape__action(style='min-width: 30%') Подписаться
+                        .center
+                            a(href='#').btn.btn-light Подписаться

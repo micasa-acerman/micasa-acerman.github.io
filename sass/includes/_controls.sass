@@ -1,0 +1,58 @@
+.btn
+    border-radius: 2em
+    font-size: 14px
+    font-weight: bold
+    letter-spacing: .16em 
+    transition-property: color background
+    transition-timing-function: linear
+    transition-duration: .2s
+    text-align: center
+    text-transform: uppercase
+    padding: 1em .6em
+    width: 280px
+    &-secondary
+        background: #d362a2
+        color: white
+    &-light
+        background: transparent
+        color: #333
+        border: 1px solid #333
+        &:hover
+            background: #333
+            color: white
+    &-dark
+        background: #333
+        border: 1px solid #333
+        color: white
+        &:hover
+            background: white
+            color: #333
+
+.center
+    display: flex
+    justify-content: center
+    align-items: center
+
+.form-control
+    border-radius: 2em
+    padding: 1em 
+    letter-spacing: .16em 
+    min-width: 320px
+    display: block
+    color: #333
+    font-size: 14px
+    border: 1px solid #333
+    font-weight: bold
+    letter-spacing: .5px
+    &::placeholder
+        font-weight: normal
+        color: #aaa
+    
+@for $i from 1 through 4
+    .mt-#{$i}
+        margin-top: $i * 10px
+    .mb-#{$i}
+        margin-bottom: $i * 10px
+    .mx-auto
+        margin-left: auto
+        margin-right: auto
