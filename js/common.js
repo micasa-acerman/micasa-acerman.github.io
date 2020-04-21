@@ -185,7 +185,23 @@ $(function() {
         items: 1,
         margin: 20,
         dots: true,
-    })
+    });
+    $('#reviews').owlCarousel({
+        margin: 20,
+        dots: false,
+        loop: true,
+        nav: true,
+        navigation: true,
+        navText: ["<div class='nav-btn prev-slide'></div>", "<div class='nav-btn next-slide'></div>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            }
+        }
+    });
 
     $('.banner-topbar__close').click(function() {
         $(this).parent().slideUp();

@@ -6,6 +6,24 @@
         width: 100%
         margin: 0
         object-fit: contain
+    .nav-btn 
+        height: 47px 
+        position: absolute 
+        width: 26px 
+        cursor: pointer 
+        top: 120px !important 
+        opacity: .5
+        transition: opacity .1s
+        &:hover
+            opacity: .8
+    .prev-slide 
+        background: url(/img/icons/arrow-left.png)
+        background-size: cover
+        left: -60px 
+    .next-slide 
+        background: url(/img/icons/arrow-right.png)
+        background-size: cover
+        right: -60px 
 #fbanner
     margin-top: 24px
 .owl-theme .owl-nav.disabled+.owl-dots

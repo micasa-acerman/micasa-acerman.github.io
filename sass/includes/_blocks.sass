@@ -265,6 +265,46 @@
    padding: 0
    margin: 0
 
+
+
+// Отзывы
+.title
+    font-size: 20px
+    font-weight: bold
+    letter-spacing: .05em
+.review
+    padding: 70px 0 0 0
+    &__wrapper
+        background: white
+        padding: 60px 30px 30px
+        position: relative
+    &__title
+        text-align: center
+        line-height: 2
+    &__platform
+        text-align: center
+        color: #afafaf
+        line-height: 2
+    &__avatar
+        position: absolute
+        top: -60px
+        left: calc(50% - 60px)
+        transition: top .5s ease
+        cursor: pointer
+        &:hover
+            top: -64px
+        img
+            border-radius: 50%
+            z-index: 1000
+            width: 120px !important
+            height: 120px
+            object-fit: cover !important
+            box-shadow: 0 0 4px rgba(0,0,0,.25)
+    &__content
+        line-height: 1.5
+section.gray
+    background: #F6F6F6
+
 @media screen and ( max-width: 767px )
     .block
         &-fullscreen
