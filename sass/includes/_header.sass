@@ -41,7 +41,7 @@
         background-size: contain
         opacity: .6
         transition: opacity .25s
-        position: pointer
+        cursor: pointer
         &:hover
             opacity: 1
     &__content
@@ -114,7 +114,18 @@
         color: #B0B0B0
         &:not(:first-child)
             margin-left: 10px
-
+.delivery
+    color: white
+    position: absolute
+    a
+        color: #d362a2
+        text-decoration: underline
+    &__icon
+        background: url(/img/icons/delivery.png)
+        width: 17px
+        height: 17px
+        margin-right: 17px
+        background-size: contain
 .price
     width: 10%
     text-align: center
@@ -152,6 +163,7 @@
         width: 100%
         display: block
         text-align: center
+        white-space: nowrap
     &-price-old
         color: #B0B0B0
         text-decoration: line-through
@@ -174,6 +186,10 @@
         text-decoration: underline
 hr
     margin: 0 8px
+.cart-name
+    text-overflow: ellipsis
+    white-space: nowrap
+    max-width: 200px
 
 // *****
 // Поиск

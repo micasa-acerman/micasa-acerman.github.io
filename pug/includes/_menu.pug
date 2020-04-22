@@ -330,9 +330,9 @@
         img(src='/img/logo.png',alt='logo')
     // Panel tools    
     .toolbar
-        .searchbar
+        form.searchbar
             input(type='text',placeholder='Что будем искать?')
-            span.searchbar__action
+            button(type='submit').searchbar__action
         // Личный кабинет
         if(isAuthorizated)
             a.profile(href="#")
@@ -364,7 +364,7 @@
                                     a(href='#')
                                         img.img-thumbnail(src='/img/gods/item1.png', alt='Apple Cinema 30"', title='Apple Cinema 30"')
                                 td.text-left
-                                    a(href='http://194.67.91.97/index.php?route=product/product&product_id=42') Mini Melisa MAR SANDAL SWEET DREAMS
+                                    a.cart-name(href='http://194.67.91.97/index.php?route=product/product&product_id=42') Mini Melisa MAR SANDAL SWEET DREAMS
                                     .properties
                                         small Размер: 28/29
                                         small Цвет: Розовый
@@ -381,7 +381,7 @@
                                     a(href='#')
                                         img.img-thumbnail(src='/img/gods/item1.png', alt='Apple Cinema 30"', title='Apple Cinema 30"')
                                 td.text-left
-                                    a(href='http://194.67.91.97/index.php?route=product/product&product_id=42') Mini Melisa MAR SANDAL SWEET DREAMS
+                                    a.cart-name(href='http://194.67.91.97/index.php?route=product/product&product_id=42') Mini Melisa MAR SANDAL SWEET DREAMS
                                     .properties
                                         small Размер: 28/29
                                         small Цвет: Розовый
@@ -398,7 +398,7 @@
                                     a(href='#')
                                         img.img-thumbnail(src='/img/gods/item1.png', alt='Apple Cinema 30"', title='Apple Cinema 30"')
                                 td.text-left
-                                    a(href='http://194.67.91.97/index.php?route=product/product&product_id=42') Mini Melisa MAR SANDAL SWEET DREAMS
+                                    a.cart-name(href='http://194.67.91.97/index.php?route=product/product&product_id=42') Mini Melisa MAR SANDAL SWEET DREAMS
                                     .properties
                                         small Размер: 28/29
                                         small Цвет: Розовый
@@ -407,7 +407,7 @@
                                         span.prev.fa.fa-caret-left
                                         input(type='number',start='1',class='count',step='1',value='1')
                                         span.next.fa.fa-caret-right
-                                td(style='width:200px')
+                                td
                                     span.stock
                                         span.stock-price-new 1000 Р
                                         span.stock-price-old 800 Р
@@ -422,7 +422,7 @@
                         tbody
                             tr
                                 td
-                                    a.toolbar-dropdown__action(href='#') Оформить заказ
+                                    a.toolbar-dropdown__action.btn.btn-primary(href='#') Оформить заказ
                                 td.text-right.total
                                     span Итого:
                                     span.price 228 Р

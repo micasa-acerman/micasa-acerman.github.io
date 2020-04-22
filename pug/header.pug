@@ -9,36 +9,21 @@
             img.banner-topbar__inner(src='/img/banner/banner.png')
         .banner-topbar__close
     .topbar
-        .topbar__inner#topbar__search(style='display: none')
-            .searchbar
-                button.searchbar__button.searchbar__button-search
-                input(type='text',placeholder='Поиск').searchbar__input#search-input
-                button.searchbar__button-clear.searchbar__button#searchbar__back
-                
         .topbar__inner#topbar__default
-            .topbar__left
-                
+            .topbar__location
                 a.locationSelector.topbar__item(href="#locationModal" data-toggle="modal" data-target="#locationModal")
                     span.fa.fa-location-arrow
                     span Москва
-                #locationModal.modal.location.fade(tabindex='-1', role='dialog', aria-labelledby='locationModalLabel', aria-hidden='true')
-                    .modal-dialog(role='document')
-                        .modal-content.location__content
-                            .location__header
-                                h5#locationModalLabel.location__title ВАШ РЕГИОН ДОСТАВКИ
-                            .location__body
-                                input.input-text.input-text-bg(placeholder='Введите название населённого пункта')
-                                .location__auto
-                                    a.link.link-primary(href="#") Определить автоматически
-                                div.location__subtitle Популярные города
-                                ul.location__list
-                                    each item in cities
-                                        li.location__item
-                                            a(href='#') #{item}
-                            .modal-footer.location__footer
-                                button.btn.btn-link.btn-lg.location__action(type='button', data-dismiss='modal') Отмена
-                                button.btn.btn-primary.btn-lg.location__action(type='button') Запомнить выбор
-            .topbar__right
+            .topbar__delivery 
+                .delivery
+                    .front
+                        img.delivery__icon
+                        span Доставка в ваш город 
+                        a(href='#') 1-2 дня
+                    .back
+                        span.delivery__icon
+                        span Скидка 5% при онлайн-оплате
+            .topbar__tools
                 // Статус заказа
                 span.order-status Статус заказа
                 // Помощь

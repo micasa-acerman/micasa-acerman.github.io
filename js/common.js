@@ -174,7 +174,7 @@ $(function() {
     }
 
     autocomplete(document.getElementById("msearch-input"), countries);
-    autocomplete(document.getElementById("search-input"), countries);
+    // autocomplete(document.getElementById("search-input"), countries);
 
     // Слайдер
     $("#fbanner").owlCarousel({

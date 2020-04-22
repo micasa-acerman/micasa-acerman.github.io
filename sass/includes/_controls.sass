@@ -10,9 +10,16 @@
     text-transform: uppercase
     padding: 1em .6em
     width: 280px
-    &-secondary
+    &-primary
         background: #d362a2
-        color: white
+        color: white !important
+        font-weight: normal
+        text-transform: none
+        padding: 1em 2em
+        letter-spacing: 0
+        transition: transform .5s
+        &:hover
+            transform: scale(1.03)
     &-light
         background: transparent
         color: #333

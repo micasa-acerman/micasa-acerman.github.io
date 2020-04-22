@@ -4,42 +4,15 @@
     <div class="banner-topbar__close"></div>
   </div>
   <div class="topbar">
-    <div class="topbar__inner" id="topbar__search" style="display: none">
-      <div class="searchbar">
-        <button class="searchbar__button searchbar__button-search"></button>
-        <input class="searchbar__input" type="text" placeholder="Поиск" id="search-input"/>
-        <button class="searchbar__button-clear searchbar__button" id="searchbar__back"></button>
-      </div>
-    </div>
     <div class="topbar__inner" id="topbar__default">
-      <div class="topbar__left"><a class="locationSelector topbar__item" href="#locationModal" data-toggle="modal" data-target="#locationModal"><span class="fa fa-location-arrow"></span><span>Москва</span></a>
-        <div class="modal location fade" id="locationModal" tabindex="-1" role="dialog" aria-labelledby="locationModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content location__content">
-              <div class="location__header">
-                <h5 class="location__title" id="locationModalLabel">ВАШ РЕГИОН ДОСТАВКИ</h5>
-              </div>
-              <div class="location__body">
-                <input class="input-text input-text-bg" placeholder="Введите название населённого пункта"/>
-                <div class="location__auto"><a class="link link-primary" href="#">Определить автоматически</a></div>
-                <div class="location__subtitle">Популярные города</div>
-                <ul class="location__list">
-                  <li class="location__item"><a href="#">Москва</a></li>
-                  <li class="location__item"><a href="#">Санкт-Петербург</a></li>
-                  <li class="location__item"><a href="#">Екатеринбург</a></li>
-                  <li class="location__item"><a href="#">Новосибирск</a></li>
-                  <li class="location__item"><a href="#">Ростов-на-Дону</a></li>
-                </ul>
-              </div>
-              <div class="modal-footer location__footer">
-                <button class="btn btn-link btn-lg location__action" type="button" data-dismiss="modal">Отмена</button>
-                <button class="btn btn-primary btn-lg location__action" type="button">Запомнить выбор</button>
-              </div>
-            </div>
-          </div>
+      <div class="topbar__location"><a class="locationSelector topbar__item" href="#locationModal" data-toggle="modal" data-target="#locationModal"><span class="fa fa-location-arrow"></span><span>Москва</span></a></div>
+      <div class="topbar__delivery"> 
+        <div class="delivery">
+          <div class="front"><img class="delivery__icon"/><span>Доставка в ваш город </span><a href="#">1-2 дня</a></div>
+          <div class="back"><span class="delivery__icon"></span><span>Скидка 5% при онлайн-оплате</span></div>
         </div>
       </div>
-      <div class="topbar__right">
+      <div class="topbar__tools">
         <!-- Статус заказа--><span class="order-status">Статус заказа</span>
         <!-- Помощь-->
         <div class="help dropdown">
@@ -379,9 +352,10 @@
       <!-- Logo--><a class="logo" href="/"><img src="/img/logo.png" alt="logo"/></a>
       <!-- Panel tools    -->
       <div class="toolbar">
-        <div class="searchbar">
-          <input type="text" placeholder="Что будем искать?"/><span class="searchbar__action"></span>
-        </div>
+        <form class="searchbar">
+          <input type="text" placeholder="Что будем искать?"/>
+          <button class="searchbar__action" type="submit"></button>
+        </form>
         <!-- Личный кабинет--><a class="profile" href="#"><img src="img/user-default.png"/></a>
         <!-- Избранные-->
         <div class="toolbar-dropdown dropdown">
@@ -398,7 +372,7 @@
               <tbody>
                 <tr>
                   <td class="text-center"><a href="#"><img class="img-thumbnail" src="/img/gods/item1.png" alt="Apple Cinema 30&quot;" title="Apple Cinema 30&quot;"/></a></td>
-                  <td class="text-left"><a href="http://194.67.91.97/index.php?route=product/product&amp;product_id=42">Mini Melisa MAR SANDAL SWEET DREAMS</a>
+                  <td class="text-left"><a class="cart-name" href="http://194.67.91.97/index.php?route=product/product&amp;product_id=42">Mini Melisa MAR SANDAL SWEET DREAMS</a>
                     <div class="properties"><small>Размер: 28/29</small><small>Цвет: Розовый</small></div>
                   </td>
                   <td>
@@ -411,7 +385,7 @@
                 </tr>
                 <tr>
                   <td class="text-center"><a href="#"><img class="img-thumbnail" src="/img/gods/item1.png" alt="Apple Cinema 30&quot;" title="Apple Cinema 30&quot;"/></a></td>
-                  <td class="text-left"><a href="http://194.67.91.97/index.php?route=product/product&amp;product_id=42">Mini Melisa MAR SANDAL SWEET DREAMS</a>
+                  <td class="text-left"><a class="cart-name" href="http://194.67.91.97/index.php?route=product/product&amp;product_id=42">Mini Melisa MAR SANDAL SWEET DREAMS</a>
                     <div class="properties"><small>Размер: 28/29</small><small>Цвет: Розовый</small></div>
                   </td>
                   <td>
@@ -424,7 +398,7 @@
                 </tr>
                 <tr>
                   <td class="text-center"><a href="#"><img class="img-thumbnail" src="/img/gods/item1.png" alt="Apple Cinema 30&quot;" title="Apple Cinema 30&quot;"/></a></td>
-                  <td class="text-left"><a href="http://194.67.91.97/index.php?route=product/product&amp;product_id=42">Mini Melisa MAR SANDAL SWEET DREAMS</a>
+                  <td class="text-left"><a class="cart-name" href="http://194.67.91.97/index.php?route=product/product&amp;product_id=42">Mini Melisa MAR SANDAL SWEET DREAMS</a>
                     <div class="properties"><small>Размер: 28/29</small><small>Цвет: Розовый</small></div>
                   </td>
                   <td>
@@ -432,7 +406,7 @@
                       <input class="count" type="number" start="1" step="1" value="1"/><span class="next fa fa-caret-right"></span>
                     </div>
                   </td>
-                  <td style="width:200px"><span class="stock"><span class="stock-price-new">1000 Р</span><span class="stock-price-old">800 Р</span></span></td>
+                  <td><span class="stock"><span class="stock-price-new">1000 Р</span><span class="stock-price-old">800 Р</span></span></td>
                   <td class="text-center"><span class="remove fa fa-trash"></span></td>
                 </tr>
               </tbody>
@@ -442,7 +416,7 @@
             <table>
               <tbody>
                 <tr>
-                  <td><a class="toolbar-dropdown__action" href="#">Оформить заказ</a></td>
+                  <td><a class="toolbar-dropdown__action btn btn-primary" href="#">Оформить заказ</a></td>
                   <td class="text-right total"><span>Итого:</span><span class="price">228 Р</span></td>
                 </tr>
               </tbody>
