@@ -59,7 +59,28 @@
     &::placeholder
         font-weight: normal
         color: #aaa
-    
+
+// Выпадающий список
+.dropdown
+    position: relative
+
+    &__inner
+        display: none
+        right: 0
+        transition: opacity .2s linear
+        position: absolute
+        top: 100%
+        background: gray
+        // width: 300px
+        width: max-content
+        overflow: hidden
+        padding-bottom: 10px
+        z-index: 1000
+        &-right
+            right: auto
+            left: 0
+
+// Позиционирование
 .mx-auto
     margin-left: auto
     margin-right: auto

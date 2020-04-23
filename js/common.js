@@ -38,13 +38,26 @@ $(function() {
         if (c != 1) {
             input_count.val(c - 1);
         }
+        if (c <= 2) {
+            $(this).addClass('prev-disabled');
+        }
     });
     $('.next').click(function() {
         const input_count = $(this).parent().find('.count');
         const c = parseInt(input_count.val());
         input_count.val(c + 1);
+        if (c == 1) {
+            $(this).parent('.counter-container').find('.prev').removeClass('prev-disabled');
+        }
     });
 
+    // Доставка. Анимация
+    (function() {
+        $('.delivery').addClass('delivery--open');
+        setTimeout(() => {
+            $('.delivery').removeClass('delivery--open');
+        }, 3000)
+    })();
     // Sticky menu
     window.onscroll = function() { onScrollListener() };
 
@@ -93,7 +106,7 @@ $(function() {
         $('#topbar__search').fadeOut('fast', function() {
             $('#topbar__default').fadeIn('fast');
         })
-    })
+    });
     $('#search-toggle').click(function() {
         $('#topbar__default').fadeOut('fast', function() {
             $('#topbar__search').fadeIn('fast');
