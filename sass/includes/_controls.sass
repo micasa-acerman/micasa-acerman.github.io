@@ -10,9 +10,22 @@
     text-transform: uppercase
     padding: 1em .6em
     width: 280px
+    box-sizing: border-box
+    user-select: none
     &-primary
         background: #d362a2
         color: white !important
+        font-weight: normal
+        text-transform: none
+        padding: 1em 2em
+        letter-spacing: 0
+        transition: transform .5s
+        &:hover
+            transform: scale(1.03)
+    &-primary-outline
+        background: white
+        color: #d362a2 !important
+        border: 1px solid #d362a2
         font-weight: normal
         text-transform: none
         padding: 1em 2em
@@ -59,7 +72,32 @@
     &::placeholder
         font-weight: normal
         color: #aaa
-
+// Автозаполнение
+.autocomplete-items 
+    position: absolute 
+    border: 1px solid #d4d4d4!important
+    border-bottom: none 
+    border-top: none 
+    z-index: 99 
+    top: 100%
+    padding: 10px !important
+    border-radius: 10px
+    left: 0
+    right: 0
+    background: white
+    div 
+        padding: 10px 
+        cursor: pointer 
+        background-color: #fff 
+        // border-bottom: 1px solid #d4d4d4 
+        &:hover 
+            // background-color: #e9e9e9
+            color: #d362a2 !important
+            text-decoration: underline
+.autocomplete-active 
+    // background-color: #aaaaaa !important 
+    color: #d362a2 !important
+    // text-decoration: 
 // Выпадающий список
 .dropdown
     position: relative
@@ -81,6 +119,12 @@
             left: 0
 
 // Позиционирование
+.text-center
+	text-align: center
+.text-left
+	text-align: left
+.text-right
+	text-align: right
 .mx-auto
     margin-left: auto
     margin-right: auto

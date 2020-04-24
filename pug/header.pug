@@ -11,9 +11,24 @@
     .topbar
         .topbar__inner#topbar__default
             .topbar__location
-                a.locationSelector.topbar__item(href="#locationModal" data-toggle="modal" data-target="#locationModal")
-                    span.fa.fa-location-arrow
-                    span Москва
+                .location
+                    .location__front
+                        span.topbar__item.fa.fa-location-arrow
+                        span.topbar__item Ваш город:
+                        a.locationSelector.topbar__link(href="#locationModal")    
+                            span#location-label Москва
+                    .location__back
+                        .location__group
+                            span.topbar__item.fa.fa-location-arrow
+                            input#location-autocomplete(placeholder='Ваш город',autocomplete="off",type='text')
+                    .location-popup
+                        p Информация о доставке будет отображаться для региона
+                        div.text-center г. Владикавказ
+                        .location-popup__actions
+                            button.btn.btn-primary.positive Да, верно
+                            button.btn.btn-primary-outline.negative Другой
+                    
+            
             .topbar__delivery 
                 .delivery
                     .back

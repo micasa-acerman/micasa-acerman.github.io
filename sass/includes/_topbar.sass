@@ -1,5 +1,7 @@
 @import "../_vars.sass" 
 
+
+// Верхняя панель
 .topbar
     background-color: $topbar-backColor
     height: 48px
@@ -9,6 +11,7 @@
         height: 100%
         align-items: center
         justify-content: space-between
+        position: relative
         > *
             width: 33.33%
     &__item
@@ -17,24 +20,28 @@
         color: $topbar-textColor
         display: block
         transition: color .2s ease-in-out
+    &__link
+        text-decoration: underline
+        color: #cc74ab
+        display: block
+        transition: color .2s ease-in-out
         &:hover
             text-decoration: none
-            color: $topbar-textHover
+            color: #c564a0
         &:visited
-            color: $topbar-textColor
+            color: #cc74ab
             text-decoration: none
         &:focus
             outline: none
-            color: $topbar-textColor
+            color: #c564a0
             text-decoration: none
+
     // Контейнеры
     &__location
         height: 100%
         display: flex
         flex-direction: row
         align-items: center
-        > *:not(:first-child)
-            margin-left: 20px
     &__delivery
         height: 100%
         display: flex
@@ -48,38 +55,74 @@
         align-items: center
         &>*
             padding: 0 1.3em
-
+// Позиция
 .location
-    &__auto
-        margin-top: 14px
-    &__location
+    height: 100%
+    position: relative
+    display: flex
+    align-items: center
+    font-size: 13px
+    &__front
+        display: flex
+        justify-content: center
+        align-items: center
+        > *:not(:last-child)
+            margin-right: 6px
+    &__back
+        display: none
+        height: 100%
+        align-items: center
+        input
+            background: transparent
+            border-color: transparent
+            color: white
+            &:focus
+                background: transparent
+                border-color: transparent
+            &:active
+                background: transparent
+                border-color: transparent
+    &__group
+        height: 30px
+        display: flex
+        justify-content: center
+        align-items: center
+        border: 1px solid rgba(255,255,255,.7)
+        height: 30px
+        padding: 10px
+        border-radius: 15px
+        > *:not(:last-child)
+            margin-right: 10px
 
-    &__content
-        padding: 33px 33px 0
-    &__header
-        padding: 0
-    &__title
-        font-size: 24px
-        margin-bottom: 12px
-    &__body
-        padding: 0
-    &__subtitle
-        margin-top: 18px
-        color: #888
-    &__list
-        list-style: none
-        margin-bottom: 32px
-    &__item
-        margin: 7px 0
-    &Selector > *:not(:first-child)
-        margin-left: 8px
+    &--open
+        .location__front
+            display: none
+        .location__back
+            display: flex
 
-    &__footer
-        padding: 16px 0
-    &__action
+// Всплывающее окно
+.location-popup
+    position: absolute
+    top: calc(100% - 4px)
+    z-index: 2000
+    padding: 12px 10px 16px
+    background: white
+    border-radius: 10px
+    width: 180px
+    border: 1px solid #d0d0d0
+    margin: 0
+
+    > *:not(:first-child)
+        margin-top: 12px
+    *
         font-size: 13px
-        &:hover,&:focus
-            text-decoration: none
+    .btn
+        width: auto
+        padding: .5em
+    
+    &__actions
+        display: flex
+        justify-content: space-between
 
 .authorization
     display: flex
@@ -170,6 +213,7 @@
     &-links
         display: none
         list-style: none
+        width: 100%
         li
             user-select: none
             float: left
@@ -183,9 +227,9 @@
             width: 26px
             height: 26px
     &-toggle
-        display: table 
+        display: block
         // background: #cc74ab
-        width: 26px 
+        padding: 0 10px
         height: 26px 
         // border-radius: 50% 
         position: relative
@@ -197,7 +241,7 @@
             width: 18px
             height: 18px
             top: 4px
-            left: 4px
+            left: 0
             display: inline-block 
             text-align: center 
             cursor: pointer

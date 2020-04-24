@@ -32,7 +32,24 @@
         </div>
         <div class="topbar">
           <div class="topbar__inner" id="topbar__default">
-            <div class="topbar__location"><a class="locationSelector topbar__item" href="#locationModal" data-toggle="modal" data-target="#locationModal"><span class="fa fa-location-arrow"></span><span>Москва</span></a></div>
+            <div class="topbar__location">
+              <div class="location">
+                <div class="location__front"><span class="topbar__item fa fa-location-arrow"></span><span class="topbar__item">Ваш город:</span><a class="locationSelector topbar__link" href="#locationModal">   <span id="location-label">Москва</span></a></div>
+                <div class="location__back">
+                  <div class="location__group"><span class="topbar__item fa fa-location-arrow"></span>
+                    <input id="location-autocomplete" placeholder="Ваш город" autocomplete="off" type="text">
+                  </div>
+                </div>
+                <div class="location-popup">
+                  <p>Информация о доставке будет отображаться для региона</p>
+                  <div class="text-center">г. Владикавказ</div>
+                  <div class="location-popup__actions">
+                    <button class="btn btn-primary positive">Да, верно</button>
+                    <button class="btn btn-primary-outline negative">Другой</button>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="topbar__delivery"> 
               <div class="delivery">
                 <div class="back"><span>Скидка 5% при онлайн-оплате</span></div>
