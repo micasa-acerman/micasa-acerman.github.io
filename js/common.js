@@ -225,6 +225,9 @@ $(function() {
         items: 1,
         margin: 20,
         dots: true,
+        loop: true,
+        nav: true,
+        navText: ["<div class='nav-btn prev-slide-inside'></div>", "<div class='nav-btn next-slide-inside'></div>"],
     });
     $('#reviews').owlCarousel({
         margin: 20,

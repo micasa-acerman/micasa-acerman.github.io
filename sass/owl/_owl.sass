@@ -23,11 +23,26 @@
     .next-slide 
         background: url(/img/icons/arrow-right.png)
         background-size: cover
-        right: -60px 
+        right: -60px
+    .prev-slide-inside
+        background: url(/img/icons/arrow-left.png)
+        background-size: cover
+        top: calc(50% - 24px) !important
+        left: 30px
+    .next-slide-inside
+        background: url(/img/icons/arrow-right.png)
+        background-size: cover
+        right: 30px
+        top: calc(50% - 24px) !important
+     
+
 #fbanner
     margin-top: 10px
-.owl-theme .owl-nav.disabled+.owl-dots
-    margin-top: -25px
+.owl-theme .owl-nav
+    height: 0 !important
+    margin: 0 !important
+.owl-theme .owl-dots
+    margin-top: -25px !important
     z-index: 10000
     position: absolute
     left: 0
