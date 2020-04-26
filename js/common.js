@@ -1,7 +1,7 @@
 $(function() {
 
-    // Autocomplete
-    function autocomplete(inp, arr, resolve) {
+    // Автозаполнение
+    function autocomplete(inp, arr, resolve, custom_template, custom_check) {
         var currentFocus;
         inp.addEventListener("input", function(e) {
             var a, b, i, val = this.value;
@@ -14,12 +14,22 @@ $(function() {
             this.parentNode.appendChild(a);
             dirty = false;
             for (i = 0; i < arr.length; i++) {
-                if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                let check = false;
+                if (custom_check)
+                    check = custom_check(val, arr[i]);
+                else
+                    check = arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase();
+                if (check) {
                     dirty = true;
-                    b = document.createElement("DIV");
-                    b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-                    b.innerHTML += arr[i].substr(val.length);
-                    b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                    b = null;
+                    if (custom_template) {
+                        b = custom_template(arr[i]);
+                    } else {
+                        b = document.createElement("DIV");
+                        b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                        b.innerHTML += arr[i].substr(val.length);
+                        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                    }
                     b.addEventListener("click", function(e) {
                         inp.value = this.getElementsByTagName("input")[0].value;
                         resolve(inp.value);
@@ -79,6 +89,37 @@ $(function() {
             closeAllLists(e.target);
         });
     }
+
+    // Геолокация
+    var countries = ["Москва", "Санкт-Петербург", "Владивосток", "Сочи", "Адлер", "Марсель"];
+    var goods = [{ name: 'Обувь', size: "28/29", color: 'Розовый', link: 'http://yandex.ru' }, { name: 'Штаны', size: "28/29", color: 'Розовый', link: 'http://yandex.ru' }];
+    autocomplete(document.getElementById("location-autocomplete"), countries, function(text) {
+        $('#location-label').text(text);
+        $('.delivery').addClass('delivery--open');
+        $('.location').removeClass('location--open');
+    });
+    autocomplete(document.getElementById('search-input'), goods, null, function(el) {
+        let container = document.createElement('div');
+        container.innerHTML = `
+            <a class="cart-name" href="${el.link}">${el.name}</a>
+            <div class="properties"><small>Размер: ${el.size}</small><small>Цвет: ${el.color}</small></div>
+        `;
+        return container;
+    }, function(val, el) {
+        return el.name.substr(0, val.length).toUpperCase() == val.toUpperCase();
+    });
+
+
+
+
+
+
+
+
+
+
+
+
     // Меню
     $('.top-menu > li').click(function() {
         $('.top-menu > li').removeClass('top-item-opened');
@@ -139,13 +180,7 @@ $(function() {
     //     }, 3000)
     // })();
 
-    // Геолокация
-    var countries = ["Москва", "Санкт-Петербург", "Владивосток", "Сочи", "Адлер", "Марсель"];
-    autocomplete(document.getElementById("location-autocomplete"), countries, function(text) {
-        $('#location-label').text(text);
-        $('.delivery').addClass('delivery--open');
-        $('.location').removeClass('location--open');
-    });
+
     $('.location').on('click', '.negative,.positive', function(e) {
         $target = $(this);
         if ($target.hasClass('positive')) {

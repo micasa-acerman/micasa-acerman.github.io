@@ -307,13 +307,13 @@
                 li
                     a(href="#") SALE%
     
-    // Logo
+    // Лого
     a.logo(href="/")
         img(src='/img/logo.png',alt='logo')
-    // Panel tools    
+    // Панель инструментов    
     .toolbar
         form.searchbar
-            input(type='text',placeholder='Что будем искать?')
+            input(type='text',id='search-input',placeholder='Что будем искать?',autocomplete='off')
             button(type='submit').searchbar__action
         // Личный кабинет
         if(isAuthorizated)
@@ -334,7 +334,7 @@
             span.toolbar-dropdown__icon.toolbar-dropdown__cart
             .toolbar-dropdown__content.dropdown__inner 
 
-                // Toggle
+                // Переключалка
                 if(false)
                     .toolbar-dropdown__title В вашей корзине пока нет товаров
                     a.toolbar-dropdown__action Перейти в каталог

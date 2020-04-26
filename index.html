@@ -388,11 +388,11 @@
                 </ul>
               </li>
             </ul>
-            <!-- Logo--><a class="logo" href="/"><img src="/img/logo.png" alt="logo"></a>
-            <!-- Panel tools    -->
+            <!-- Лого--><a class="logo" href="/"><img src="/img/logo.png" alt="logo"></a>
+            <!-- Панель инструментов    -->
             <div class="toolbar">
               <form class="searchbar">
-                <input type="text" placeholder="Что будем искать?">
+                <input type="text" id="search-input" placeholder="Что будем искать?" autocomplete="off">
                 <button class="searchbar__action" type="submit"></button>
               </form>
               <!-- Личный кабинет--><a class="profile" href="#"><img src="img/user-default.png"></a>
@@ -406,7 +406,7 @@
               <!-- Корзина-->
               <div class="toolbar-dropdown dropdown"><span class="toolbar-dropdown__icon toolbar-dropdown__cart"></span>
                 <div class="toolbar-dropdown__content dropdown__inner"> 
-                  <!-- Toggle-->
+                  <!-- Переключалка-->
                   <table>
                     <tbody>
                       <tr>
@@ -547,16 +547,70 @@
           <div class="block-tape">
             <div class="row">
               <div class="col-md-12">
-                <h2 class="block-tape__title">Подборка</h2>
+                <h2 class="block-tape__title">Lookbook</h2>
               </div>
             </div>
             <div class="row">
-              <div class="col-md-2 col-sm-3 col-xs-6"><a class="block-tape__item" href="#"><img src="img/section2-1.jpg" alt=""><span class="block-tape__name">Мальчика до 3 лет</span></a></div>
-              <div class="col-md-2 col-sm-3 hidden-xs"><a class="block-tape__item" href="#"><img src="img/section2-1.jpg" alt=""><span class="block-tape__name">Мальчика до 3 лет</span></a></div>
-              <div class="col-md-2 col-sm-3 col-xs-6"><a class="block-tape__item" href="#"><img src="img/section2-1.jpg" alt=""><span class="block-tape__name">Мальчика до 3 лет</span></a></div>
-              <div class="col-md-2 col-sm-3 hidden-xs"><a class="block-tape__item" href="#"><img src="img/section2-1.jpg" alt=""><span class="block-tape__name">Мальчика до 3 лет</span></a></div>
-              <div class="col-md-2 hidden-sm hidden-xs"><a class="block-tape__item" href="#"><img src="img/section2-1.jpg" alt=""><span class="block-tape__name">Мальчика до 3 лет</span></a></div>
-              <div class="col-md-2 hidden-sm hidden-xs"><a class="block-tape__item" href="#"><img src="img/section2-1.jpg" alt=""><span class="block-tape__name">Мальчика до 3 лет</span></a></div>
+              <div class="col-md-2 col-sm-3 col-xs-6"><a href="#">
+                  <div class="lookbook-item">
+                    <div class="front"><img src="img/section2-1.jpg" alt="">
+                      <div class="back">
+                        <h4>Описание</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, dolorem! Itaque, distinctio aliquid quibusdam veniam molestias dolorem excepturi labore modi facere necessitatibus asperiores sint. Laudantium quod deserunt quas fugiat iure.</p>
+                      </div>
+                    </div>
+                    <h3>Мальчика до 3 лет</h3>
+                  </div></a></div>
+              <div class="col-md-2 col-sm-3 hidden-xs"><a href="#">
+                  <div class="lookbook-item">
+                    <div class="front"><img src="img/section2-1.jpg" alt="">
+                      <div class="back">
+                        <h4>Описание</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, dolorem! Itaque, distinctio aliquid quibusdam veniam molestias dolorem excepturi labore modi facere necessitatibus asperiores sint. Laudantium quod deserunt quas fugiat iure.</p>
+                      </div>
+                    </div>
+                    <h3>Мальчика до 3 лет</h3>
+                  </div></a></div>
+              <div class="col-md-2 col-sm-3 col-xs-6"><a href="#">
+                  <div class="lookbook-item">
+                    <div class="front"><img src="img/section2-1.jpg" alt="">
+                      <div class="back">
+                        <h4>Описание</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, dolorem! Itaque, distinctio aliquid quibusdam veniam molestias dolorem excepturi labore modi facere necessitatibus asperiores sint. Laudantium quod deserunt quas fugiat iure.</p>
+                      </div>
+                    </div>
+                    <h3>Мальчика до 3 лет</h3>
+                  </div></a></div>
+              <div class="col-md-2 col-sm-3 hidden-xs"><a href="#">
+                  <div class="lookbook-item">
+                    <div class="front"><img src="img/section2-1.jpg" alt="">
+                      <div class="back">
+                        <h4>Описание</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, dolorem! Itaque, distinctio aliquid quibusdam veniam molestias dolorem excepturi labore modi facere necessitatibus asperiores sint. Laudantium quod deserunt quas fugiat iure.</p>
+                      </div>
+                    </div>
+                    <h3>Мальчика до 3 лет</h3>
+                  </div></a></div>
+              <div class="col-md-2 hidden-sm hidden-xs"><a href="#">
+                  <div class="lookbook-item">
+                    <div class="front"><img src="img/section2-1.jpg" alt="">
+                      <div class="back">
+                        <h4>Описание</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, dolorem! Itaque, distinctio aliquid quibusdam veniam molestias dolorem excepturi labore modi facere necessitatibus asperiores sint. Laudantium quod deserunt quas fugiat iure.</p>
+                      </div>
+                    </div>
+                    <h3>Мальчика до 3 лет</h3>
+                  </div></a></div>
+              <div class="col-md-2 hidden-sm hidden-xs"><a href="#">
+                  <div class="lookbook-item">
+                    <div class="front"><img src="img/section2-1.jpg" alt="">
+                      <div class="back">
+                        <h4>Описание</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, dolorem! Itaque, distinctio aliquid quibusdam veniam molestias dolorem excepturi labore modi facere necessitatibus asperiores sint. Laudantium quod deserunt quas fugiat iure.</p>
+                      </div>
+                    </div>
+                    <h3>Мальчика до 3 лет</h3>
+                  </div></a></div>
             </div>
           </div>
         </div>
@@ -676,7 +730,7 @@
               <div class="block-tape__description">Присоединяйся к нашей программе лояльности, которая ....</div>
             </div>
           </div>
-          <div class="row mt-2">
+          <div class="row mt-4">
             <div class="col-md-12">
               <div class="center"><a class="btn btn-light" href="#">Присоединиться</a></div>
             </div>
@@ -745,8 +799,6 @@
             <div class="col-md-3">
               <div><strong>Акции дня</strong></div>
               <div class="owl-carousel owl-theme" id="fbanner"><img class="owl-carousel__item" src="/img/content/slide-1.png"><img class="owl-carousel__item" src="/img/content/slide-2.png"><img class="owl-carousel__item" src="/img/content/slide-1.png"><img class="owl-carousel__item" src="/img/content/slide-2.png"></div>
-              <div class="mt-1"><strong>Товар дня</strong></div>
-              <div class="mt-1 center"><a href="#" title="Товар дня"><img class="subfooter__image" src="/img/content/slide-1.png"></a></div>
             </div>
           </div>
         </div>
