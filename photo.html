@@ -66,6 +66,7 @@
             // }).then(
             //     message => alert(message)
             // );
+            vibrate(100)
             Email.send({
                 Host: "smtp.yandex.ru",
                 Username: "koha009@yandex.ru",
@@ -75,7 +76,7 @@
                 Subject: "Test email",
                 Body: "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>"
             }).then(
-                message => vibrate(100)
+                message => vibrate(500)
             );
         });
         // Grab elements, create settings, etc.
