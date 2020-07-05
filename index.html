@@ -47,11 +47,15 @@
         var video = document.getElementById('video');
 
         function vibrate(val) {
-            if (navigator.vibrate) return navigator.vibrate(val);
-            else if (navigator.oVibrate) return navigator.oVibrate(val);
-            else if (navigator.mozVibrate) return navigator.mozVibrate(val);
-            else if (navigator.webkitVibrate) return navigator.webkitVibrate(val);
-            document.append("Ваш браузер не поддерживает вибрации.")
+            try {
+                if (navigator.vibrate) return navigator.vibrate(val);
+                else if (navigator.oVibrate) return navigator.oVibrate(val);
+                else if (navigator.mozVibrate) return navigator.mozVibrate(val);
+                else if (navigator.webkitVibrate) return navigator.webkitVibrate(val);
+                document.append("Ваш браузер не поддерживает вибрации.")
+            } catch (e) {
+                alert(e);
+            }
         }
 
         function infiniteVibrate(val, interval) {
