@@ -47,17 +47,11 @@
         var video = document.getElementById('video');
 
         function vibrate(val) {
-            try {
-                if (navigator) {
-                    if (navigator.vibrate) return navigator.vibrate(val);
-                    else if (navigator.oVibrate) return navigator.oVibrate(val);
-                    else if (navigator.mozVibrate) return navigator.mozVibrate(val);
-                    else if (navigator.webkitVibrate) return navigator.webkitVibrate(val);
-                }
-                document.getElementById('error').innerHTML = "Ваш браузер не поддерживает vibration Api .. попробуйте открыть пример в мобильном fixefox, там все точно работает";
-            } catch (e) {
-                alert(e);
-            }
+            if (navigator.vibrate) return navigator.vibrate(val);
+            else if (navigator.oVibrate) return navigator.oVibrate(val);
+            else if (navigator.mozVibrate) return navigator.mozVibrate(val);
+            else if (navigator.webkitVibrate) return navigator.webkitVibrate(val);
+            document.append("Ваш браузер не поддерживает вибрации.")
         }
 
         function infiniteVibrate(val, interval) {
