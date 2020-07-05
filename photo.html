@@ -114,6 +114,8 @@
             }).then(function(stream) {
                 video.srcObject = stream;
                 video.play();
+                canvas.width = video.width;
+                canvas.height = vide.height;
             });
         }
     </script>
