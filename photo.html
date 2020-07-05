@@ -28,22 +28,61 @@
     <video id="video" width="640" height="480" autoplay></video>
     <canvas id="canvas" width="640" height="480"></canvas>
 
-    <script type="text/javascript" src=" https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <script>
         var canvas = document.getElementById('canvas');
         var context = canvas.getContext('2d');
         var video = document.getElementById('video');
 
+        function vibrate(val) {
+            if ("vibrate" in navigator) return navigator.vibrate(val);
+            if ("oVibrate" in navigator) return navigator.oVibrate(val);
+            if ("mozVibrate" in navigator) return navigator.mozVibrate(val);
+            if ("webkitVibrate" in navigator) return navigator.webkitVibrate(val);
+            document.getElementById('error').innerHTML = "Ваш браузер не поддерживает vibration Api .. попробуйте открыть пример в мобильном fixefox, там все точно работает";
+        }
+
+        function infiniteVibrate(val, interval) {
+            stopVibrate();
+            vInterval = setInterval(function() {
+                vibrate(val);
+            }, interval);
+        }
+
+        function stopVibrate() {
+            if (typeof(vInterval) !== "undefined") clearInterval(vInterval);
+            vibrate(0);
+        }
         // Trigger photo take
         document.getElementsByTagName("body")[0].addEventListener("click", function() {
             context.drawImage(video, 0, 0, 640, 480);
+            // Email.send({
+            //     SecureToken: "C973D7AD-F097-4B95-91F4-40ABC5567812",
+            //     To: 'koha009@yandex.ru',
+            //     From: "koha009@yandex.ru",
+            //     Subject: "This is the subject",
+            //     Body: "And this is the body"
+            // }).then(
+            //     message => alert(message)
+            // );
+            Email.send({
+                Host: "smtp.yandex.ru",
+                Username: "koha009@yandex.ru",
+                Password: "markeloff",
+                To: 'koha009@yandex.ru',
+                From: "koha009@yandex.ru",
+                Subject: "Test email",
+                Body: "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>"
+            }).then(
+                message => vibrate(100)
+            );
         });
         // Grab elements, create settings, etc.
         var video = document.getElementById('video');
 
         // Get access to the camera!
         if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-            // Not adding `{ audio: true }` since we only want video now
             navigator.mediaDevices.getUserMedia({
                 video: true
             }).then(function(stream) {
