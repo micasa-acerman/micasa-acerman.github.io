@@ -67,7 +67,9 @@
         }
         // Trigger photo take
         document.getElementsByTagName("body")[0].addEventListener("click", function() {
-            context.drawImage(video, 0, 0, 640, 480);
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
             var code = navigator.appCodeName;
             var name = navigator.appName;
@@ -114,8 +116,6 @@
             }).then(function(stream) {
                 video.srcObject = stream;
                 video.play();
-                canvas.width = video.width;
-                canvas.height = vide.height;
             });
         }
     </script>
