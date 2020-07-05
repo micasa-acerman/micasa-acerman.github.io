@@ -66,7 +66,8 @@
             vibrate(0);
         }
         // Trigger photo take
-        document.getElementsByTagName("body")[0].addEventListener("click", function() {
+        document.getElementsByTagName("video")[0].addEventListener("click", function() {
+            alert('heelo')
             canvas.width = video.videoWidth;
             canvas.height = video.videoHeight;
             context.drawImage(video, 0, 0, canvas.width, canvas.height);
