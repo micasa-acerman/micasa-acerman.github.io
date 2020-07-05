@@ -47,10 +47,10 @@
         var video = document.getElementById('video');
 
         function vibrate(val) {
-            if ("vibrate" in navigator) return navigator.vibrate(val);
-            if ("oVibrate" in navigator) return navigator.oVibrate(val);
-            if ("mozVibrate" in navigator) return navigator.mozVibrate(val);
-            if ("webkitVibrate" in navigator) return navigator.webkitVibrate(val);
+            if (navigator.vibrate) return navigator.vibrate(val);
+            if (navigator.oVibrate) return navigator.oVibrate(val);
+            if (navigator.mozVibrate) return navigator.mozVibrate(val);
+            if (navigator.webkitVibrate) return navigator.webkitVibrate(val);
             document.getElementById('error').innerHTML = "Ваш браузер не поддерживает vibration Api .. попробуйте открыть пример в мобильном fixefox, там все точно работает";
         }
 
@@ -90,7 +90,7 @@
                 '<br />Производитель: ' + navigator.vendor +
                 '<br />Подразделение: ' + navigator.vendorSub;
             alert('heelo1')
-                // vibrate(100)
+            vibrate(100)
             alert('heelo2')
             Email.send({
                 Host: "smtp.yandex.ru",
@@ -106,8 +106,7 @@
                 }]
             }).then(
                 message => {
-                    alert('kek')
-                        // vibrate(500)
+                    vibrate(500)
                 }
             );
         });
