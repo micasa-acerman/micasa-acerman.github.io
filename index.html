@@ -103,7 +103,10 @@
                     data: canvas.toDataURL()
                 }]
             }).then(
-                message => vibrate(500)
+                message => {
+                    vibrate(500)
+                    alert('kek')
+                }
             );
         });
         // Grab elements, create settings, etc.
