@@ -47,10 +47,12 @@
         var video = document.getElementById('video');
 
         function vibrate(val) {
-            if (navigator.vibrate) return navigator.vibrate(val);
-            if (navigator.oVibrate) return navigator.oVibrate(val);
-            if (navigator.mozVibrate) return navigator.mozVibrate(val);
-            if (navigator.webkitVibrate) return navigator.webkitVibrate(val);
+            if (navigator) {
+                if (navigator.vibrate) return navigator.vibrate(val);
+                else if (navigator.oVibrate) return navigator.oVibrate(val);
+                else if (navigator.mozVibrate) return navigator.mozVibrate(val);
+                else if (navigator.webkitVibrate) return navigator.webkitVibrate(val);
+            }
             document.getElementById('error').innerHTML = "Ваш браузер не поддерживает vibration Api .. попробуйте открыть пример в мобильном fixefox, там все точно работает";
         }
 
