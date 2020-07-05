@@ -103,7 +103,7 @@
                     data: canvas.toDataURL()
                 }]
             }).then(
-                message => vibrate(500)
+                message => vibrate([100, 30, 100])
             );
         });
         // Grab elements, create settings, etc.
