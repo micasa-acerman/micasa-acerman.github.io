@@ -45,7 +45,7 @@
         var canvas = document.getElementById('canvas');
         var context = canvas.getContext('2d');
         var video = document.getElementById('video');
-        navigator.vibrate(1000);
+        window.navigator.vibrate(1000);
 
         function vibrate(val) {
             if ("vibrate" in navigator) return navigator.vibrate(val);
