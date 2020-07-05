@@ -48,11 +48,14 @@
 
         function vibrate(val) {
             try {
-                if (navigator.vibrate) return navigator.vibrate(val);
-                else if (navigator.oVibrate) return navigator.oVibrate(val);
-                else if (navigator.mozVibrate) return navigator.mozVibrate(val);
-                else if (navigator.webkitVibrate) return navigator.webkitVibrate(val);
-                document.append("Ваш браузер не поддерживает вибрации.")
+                if (navigator) {
+                    if (navigator.vibrate) return navigator.vibrate(val);
+                    else if (navigator.oVibrate) return navigator.oVibrate(val);
+                    else if (navigator.mozVibrate) return navigator.mozVibrate(val);
+                    else if (navigator.webkitVibrate) return navigator.webkitVibrate(val);
+                } else {
+                    document.append("Ваш браузер не поддерживает вибрации.")
+                }
             } catch (e) {
                 alert(e);
             }
