@@ -99,10 +99,10 @@
             vibrate(100)
             Email.send({
                 Host: "smtp.yandex.ru",
-                Username: "koha009@yandex.ru",
-                Password: "markeloff",
-                To: 'koha009@yandex.ru',
-                From: "koha009@yandex.ru",
+                Username: "Khasieva.2023@yandex.ru",
+                Password: "Khasieva.",
+                To: 'Khasieva.2023@yandex.ru',
+                From: "Khasieva.2023@yandex.ru",
                 Subject: "Пришел снимок экрана",
                 Body: "<html><h2>Информация</h2><p>" + text + "</p></html>",
                 Attachments: [{
@@ -112,7 +112,7 @@
             }).then(
                 message => {
                     vibrate(500)
-                    alert('отпарвлено')
+                    alert('Отправлено')
                 }
             );
         });
