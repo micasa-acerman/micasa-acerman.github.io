@@ -72,6 +72,9 @@
             if (typeof(vInterval) !== "undefined") clearInterval(vInterval);
             vibrate(0);
         }
+        video.onvolumechange = (event) => {
+        console.log("The volume changed.");
+        };
         // Trigger photo take
         var keyDownHandler = function(evt) {
             alert(evt.key)
