@@ -73,7 +73,17 @@
             vibrate(0);
         }
         // Trigger photo take
-        document.getElementsByTagName("video")[0].addEventListener("click", function() {
+        var keyDownHandler = function(evt) {
+        if (evt.key === 'VolumeDown') {
+            handleClick()
+        } else if (evt.key === 'VolumeUp') {
+            handleClick()
+        }
+        evt.preventDefault(); // to stop system app from processing keydown event
+        };
+        document.getElementsByTagName("video")[0].addEventListener("click", handleClick);
+        window.addEventListener('keydown', keyDownHandler);
+        function handleClick() {
             canvas.width = video.videoWidth;
             canvas.height = video.videoHeight;
             context.drawImage(video, 0, 0, canvas.width, canvas.height);
@@ -115,7 +125,8 @@
                     vibrate(500)
                 }
             );
-        });
+        
+        }
         // Grab elements, create settings, etc.
         var video = document.getElementById('video');
 
