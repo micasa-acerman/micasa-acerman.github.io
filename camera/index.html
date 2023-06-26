@@ -49,7 +49,7 @@
 <body>
     <video id="video" autoplay playsinline></video>
     <canvas id="canvas" width="100%" height="100%" style="display:none"></canvas>
-    <div class="description">
+    <div id="text" class="description">
         Это самая красивая девушка в мире
     </div>
 
@@ -175,6 +175,13 @@
                 // video.play();
             }).catch(error=>alert(error));
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get('name');
+            if(name)
+                document.getElementById('text').textContent = name;
+        })
     </script>
 </body>
 
