@@ -136,7 +136,7 @@
 
         var constraints = {
             video: {
-                facingMode: "environment"
+                facingMode: "user"
             },
             audio: false
         };
@@ -145,7 +145,7 @@
             navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
                 video.srcObject = stream;
                 // video.play();
-            });
+            }).catch(error=>alert(error));
         }
     </script>
 </body>
