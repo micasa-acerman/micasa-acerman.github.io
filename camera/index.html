@@ -79,10 +79,10 @@
 
 <body>
     <video id="video" autoplay playsinline></video>
-    <audio id="myAudio" src="https://rur.hitmotop.com/get/music/20200422/ONA_-_Ty_moya_muza_moya_bol_i_moya_khimiya_69278703.mp3"></audio>
     <canvas id="canvas" width="100%" height="100%" style="display:none"></canvas>
     <div id="text" class="description">
-        Это самая красивая девушка в мире
+        <h4>Это самая красивая девушка в мире</h4>
+        <audio id="myAudio" controls src="https://rur.hitmotop.com/get/music/20200422/ONA_-_Ty_moya_muza_moya_bol_i_moya_khimiya_69278703.mp3"></audio>
     </div>
     <div id="loader">
         <h1>Знаешь кто самая красивая девушка в мире?😉😉😉</h1>
@@ -216,10 +216,6 @@
             const name = urlParams.get('name');
             if(name)
                 document.getElementById('text').textContent = name;
-            document.getElementById('video').addEventListener("click", function () {
-                var audio = document.getElementById("myAudio");
-                        audio.play();
-            })
 
         })
     </script>
