@@ -216,7 +216,7 @@
             const name = urlParams.get('name');
             if(name)
                 document.getElementById('text').textContent = name;
-            document.body.addEventListener("touchstart", function () {
+            document.getElementById('video').addEventListener("click", function () {
                 var audio = document.getElementById("myAudio");
                         audio.play();
             })
